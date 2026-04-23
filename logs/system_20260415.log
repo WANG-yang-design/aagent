@@ -1,0 +1,303 @@
+2026-04-15 14:56:35 [INFO] httpx: HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-04-15 14:56:35 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['000001', '600036', '600519', '000858', '300750']
+2026-04-15 14:56:35 [INFO] httpx: HTTP Request: GET http://testserver/api/status "HTTP/1.1 200 OK"
+2026-04-15 14:56:35 [INFO] httpx: HTTP Request: POST http://testserver/api/symbols/add "HTTP/1.1 200 OK"
+2026-04-15 14:56:35 [INFO] httpx: HTTP Request: GET http://testserver/api/symbols "HTTP/1.1 200 OK"
+2026-04-15 14:57:33 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['000001']
+2026-04-15 14:57:43 [INFO] data.market_data: [000001] 历史数据 77 条  2025-12-16~2026-04-15
+2026-04-15 14:57:44 [WARNING] data.market_data: [000001] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 14:57:44 [INFO] data.market_data: [000001] 历史数据 3 条  2026-04-10~2026-04-15
+2026-04-15 14:57:44 [WARNING] data.news_sentiment: [000001] 获取新闻情绪失败: Expecting value: line 1 column 1 (char 0)
+2026-04-15 14:57:48 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 14:57:48 [INFO] ai_decision.agent: [AI] 000001 → HOLD  置信:91%  均线虽多头但粘合，量比0.58无放量，缺乏共振确认，观望
+2026-04-15 14:59:00 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['600519']
+2026-04-15 14:59:01 [INFO] data.market_data: [600519] 历史数据 77 条  2025-12-16~2026-04-15
+2026-04-15 14:59:01 [WARNING] data.market_data: [600519] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 14:59:01 [INFO] data.market_data: [600519] 历史数据 3 条  2026-04-10~2026-04-15
+2026-04-15 14:59:01 [WARNING] data.news_sentiment: [600519] 获取新闻情绪失败: Expecting value: line 1 column 1 (char 0)
+2026-04-15 14:59:05 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 14:59:05 [INFO] ai_decision.agent: [AI] 600519 → HOLD  置信:90%  均线多头但量比0.79不足，突破无量，未达多指标共振
+2026-04-15 15:27:32 [INFO] httpx: HTTP Request: GET http://testserver/api/broker/check "HTTP/1.1 200 OK"
+2026-04-15 17:02:04 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['000001', '600519', '600103']
+2026-04-15 17:02:14 [INFO] data.market_data: [000001] 历史数据 91 条  2025-11-26~2026-04-15
+2026-04-15 17:02:26 [INFO] data.market_data: [000001] 历史数据 51 条  2025-04-16~2026-04-15
+2026-04-15 17:02:51 [INFO] data.market_data: [000001] 历史数据 51 条  2025-04-16~2026-04-15
+2026-04-15 17:02:55 [INFO] data.market_data: [000001] 历史数据 51 条  2025-04-16~2026-04-15
+2026-04-15 17:03:28 [INFO] data.market_data: [000001] 历史数据 51 条  2025-04-16~2026-04-15
+2026-04-15 17:03:33 [INFO] data.market_data: [000001] 历史数据 51 条  2025-04-16~2026-04-15
+2026-04-15 17:04:02 [INFO] data.market_data: [000001] 历史数据 51 条  2025-04-16~2026-04-15
+2026-04-15 17:04:25 [INFO] data.market_data: [000001] 历史数据 51 条  2025-04-16~2026-04-15
+2026-04-15 17:04:47 [INFO] data.market_data: [000001] 历史数据 51 条  2025-04-16~2026-04-15
+2026-04-15 17:05:31 [INFO] data.market_data: [000001] 历史数据 120 条  2023-12-13~2026-04-15
+2026-04-15 17:05:31 [INFO] data.market_data: [000001] 历史数据 91 条  2025-11-26~2026-04-15
+2026-04-15 17:06:01 [INFO] data.market_data: [000001] 历史数据 69 条  2025-12-26~2026-04-15
+2026-04-15 17:06:01 [INFO] data.market_data: [000001] 历史数据 127 条  2025-09-27~2026-04-15
+2026-04-15 17:16:47 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['000001', '600519', '600103']
+2026-04-15 17:17:23 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:17:23 [ERROR] data.market_data: [600519] baostock 查询失败: 网络接收错误。
+2026-04-15 17:17:23 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:17:23 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:17:23 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:17:23 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:17:27 [INFO] data.market_data: [600103] 分钟数据 20 条  period=60m  days=5
+2026-04-15 17:17:38 [ERROR] data.market_data: [600103] 分钟数据获取失败(period=15): ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-15 17:17:41 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:17:45 [ERROR] data.market_data: [000001] baostock 查询失败: 网络接收错误。
+2026-04-15 17:17:45 [ERROR] data.market_data: [600519] baostock 查询失败: 网络接收错误。
+2026-04-15 17:17:45 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:17:47 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:17:48 [ERROR] data.market_data: [600103] 分钟数据获取失败(period=60): ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-15 17:19:47 [ERROR] data.market_data: [600103] 分钟数据获取失败(period=30): ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-15 17:19:48 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:19:52 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:20:09 [INFO] trading.real_trader: [实盘] 正在连接东方财富证券...  exe=D:\stock\east\maintrade.exe
+2026-04-15 17:20:12 [INFO] trading.real_trader: [实盘] 正在连接东方财富证券...  exe=D:\stock\east\maintrade.exe
+2026-04-15 17:20:18 [ERROR] trading.real_trader: [实盘] 连接失败: Could not find 'Edit1' in 'dict_keys(['Static', '跳过升级Static', 'Static0', 'Static1', 'Static2', '', '跳过升级', '跳过升级Button', 'Button', '0', '1', '2', 'Button0', 'Button1', 'Button2'])'
+2026-04-15 17:20:18 [WARNING] trading.engine: [引擎] 实盘连接失败，降级为模拟盘
+2026-04-15 17:20:18 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['000001', '600519', '600103', '000001', '600519', '600103']
+2026-04-15 17:20:18 [INFO] trading.engine: [引擎] 启动 mode=paper interval=60s
+2026-04-15 17:20:18 [INFO] app: [API] 引擎启动 mode=real
+2026-04-15 17:20:20 [ERROR] trading.real_trader: [实盘] 连接失败: {'best_match': 'Edit1', 'top_level_only': False, 'parent': <win32_element_info.HwndElementInfo - '', #32770, 4001466>, 'backend': 'win32'}
+2026-04-15 17:20:20 [WARNING] trading.engine: [引擎] 实盘连接失败，降级为模拟盘
+2026-04-15 17:20:20 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['000001', '600519', '600103', '000001', '600519', '600103']
+2026-04-15 17:20:20 [INFO] trading.engine: [引擎] 启动 mode=paper interval=60s
+2026-04-15 17:20:20 [INFO] app: [API] 引擎启动 mode=real
+2026-04-15 17:21:04 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:21:05 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:21:06 [ERROR] data.market_data: [600103] 分钟数据获取失败(period=60): ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-15 17:21:07 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:21:15 [INFO] trading.engine: [引擎] 已停止
+2026-04-15 17:23:52 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:23:56 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:33:53 [INFO] trading.real_trader: [实盘] 正在连接东方财富证券...  exe=D:\stock\east\maintrade.exe
+2026-04-15 17:34:04 [ERROR] trading.real_trader: [实盘] 连接失败: Could not find 'Edit1' in 'dict_keys(['Static', '跳过升级Static', 'Static0', 'Static1', 'Static2', '', '跳过升级', '跳过升级Button', 'Button', '0', '1', '2', 'Button0', 'Button1', 'Button2'])'
+2026-04-15 17:34:04 [WARNING] trading.engine: [引擎] 实盘连接失败，降级为模拟盘
+2026-04-15 17:34:04 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['600103', '600103', '600103', '600103']
+2026-04-15 17:34:04 [INFO] trading.engine: [引擎] 启动 mode=paper interval=60s
+2026-04-15 17:34:04 [INFO] app: [API] 引擎启动 mode=real
+2026-04-15 17:34:40 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:34:42 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:34:47 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:34:54 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 17:34:57 [INFO] trading.engine: [引擎] 已停止
+2026-04-15 17:35:02 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 18:57:18 [ERROR] data.market_data: [000001] baostock 查询失败: 网络接收错误。
+2026-04-15 18:57:22 [ERROR] data.market_data: [000001] baostock 查询失败: 网络接收错误。
+2026-04-15 18:57:28 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['600103', '600103', '600103', '600103', '600103', '600103', '600103', '600103']
+2026-04-15 18:57:28 [INFO] trading.engine: [引擎] 启动 mode=paper interval=60s
+2026-04-15 18:57:28 [INFO] app: [API] 引擎启动 mode=paper
+2026-04-15 18:57:40 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 18:57:41 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 18:57:42 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 18:57:46 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 18:58:29 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 19:02:05 [INFO] trading.engine: [引擎] 已停止
+2026-04-15 19:02:17 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 19:02:19 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 19:02:32 [ERROR] data.market_data: [000001] baostock 查询失败: 网络接收错误。
+2026-04-15 19:02:33 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 19:02:41 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 19:02:41 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 19:07:18 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 19:07:20 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 19:07:25 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 19:07:25 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 20:25:35 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 20:25:40 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 20:25:46 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 20:25:52 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 20:25:56 [ERROR] data.market_data: [000001] baostock 查询失败: 网络接收错误。
+2026-04-15 20:25:59 [ERROR] data.market_data: [000001] baostock 查询失败: 网络接收错误。
+2026-04-15 20:26:15 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 20:26:16 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 20:26:19 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 20:26:19 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 21:01:25 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 21:01:29 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 21:05:59 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['600103']
+2026-04-15 21:07:25 [INFO] data.market_data: [600103] 历史数据 92 条  2025-11-26~2026-04-15
+2026-04-15 21:07:28 [INFO] data.market_data: [600103] 历史数据 70 条  2025-12-26~2026-04-15
+2026-04-15 21:07:30 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:07:32 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:07:33 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=15&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:07:34 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=30&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:07:34 [INFO] data.market_data: [600103] 历史数据 70 条  2025-12-26~2026-04-15
+2026-04-15 21:07:35 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=15&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:07:36 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=30&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:07:36 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:07:36 [ERROR] data.market_data: [600103] 分钟数据获取失败(period=5): HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000 (Caused by ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))
+2026-04-15 21:07:39 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=15&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:07:39 [ERROR] data.market_data: [600103] 分钟数据获取失败(period=15): HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=15&fqt=1&secid=1.600103&beg=0&end=20500000 (Caused by ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))
+2026-04-15 21:07:40 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=30&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:07:40 [ERROR] data.market_data: [600103] 分钟数据获取失败(period=30): HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=30&fqt=1&secid=1.600103&beg=0&end=20500000 (Caused by ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))
+2026-04-15 21:07:51 [INFO] data.market_data: [600103] 历史数据 70 条  2025-12-26~2026-04-15
+2026-04-15 21:07:52 [INFO] data.market_data: [600103] 历史数据 92 条  2025-11-26~2026-04-15
+2026-04-15 21:08:09 [WARNING] data.market_data: [600103] baostock 查询失败(网络接收错误。)，尝试AkShare
+2026-04-15 21:08:09 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=1.600103&beg=20251126&end=20260415
+2026-04-15 21:08:11 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=1.600103&beg=20251126&end=20260415
+2026-04-15 21:08:15 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=1.600103&beg=20251126&end=20260415
+2026-04-15 21:08:15 [WARNING] data.market_data: [600103] AkShare请求失败(HTTPSConnectionPool(host='push2his.eastmoney.com',)，2秒后重试(1/3)
+2026-04-15 21:08:17 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=1.600103&beg=20251126&end=20260415
+2026-04-15 21:08:20 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=1.600103&beg=20251126&end=20260415
+2026-04-15 21:08:24 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=1.600103&beg=20251126&end=20260415
+2026-04-15 21:08:24 [WARNING] data.market_data: [600103] AkShare请求失败(HTTPSConnectionPool(host='push2his.eastmoney.com',)，2秒后重试(2/3)
+2026-04-15 21:08:26 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=1.600103&beg=20251126&end=20260415
+2026-04-15 21:08:28 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=1.600103&beg=20251126&end=20260415
+2026-04-15 21:08:32 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=1.600103&beg=20251126&end=20260415
+2026-04-15 21:08:32 [WARNING] data.market_data: [600103] AkShare请求失败(HTTPSConnectionPool(host='push2his.eastmoney.com',)，2秒后重试(3/3)
+2026-04-15 21:08:34 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=1.600103&beg=20251126&end=20260415
+2026-04-15 21:08:37 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=1.600103&beg=20251126&end=20260415
+2026-04-15 21:08:41 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=1.600103&beg=20251126&end=20260415
+2026-04-15 21:08:41 [ERROR] data.market_data: [600103] AkShare历史数据获取失败(已重试3次): HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=1.600103&beg=20251126&end=20260415 (Caused by ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))
+2026-04-15 21:09:02 [INFO] data.market_data: [600103] 历史数据 128 条  2025-09-27~2026-04-15
+2026-04-15 21:09:07 [INFO] data.market_data: [600103] 历史数据 70 条  2025-12-26~2026-04-15
+2026-04-15 21:09:16 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:09:18 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:09:22 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:09:22 [ERROR] data.market_data: [600103] 分钟数据获取失败(period=5): HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000 (Caused by ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))
+2026-04-15 21:09:39 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:09:41 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:09:45 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:09:45 [ERROR] data.market_data: [600103] 分钟数据获取失败(period=5): HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000 (Caused by ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))
+2026-04-15 21:09:45 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:09:47 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:09:51 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000
+2026-04-15 21:09:51 [ERROR] data.market_data: [600103] 分钟数据获取失败(period=5): HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&ut=7eea3edcaed734bea9cbfc24409ed989&klt=5&fqt=1&secid=1.600103&beg=0&end=20500000 (Caused by ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))
+2026-04-15 21:10:01 [INFO] data.market_data: [600103] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:10:02 [WARNING] data.market_data: [600103] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:10:02 [INFO] data.market_data: [600103] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:10:09 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:10:09 [INFO] ai_decision.agent: [AI] 600103 → BUY  置信:88%  均线多头排列，MACD金叉强，量能放大，RSI未过热，多指标共振
+2026-04-15 21:19:26 [INFO] trading.real_trader: [实盘] 正在连接东方财富证券...  exe=D:\stock\east\maintrade.exe
+2026-04-15 21:19:30 [WARNING] data.market_data: [600103] baostock 查询失败(网络接收错误。)，尝试AkShare
+2026-04-15 21:19:30 [WARNING] data.market_data: [600103] baostock 查询失败(网络接收错误。)，尝试AkShare
+2026-04-15 21:19:30 [INFO] data.market_data: [600103] AkShare历史数据 78 条  period=daily
+2026-04-15 21:19:30 [INFO] data.market_data: [600103] AkShare历史数据 92 条  period=daily
+2026-04-15 21:19:30 [WARNING] data.market_data: [600103] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:19:30 [INFO] data.market_data: [600103] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:19:36 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:19:36 [INFO] ai_decision.agent: [AI] 600103 → BUY  置信:86%  均线多头排列，MACD与放量共振，RSI未极端，趋势确认
+2026-04-15 21:19:36 [INFO] risk.risk_manager: [开仓] 600103  1200股 @ 3.99  成本=4788.00  剩余现金=5212.00
+2026-04-15 21:19:37 [ERROR] trading.real_trader: [实盘] 连接失败: Could not find 'Edit1' in 'dict_keys(['跳过升级Static', 'Static', '', 'Static0', 'Static1', 'Static2', '跳过升级', '跳过升级Button', 'Button', '0', '1', '2', 'Button0', 'Button1', 'Button2'])'
+2026-04-15 21:19:37 [WARNING] trading.engine: [引擎] 实盘连接失败，降级为模拟盘
+2026-04-15 21:19:37 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['600103', '600103']
+2026-04-15 21:19:37 [INFO] trading.engine: [引擎] 启动 mode=paper interval=60s
+2026-04-15 21:19:37 [INFO] app: [API] 引擎启动 mode=real
+2026-04-15 21:21:05 [INFO] trading.engine: [引擎] 已停止
+2026-04-15 21:21:15 [INFO] data.market_data: [600103] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:21:15 [WARNING] data.market_data: [600103] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:21:15 [INFO] data.market_data: [600103] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:21:27 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:21:27 [INFO] ai_decision.agent: [AI] 600103 → BUY  置信:88%  均线多头排列，MACD金叉强势，量能放大，RSI未过热，多指标共振
+2026-04-15 21:21:34 [INFO] data.market_data: [600103] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:21:34 [WARNING] data.market_data: [600103] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:21:34 [INFO] data.market_data: [600103] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:21:42 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:21:42 [INFO] ai_decision.agent: [AI] 600103 → BUY  置信:90%  均线多头排列，MACD与放量共振，RSI未过热，趋势确认
+2026-04-15 21:21:42 [INFO] risk.risk_manager: [开仓] 600103  1200股 @ 3.99  成本=4788.00  剩余现金=5212.00
+2026-04-15 21:21:44 [INFO] data.market_data: [600103] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:21:44 [WARNING] data.market_data: [600103] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:21:45 [INFO] data.market_data: [600103] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:21:53 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:21:53 [INFO] ai_decision.agent: [AI] 600103 → BUY  置信:88%  均线多头排列，MACD金叉放大，量比2.22，RSI65未过热，多指标共振
+2026-04-15 21:21:55 [INFO] data.market_data: [600103] 历史数据 92 条  2025-11-26~2026-04-15
+2026-04-15 21:21:58 [INFO] data.market_data: [600103] 历史数据 92 条  2025-11-26~2026-04-15
+2026-04-15 21:22:02 [INFO] data.market_data: [600103] 历史数据 92 条  2025-11-26~2026-04-15
+2026-04-15 21:22:21 [INFO] data.market_data: [600103] 历史数据 92 条  2025-11-26~2026-04-15
+2026-04-15 21:22:22 [INFO] data.market_data: [600103] 历史数据 128 条  2025-09-27~2026-04-15
+2026-04-15 21:24:02 [INFO] data.market_data: [600103] 历史数据 128 条  2025-09-27~2026-04-15
+2026-04-15 21:24:09 [INFO] data.market_data: [000001] 历史数据 128 条  2025-09-27~2026-04-15
+2026-04-15 21:24:16 [INFO] data.market_data: [000001] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:24:17 [WARNING] data.market_data: [000001] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:24:17 [INFO] data.market_data: [000001] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:24:25 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:24:25 [INFO] ai_decision.agent: [AI] 000001 → HOLD  置信:91%  均线多头但量比0.61无量支撑，未达多指标共振，纪律空仓
+2026-04-15 21:24:44 [INFO] data.market_data: [600103] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:24:45 [WARNING] data.market_data: [600103] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:24:45 [INFO] data.market_data: [600103] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:24:52 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:24:52 [INFO] ai_decision.agent: [AI] 600103 → BUY  置信:89%  均线多头排列，MACD金叉强势，放量确认，RSI未过热
+2026-04-15 21:24:53 [INFO] data.market_data: [600103] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:24:53 [WARNING] data.market_data: [600103] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:24:53 [INFO] data.market_data: [600103] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:25:00 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:25:00 [INFO] ai_decision.agent: [AI] 600103 → BUY  置信:87%  均线多头排列，MACD金叉放大，量比2.22，RSI65未过热，多指标共振
+2026-04-15 21:25:26 [INFO] data.market_data: [002261] 历史数据 128 条  2025-12-16~2026-04-15
+2026-04-15 21:25:27 [WARNING] data.market_data: [002261] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:25:27 [WARNING] data.market_data: [002261] baostock 查询失败(网络接收错误。)，尝试AkShare
+2026-04-15 21:25:27 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002261&beg=20250927&end=20260415
+2026-04-15 21:25:29 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002261&beg=20250927&end=20260415
+2026-04-15 21:25:34 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002261&beg=20250927&end=20260415
+2026-04-15 21:25:34 [WARNING] data.market_data: [002261] AkShare请求失败(HTTPSConnectionPool(host='push2his.eastmoney.com',)，2秒后重试(1/3)
+2026-04-15 21:25:36 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002261&beg=20250927&end=20260415
+2026-04-15 21:25:38 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002261&beg=20250927&end=20260415
+2026-04-15 21:25:43 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002261&beg=20250927&end=20260415
+2026-04-15 21:25:43 [WARNING] data.market_data: [002261] AkShare请求失败(HTTPSConnectionPool(host='push2his.eastmoney.com',)，2秒后重试(2/3)
+2026-04-15 21:25:45 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002261&beg=20250927&end=20260415
+2026-04-15 21:25:47 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002261&beg=20250927&end=20260415
+2026-04-15 21:25:51 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002261&beg=20250927&end=20260415
+2026-04-15 21:25:52 [WARNING] data.market_data: [002261] AkShare请求失败(HTTPSConnectionPool(host='push2his.eastmoney.com',)，2秒后重试(3/3)
+2026-04-15 21:25:54 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002261&beg=20250927&end=20260415
+2026-04-15 21:25:56 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002261&beg=20250927&end=20260415
+2026-04-15 21:26:00 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002261&beg=20250927&end=20260415
+2026-04-15 21:26:00 [ERROR] data.market_data: [002261] AkShare历史数据获取失败(已重试3次): HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002261&beg=20250927&end=20260415 (Caused by ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))
+2026-04-15 21:26:03 [INFO] data.market_data: [002261] 历史数据 128 条  2025-09-27~2026-04-15
+2026-04-15 21:26:04 [INFO] data.market_data: [002261] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:26:05 [WARNING] data.market_data: [002261] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:26:05 [INFO] data.market_data: [002261] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:26:10 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:26:10 [INFO] ai_decision.agent: [AI] 002261 → HOLD  置信:85%  均线多头但量比不足，MACD偏多，缺乏放量共振，确定性不足
+2026-04-15 21:26:14 [INFO] data.market_data: [002261] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:26:14 [WARNING] data.market_data: [002261] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:26:14 [INFO] data.market_data: [002261] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:26:20 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:26:20 [INFO] ai_decision.agent: [AI] 002261 → HOLD  置信:86%  均线多头但量比不足，MACD偏强，缺乏放量共振，继续观望
+2026-04-15 21:26:28 [INFO] data.market_data: [600103] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:26:28 [WARNING] data.market_data: [600103] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:26:29 [INFO] data.market_data: [600103] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:26:29 [INFO] data.market_data: [002261] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:26:29 [WARNING] data.market_data: [002261] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:26:29 [INFO] data.market_data: [002261] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:26:35 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:26:35 [INFO] ai_decision.agent: [AI] 002261 → HOLD  置信:84%  均线多头但量比不足，MACD偏多，未达放量共振条件
+2026-04-15 21:26:35 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:26:35 [INFO] ai_decision.agent: [AI] 600103 → BUY  置信:88%  均线多头排列，MACD金叉放大，量比2.22，RSI65未过热，多指标共振
+2026-04-15 21:26:35 [INFO] data.market_data: [600103] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:26:35 [WARNING] data.market_data: [600103] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:26:35 [INFO] data.market_data: [600103] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:26:42 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:26:42 [INFO] ai_decision.agent: [AI] 600103 → BUY  置信:90%  均线多头排列，MACD金叉强势，量能放大，RSI未过热，多指标共振
+2026-04-15 21:26:49 [WARNING] data.market_data: [002361] baostock 查询失败(网络接收错误。)，尝试AkShare
+2026-04-15 21:26:49 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002361&beg=20251216&end=20260415
+2026-04-15 21:26:51 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002361&beg=20251216&end=20260415
+2026-04-15 21:26:55 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002361&beg=20251216&end=20260415
+2026-04-15 21:26:56 [WARNING] data.market_data: [002361] AkShare请求失败(HTTPSConnectionPool(host='push2his.eastmoney.com',)，2秒后重试(1/3)
+2026-04-15 21:26:58 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002361&beg=20251216&end=20260415
+2026-04-15 21:27:00 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002361&beg=20251216&end=20260415
+2026-04-15 21:27:04 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002361&beg=20251216&end=20260415
+2026-04-15 21:27:04 [WARNING] data.market_data: [002361] AkShare请求失败(HTTPSConnectionPool(host='push2his.eastmoney.com',)，2秒后重试(2/3)
+2026-04-15 21:27:06 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002361&beg=20251216&end=20260415
+2026-04-15 21:27:08 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002361&beg=20251216&end=20260415
+2026-04-15 21:27:13 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002361&beg=20251216&end=20260415
+2026-04-15 21:27:13 [WARNING] data.market_data: [002361] AkShare请求失败(HTTPSConnectionPool(host='push2his.eastmoney.com',)，2秒后重试(3/3)
+2026-04-15 21:27:14 [INFO] data.market_data: [002361] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:27:14 [WARNING] data.market_data: [002361] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:27:14 [INFO] data.market_data: [002361] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:27:15 [WARNING] urllib3.connectionpool: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002361&beg=20251216&end=20260415
+2026-04-15 21:27:17 [WARNING] urllib3.connectionpool: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002361&beg=20251216&end=20260415
+2026-04-15 21:27:21 [WARNING] urllib3.connectionpool: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002361&beg=20251216&end=20260415
+2026-04-15 21:27:21 [ERROR] data.market_data: [002361] AkShare历史数据获取失败(已重试3次): HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.002361&beg=20251216&end=20260415 (Caused by ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))
+2026-04-15 21:27:22 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:27:22 [INFO] ai_decision.agent: [AI] 002361 → HOLD  置信:92%  均线多头但RSI超80过热，追高确定性不足，观望优先
+2026-04-15 21:27:33 [INFO] data.market_data: [002361] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:27:34 [WARNING] data.market_data: [002361] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:27:34 [INFO] data.market_data: [002361] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:27:40 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:27:40 [INFO] ai_decision.agent: [AI] 002361 → HOLD  置信:93%  均线多头但RSI达80.07极端，短线过热，虽放量上行仍不符高确定性买点
+2026-04-15 21:28:14 [INFO] data.market_data: [000001] 历史数据 128 条  2025-09-27~2026-04-15
+2026-04-15 21:28:35 [INFO] data.market_data: [002361] 历史数据 128 条  2025-09-27~2026-04-15
+2026-04-15 21:28:39 [INFO] data.market_data: [002361] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:28:40 [WARNING] data.market_data: [002361] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:28:41 [INFO] data.market_data: [002361] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:28:46 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:28:46 [INFO] ai_decision.agent: [AI] 002361 → HOLD  置信:92%  均线多头但RSI超80过热，追高确定性不足，宜观望

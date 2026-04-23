@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>量化交易 Agent</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<style>
+:root{
+  --bg:#0d1117;--card:#161b22;--card2:#1c2128;--border:#30363d;
+  --text:#e6edf3;--muted:#8b949e;
+  --green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#58a6ff;
+  --purple:#bc8cff;--orange:#ffa657;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;overflow:hidden}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;display:flex;flex-direction:column}
+
+/* ── Navbar ── */
+.topnav{background:var(--card);border-bottom:1px solid var(--border);padding:0 20px;display:flex;align-items:center;height:46px;flex-shrink:0;position:relative;z-index:100}
+.topnav-brand{font-weight:700;color:var(--blue);font-size:.95rem;margin-right:20px;white-space:nowrap}
+.nav-tab{padding:0 14px;height:46px;display:flex;align-items:center;cursor:pointer;font-size:.82rem;color:var(--muted);border-bottom:2px solid transparent;transition:.15s;white-space:nowrap}
+.nav-tab:hover{color:var(--text)}
+.nav-tab.active{color:var(--blue);border-bottom-color:var(--blue)}
+.topnav-right{margin-left:auto;display:flex;align-items:center;gap:14px}
+
+/* ── Pages ── */
+#app-body{flex:1;overflow:hidden;display:flex;flex-direction:column}
+.page{display:none;height:100%;overflow-y:auto;padding:14px 18px}
+.page.active{display:flex;flex-direction:column}
+
+/* ── Cards ── */
+.metric-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 14px}
+.metric-card .lbl{color:var(--muted);font-size:.7rem;margin-bottom:2px}
+.metric-card .val{font-size:1.15rem;font-weight:700;line-height:1.2}
+.metric-card .sub{font-size:.68rem;color:var(--muted);margin-top:2px}
+
+/* ── Panel ── */
+.panel{background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.ph{padding:7px 12px;border-bottom:1px solid var(--border);font-weight:600;font-size:.82rem;display:flex;justify-content:space-between;align-items:center;gap:6px;flex-shrink:0}
+.ph-title{display:flex;align-items:center;gap:5px}
+
+/* ── Table ── */
+.tbl-wrap{overflow-x:auto;flex:1;overflow-y:auto}
+table{width:100%;border-collapse:collapse;font-size:.78rem}
+th{color:var(--muted);font-weight:500;padding:5px 10px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap;font-size:.72rem;position:sticky;top:0;background:var(--card)}
+td{padding:5px 10px;border-bottom:1px solid #21262d;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--card2)}
+
+/* ── Badges ── */
+.b-buy {background:rgba(63,185,80,.15); color:var(--green); border-radius:4px;padding:2px 8px;font-size:.7rem;font-weight:700}
+.b-sell{background:rgba(248,81,73,.15); color:var(--red);   border-radius:4px;padding:2px 8px;font-size:.7rem;font-weight:700}
+.b-hold{background:rgba(210,153,34,.15);color:var(--yellow);border-radius:4px;padding:2px 8px;font-size:.7rem;font-weight:700}
+
+/* ── Large action badge ── */
+.action-badge-lg{border-radius:8px;padding:6px 18px;font-size:1.1rem;font-weight:800;display:inline-block}
+.action-badge-lg.buy {background:rgba(63,185,80,.2); color:var(--green);border:1px solid var(--green)}
+.action-badge-lg.sell{background:rgba(248,81,73,.2); color:var(--red);  border:1px solid var(--red)}
+.action-badge-lg.hold{background:rgba(210,153,34,.2);color:var(--yellow);border:1px solid var(--yellow)}
+
+/* ── Colors ── */
+.up  {color:var(--red)}
+.down{color:var(--green)}
+.flat{color:var(--muted)}
+
+/* ── Buttons ── */
+.btn-xs{font-size:.73rem;padding:3px 10px;border-radius:5px;border:none;cursor:pointer;font-weight:500;transition:.15s;white-space:nowrap}
+.btn-xs:hover{filter:brightness(1.15)}
+.btn-xs:disabled{opacity:.5;cursor:default}
+.bp {background:var(--blue);  color:#000}
+.bg {background:var(--green); color:#000}
+.br {background:var(--red);   color:#fff}
+.bm {background:var(--card2); color:var(--text);border:1px solid var(--border)}
+.bw {background:var(--yellow);color:#000}
+.btn-icon{background:transparent;border:none;cursor:pointer;color:var(--muted);padding:2px 4px;font-size:.95rem;line-height:1}
+.btn-icon:hover{color:var(--yellow)}
+.btn-icon.starred{color:var(--yellow)}
+a.btn-xs{display:inline-block;text-decoration:none}
+
+/* ── Form ── */
+input,select,textarea{background:var(--card2);border:1px solid var(--border);color:var(--text);border-radius:5px;padding:4px 8px;font-size:.78rem}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue)}
+input::placeholder,textarea::placeholder{color:var(--muted)}
+textarea{resize:vertical;width:100%;min-height:48px;line-height:1.4}
+
+/* ── Conf bar ── */
+.conf-bar{background:#21262d;border-radius:3px;height:5px;width:60px;display:inline-block;vertical-align:middle;margin-right:4px}
+.conf-fill{height:100%;border-radius:3px;background:var(--blue);transition:.3s}
+
+/* ── Toast ── */
+.toast-wrap{position:fixed;top:52px;right:16px;z-index:9999;display:flex;flex-direction:column;gap:4px;pointer-events:none}
+.toast-msg{background:var(--card);border:1px solid var(--border);border-radius:7px;padding:8px 12px;font-size:.77rem;min-width:200px;max-width:300px;opacity:0;transform:translateX(12px);transition:.22s;pointer-events:all}
+.toast-msg.show{opacity:1;transform:translateX(0)}
+.toast-msg.ok  {border-left:3px solid var(--green)}
+.toast-msg.err {border-left:3px solid var(--red)}
+.toast-msg.info{border-left:3px solid var(--blue)}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+/* ── Chart containers ── */
+#klineChart{width:100%;flex:1;min-height:0}
+
+/* ── TF buttons ── */
+.tf-group{display:flex;gap:2px;flex-wrap:nowrap}
+.tf-btn{background:var(--card2);border:1px solid var(--border);color:var(--muted);padding:3px 8px;font-size:.72rem;border-radius:4px;cursor:pointer;transition:.12s;white-space:nowrap}
+.tf-btn:hover{color:var(--text);border-color:var(--muted)}
+.tf-btn.active{background:var(--blue);color:#000;border-color:var(--blue);font-weight:600}
+
+/* ── Fav item ── */
+.fav-item{display:flex;align-items:center;gap:6px;padding:5px 8px;border-radius:5px;cursor:pointer;transition:.1s}
+.fav-item:hover{background:var(--card2)}
+.fav-item.selected{background:rgba(88,166,255,.1);border-left:2px solid var(--blue);padding-left:6px}
+/* 左侧四合一标签 */
+.ltab{flex:1;background:transparent;border:none;border-bottom:2px solid transparent;padding:5px 2px;font-size:.68rem;color:var(--muted);cursor:pointer;transition:.12s;white-space:nowrap}
+.ltab:hover{color:var(--fg)}
+.ltab.active{color:var(--blue);border-bottom-color:var(--blue);font-weight:600}
+.ltab-content{display:none}
+.ltab-content.active-tc{display:flex!important}
+/* 持仓行 */
+.hold-row{display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:4px;cursor:pointer;font-size:.72rem}
+.hold-row:hover{background:var(--card2)}
+.hold-pnl.up{color:var(--red)}.hold-pnl.down{color:var(--green)}
+.fav-code{font-weight:600;font-size:.8rem}
+.fav-name{color:var(--muted);font-size:.7rem}
+
+/* ── Symbol tags ── */
+.sym-tag{display:inline-flex;align-items:center;gap:3px;background:var(--card2);border:1px solid var(--border);border-radius:4px;padding:2px 7px;font-size:.72rem;margin:2px}
+.sym-tag .rm{cursor:pointer;color:var(--muted)}
+.sym-tag .rm:hover{color:var(--red)}
+
+/* ── Intraday summary ── */
+.intraday-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.ind-item{background:var(--card2);border-radius:6px;padding:6px 8px;text-align:center}
+.ind-item .il{font-size:.63rem;color:var(--muted);margin-bottom:2px}
+.ind-item .iv{font-size:.82rem;font-weight:700}
+
+/* ── AI panel ── */
+.ai-reason-box{background:var(--card2);border-radius:7px;padding:10px 12px;font-size:.78rem;line-height:1.7;color:var(--text)}
+.ai-input-label{font-size:.72rem;color:var(--muted);margin-bottom:3px}
+
+/* ── AI history ── */
+.ai-hist-item{background:var(--card2);border-radius:6px;padding:5px 8px;cursor:pointer;transition:.1s;border:1px solid transparent}
+.ai-hist-item:hover{border-color:var(--border)}
+.ai-hist-item .ahi-row{display:flex;align-items:center;gap:5px;font-size:.72rem}
+.ai-hist-item .ahi-time{font-size:.63rem;color:var(--border);margin-top:1px}
+.ai-hist-item .ahi-reason{font-size:.67rem;color:var(--muted);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* ── Market page layout ── */
+#page-market{flex-direction:row;gap:10px;padding:10px 14px;overflow:hidden}
+.market-left{width:200px;flex-shrink:0;display:flex;flex-direction:column;gap:8px;overflow-y:auto}
+.market-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px;overflow:hidden}
+.kline-panel{flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+.bottom-row{display:flex;gap:8px;flex-shrink:0;height:260px}
+.market-right-col{width:300px;flex-shrink:0;display:flex;flex-direction:column;gap:8px;overflow:hidden}
+
+@media(max-width:1100px){
+  .market-right-col{width:260px}
+}
+@media(max-width:900px){
+  #page-market{flex-direction:column!important}
+  .market-left{width:100%;max-height:150px;flex-direction:row;flex-wrap:wrap;overflow-x:auto}
+  .market-right-col{width:100%;height:auto}
+  .bottom-row{height:auto;flex-direction:column}
+  .kline-panel{min-height:300px}
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="topnav">
+  <span class="topnav-brand"><i class="bi bi-activity"></i> 量化交易 Agent</span>
+  <span class="nav-tab active" onclick="showPage('market')" id="tab-market"><i class="bi bi-bar-chart-line me-1"></i>行情分析</span>
+  <span class="nav-tab" onclick="showPage('history')" id="tab-history"><i class="bi bi-journal-text me-1"></i>分析历史</span>
+  <span class="nav-tab" onclick="showPage('backtest')" id="tab-backtest"><i class="bi bi-clock-history me-1"></i>回测</span>
+  <div class="topnav-right">
+    <span id="clockText" style="font-size:.72rem;color:var(--muted)"></span>
+  </div>
+</nav>
+
+<div id="app-body">
+<div class="toast-wrap" id="toastWrap"></div>
+
+<!-- ═══════════════════ 邮件推送设置 Modal ═══════════════════ -->
+<div id="notifyModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.55);align-items:center;justify-content:center" onclick="if(event.target===this)closeNotifyConfig()">
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:24px;width:420px;max-width:96vw">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+      <b style="font-size:1rem"><i class="bi bi-envelope-fill" style="color:var(--blue)"></i> 邮件推送设置</b>
+      <button onclick="closeNotifyConfig()" class="btn-icon"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div style="font-size:.72rem;color:var(--muted);margin-bottom:12px;line-height:1.6">
+      推荐使用 <b>QQ邮箱</b>：SMTP服务器 smtp.qq.com，端口 465。<br>
+      需在QQ邮箱→设置→账户中开启 SMTP 并生成<b>授权码</b>（不是QQ密码）。<br>
+      发送到手机：将收件邮箱设为手机QQ邮件通知绑定的邮箱即可。
+    </div>
+    <div style="display:grid;grid-template-columns:100px 1fr;gap:8px;align-items:center;font-size:.82rem">
+      <label>SMTP服务器</label>
+      <input id="nc-host" class="search-input" style="padding:5px 8px" placeholder="smtp.qq.com" value="smtp.qq.com">
+      <label>端口</label>
+      <input id="nc-port" class="search-input" style="padding:5px 8px" placeholder="465" value="465" type="number">
+      <label>发件邮箱</label>
+      <input id="nc-sender" class="search-input" style="padding:5px 8px" placeholder="your@qq.com">
+      <label>授权码</label>
+      <input id="nc-pass" class="search-input" style="padding:5px 8px" type="password" placeholder="QQ邮箱授权码（非密码）">
+      <label>收件邮箱</label>
+      <input id="nc-receiver" class="search-input" style="padding:5px 8px" placeholder="手机收件邮箱">
+      <label>最低置信度</label>
+      <input id="nc-conf" class="search-input" style="padding:5px 8px" placeholder="0.60" value="0.60" type="number" step="0.05" min="0.3" max="1">
+    </div>
+    <div style="display:flex;gap:8px;margin-top:16px">
+      <button class="btn-xs bp" onclick="saveNotifyConfig()" style="flex:1">保存配置</button>
+    </div>
+    <div style="margin-top:10px">
+      <div style="font-size:.7rem;color:var(--muted);margin-bottom:6px">测试各类邮件（需先保存配置）</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+        <button class="btn-xs bm" onclick="testNotifyEmail('buy')" style="font-size:.7rem">📈 BUY信号</button>
+        <button class="btn-xs" onclick="testNotifyEmail('sell')" style="font-size:.7rem;background:var(--red);color:#fff;border:none;border-radius:5px;padding:5px;cursor:pointer">⚠️ 持仓SELL</button>
+        <button class="btn-xs" onclick="testNotifyEmail('ai_fail')" style="font-size:.7rem;background:#e67e22;color:#fff;border:none;border-radius:5px;padding:5px;cursor:pointer">🔴 AI告警</button>
+        <button class="btn-xs" onclick="testNotifyEmail('daily')" style="font-size:.7rem;background:#2980b9;color:#fff;border:none;border-radius:5px;padding:5px;cursor:pointer">📋 每日日报</button>
+      </div>
+    </div>
+    <div id="notifyConfigStatus" style="font-size:.72rem;margin-top:8px;text-align:center"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ PAGE: 行情分析 ═══════════════════════ -->
+<div class="page active" id="page-market">
+
+  <!-- 左侧 -->
+  <div class="market-left">
+    <!-- 搜索 -->
+    <div class="panel flex-shrink-0">
+      <div style="padding:6px 8px;display:flex;gap:5px">
+        <input id="m-searchSym" placeholder="代码/名称" style="flex:1;min-width:0" onkeydown="if(event.key==='Enter')loadKlineBySearch()">
+        <button class="btn-xs bp" onclick="loadKlineBySearch()">查</button>
+        <button class="btn-xs bm" title="加入监控" onclick="addSearchToWatch()"><i class="bi bi-eye"></i></button>
+      </div>
+    </div>
+
+    <!-- 四合一标签面板 -->
+    <div class="panel" style="flex:1;min-height:120px;overflow:hidden;display:flex;flex-direction:column">
+      <!-- 标签栏 -->
+      <div style="display:flex;border-bottom:1px solid var(--border);flex-shrink:0">
+        <button class="ltab active" id="ltab-watch" onclick="switchLeftTab('watch')"><i class="bi bi-eye"></i> 监控</button>
+        <button class="ltab" id="ltab-fav"    onclick="switchLeftTab('fav')"><i class="bi bi-star"></i> 收藏<span id="favCount" style="font-size:.6rem;margin-left:2px;color:var(--yellow)"></span></button>
+        <button class="ltab" id="ltab-sector" onclick="switchLeftTab('sector')"><i class="bi bi-grid-3x3-gap"></i> 龙头</button>
+        <button class="ltab" id="ltab-hold"   onclick="switchLeftTab('hold')"><i class="bi bi-briefcase"></i> 持仓</button>
+      </div>
+
+      <!-- 监控 -->
+      <div id="tc-watch" class="ltab-content" style="display:flex;flex-direction:column;flex:1;min-height:0">
+        <div style="padding:4px 6px;display:flex;gap:4px;flex-shrink:0">
+          <input id="m-addWatch" placeholder="代码" style="flex:1;min-width:0" onkeydown="if(event.key==='Enter')addWatchSymbol()">
+          <button class="btn-xs bm" onclick="addWatchSymbol()" style="padding:2px 7px">+</button>
+        </div>
+        <div id="watchList" style="flex:1;overflow-y:auto;padding:2px 0">
+          <div style="text-align:center;color:var(--muted);font-size:.72rem;padding:8px">暂无标的</div>
+        </div>
+      </div>
+
+      <!-- 收藏 -->
+      <div id="tc-fav" class="ltab-content" style="display:none;flex:1;min-height:0;overflow-y:auto">
+        <div id="favList" style="padding:2px 0">
+          <div style="text-align:center;color:var(--muted);font-size:.72rem;padding:8px">暂无收藏</div>
+        </div>
+      </div>
+
+      <!-- 龙头股信号列表 -->
+      <div id="tc-sector" class="ltab-content" style="display:none;flex:1;min-height:0;overflow-y:auto">
+        <div id="sectorSignalList" style="padding:2px 0">
+          <div style="text-align:center;color:var(--muted);font-size:.72rem;padding:8px">点击「扫描板块龙头」加载</div>
+        </div>
+        <div id="sectorScanTime" style="font-size:.6rem;color:var(--muted);padding:2px 8px 4px;flex-shrink:0"></div>
+      </div>
+
+      <!-- 持仓 -->
+      <div id="tc-hold" class="ltab-content" style="display:none;flex-direction:column;flex:1;min-height:0">
+        <div style="padding:4px 6px;flex-shrink:0;border-bottom:1px solid var(--border)">
+          <div style="display:grid;grid-template-columns:52px 52px 52px 1fr;gap:3px;align-items:center">
+            <input id="h-sym"    placeholder="代码" style="font-size:.72rem;padding:3px 5px" onkeydown="if(event.key==='Enter')addHolding()">
+            <input id="h-shares" placeholder="股数" type="number" style="font-size:.72rem;padding:3px 5px">
+            <input id="h-cost"   placeholder="成本" type="number" step="0.001" style="font-size:.72rem;padding:3px 5px">
+            <button class="btn-xs bm" onclick="addHolding()" style="padding:3px 6px;font-size:.72rem">+添加</button>
+          </div>
+        </div>
+        <div id="holdingList" style="flex:1;overflow-y:auto;padding:2px 0">
+          <div style="text-align:center;color:var(--muted);font-size:.72rem;padding:8px">暂无持仓</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI扫描 -->
+    <div class="panel flex-shrink-0">
+      <div style="padding:6px 8px;display:flex;flex-direction:column;gap:4px">
+        <button class="btn-xs bp" id="scanBtn" onclick="doScan()" style="width:100%;padding:4px"><i class="bi bi-search"></i> 扫描监控列表</button>
+        <div style="display:flex;gap:4px">
+          <button class="btn-xs" id="sectorScanBtn" onclick="doSectorScan()" style="flex:1;padding:4px;background:var(--card2);color:var(--fg);border:1px solid var(--border);font-size:.72rem"><i class="bi bi-grid-3x3-gap"></i> 龙头</button>
+          <button class="btn-xs" id="holdScanBtn" onclick="doHoldingScan()" style="flex:1;padding:4px;background:var(--card2);color:var(--fg);border:1px solid var(--border);font-size:.72rem"><i class="bi bi-briefcase"></i> 持仓</button>
+        </div>
+        <button class="btn-xs" onclick="showNotifyConfig()" style="width:100%;padding:3px;background:transparent;color:var(--muted);border:1px solid var(--border);font-size:.68rem"><i class="bi bi-envelope"></i> 邮件设置</button>
+        <div id="scanStatus" style="font-size:.65rem;color:var(--muted);text-align:center"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 中间主区域（K线+底部） -->
+  <div class="market-main">
+    <!-- K线面板 -->
+    <div class="kline-panel panel">
+      <div class="ph" style="flex-wrap:wrap;gap:4px">
+        <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:0">
+          <span id="klineTitle" style="font-weight:700;font-size:.92rem;white-space:nowrap">── 请选择股票 ──</span>
+          <span id="klinePrice" style="font-size:1.05rem;font-weight:700"></span>
+          <span id="klinePctChg" style="font-size:.82rem"></span>
+          <span id="klineUpdateTime" style="font-size:.65rem;color:var(--muted);margin-left:2px"></span>
+          <button class="btn-icon" id="starBtn" onclick="toggleFavorite(currentSymbol)" title="收藏/取消"><i class="bi bi-star"></i></button>
+          <button class="btn-icon" id="watchAddBtn" onclick="addCurrentToWatch()" title="加入扫描队列" style="display:none"><i class="bi bi-eye-fill" style="color:var(--blue)"></i></button>
+        </div>
+        <div style="display:flex;gap:5px;align-items:center;flex-wrap:wrap">
+          <div class="tf-group">
+            <button class="tf-btn" onclick="setTF('5','min')">5分</button>
+            <button class="tf-btn" onclick="setTF('15','min')">15分</button>
+            <button class="tf-btn" onclick="setTF('30','min')">30分</button>
+            <button class="tf-btn" onclick="setTF('60','min')">60分</button>
+            <button class="tf-btn active" onclick="setTF('daily','day')">日K</button>
+            <button class="tf-btn" onclick="setTF('weekly','day')">周K</button>
+          </div>
+          <div class="tf-group" id="daysBtns">
+            <button class="tf-btn" id="days30Btn" onclick="setDays(30)">30</button>
+            <button class="tf-btn active" id="days60Btn" onclick="setDays(60)">60</button>
+            <button class="tf-btn" id="days120Btn" onclick="setDays(120)">120</button>
+            <button class="tf-btn" id="days250Btn" onclick="setDays(250)">250</button>
+          </div>
+          <button class="btn-icon" id="klineRefreshBtn" onclick="refreshKline()" title="刷新K线" style="padding:2px 7px;font-size:.75rem;border-radius:4px;border:1px solid var(--border);background:var(--card);color:var(--fg);cursor:pointer;display:flex;align-items:center;gap:3px"><i class="bi bi-arrow-clockwise"></i> 刷新</button>
+        </div>
+      </div>
+      <div id="klineChart"></div>
+    </div>
+
+    <!-- 底部行：指标 + AI信号列表 -->
+    <div class="bottom-row">
+      <!-- 最新指标 -->
+      <div class="panel" style="flex:0 0 220px;overflow:hidden">
+        <div class="ph"><span class="ph-title"><i class="bi bi-activity"></i> 最新指标</span></div>
+        <div style="padding:8px;overflow-y:auto;flex:1" id="indicatorPanel">
+          <div style="text-align:center;color:var(--muted);font-size:.72rem;padding:8px">加载K线后显示</div>
+        </div>
+      </div>
+      <!-- AI信号列表 -->
+      <div class="panel" style="flex:1;min-width:0;overflow:hidden">
+        <div class="ph">
+          <span class="ph-title"><i class="bi bi-table"></i> AI信号列表</span>
+          <span id="signalSource" style="font-size:.68rem;color:var(--muted);margin-left:6px"></span>
+          <span id="hotSectors" style="font-size:.68rem;color:var(--yellow);margin-left:auto"></span>
+        </div>
+        <div class="tbl-wrap">
+          <table><thead><tr><th>股票</th><th>板块</th><th>价格</th><th>RSI</th><th>信号</th><th>置信</th><th>情绪</th><th>理由</th><th>时间</th></tr></thead>
+          <tbody id="signalsTbody"><tr><td colspan="9" style="text-align:center;color:var(--muted);padding:10px">点击左侧「扫描监控列表」或「扫描板块龙头」获取信号</td></tr></tbody></table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 右侧：AI分析 -->
+  <div class="market-right-col">
+    <!-- 分时摘要 -->
+    <div class="panel flex-shrink-0" id="intradayPanel" style="display:none">
+      <div class="ph"><span class="ph-title"><i class="bi bi-clock"></i> 今日分时摘要</span></div>
+      <div style="padding:8px" id="intradayContent"></div>
+    </div>
+
+    <!-- AI分析输入 + 结论 -->
+    <div class="panel" style="flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column">
+      <div class="ph">
+        <span class="ph-title"><i class="bi bi-robot"></i> AI辅助分析</span>
+        <span id="aiSymbolTag" style="font-size:.7rem;color:var(--muted)"></span>
+      </div>
+      <div style="flex:1;overflow-y:auto;padding:8px 10px;display:flex;flex-direction:column;gap:8px">
+
+        <!-- 用户输入区 -->
+        <div>
+          <div class="ai-input-label">持仓状态（可留空）</div>
+          <input id="ai-holding" placeholder="如：空仓 / 持有500股均价12.5元" style="width:100%">
+        </div>
+        <div>
+          <div class="ai-input-label">可用资金（可留空）</div>
+          <input id="ai-capital" placeholder="如：5万 / 10000元" style="width:100%">
+        </div>
+        <div>
+          <div class="ai-input-label">补充说明 / 问题</div>
+          <textarea id="ai-note" placeholder="如：今天放量上涨，是否追高？&#10;或：准备长线持有，适合建仓吗？"></textarea>
+        </div>
+        <button class="btn-xs bp" id="analyzeBtn" onclick="analyzeCurrentSymbol()" disabled style="padding:7px;font-size:.8rem">
+          <i class="bi bi-robot"></i> 开始AI分析
+        </button>
+
+        <div id="analyzeLoading" style="display:none;text-align:center;padding:10px;color:var(--muted);font-size:.75rem">
+          <i class="bi bi-hourglass-split"></i> AI分析中，请稍候...
+        </div>
+
+        <!-- 分析结论 -->
+        <div id="aiDecisionPanel" style="display:none">
+          <div style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">
+            <!-- 主操作建议 -->
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap">
+              <span id="ai-action-badge"></span>
+              <div>
+                <div style="display:flex;align-items:center;gap:6px">
+                  <span class="conf-bar"><span class="conf-fill" id="ai-conf-fill"></span></span>
+                  <span id="ai-conf-text" style="font-size:.8rem;font-weight:600"></span>
+                  <span id="ai-risk-text" style="font-size:.72rem"></span>
+                </div>
+                <div id="ai-signal-text" style="font-size:.68rem;color:var(--muted);margin-top:2px"></div>
+              </div>
+            </div>
+            <!-- 理由 -->
+            <div class="ai-reason-box" id="ai-reason"></div>
+            <!-- 止盈止损条件单（仅BUY时显示） -->
+            <div id="ai-sl-tp-panel" style="display:none;margin-top:8px">
+              <div style="font-size:.72rem;color:var(--muted);margin-bottom:4px;font-weight:600">
+                <i class="bi bi-shield-exclamation"></i> 操作条件单
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px">
+                <div style="background:rgba(248,81,73,.1);border:1px solid rgba(248,81,73,.3);border-radius:6px;padding:6px 8px">
+                  <div style="font-size:.63rem;color:var(--muted)">止损价</div>
+                  <div id="ai-stop-loss" style="font-size:.9rem;font-weight:700;color:var(--red)">--</div>
+                  <div id="ai-stop-loss-pct" style="font-size:.65rem;color:var(--muted)"></div>
+                </div>
+                <div style="background:rgba(63,185,80,.1);border:1px solid rgba(63,185,80,.3);border-radius:6px;padding:6px 8px">
+                  <div style="font-size:.63rem;color:var(--muted)">止盈价</div>
+                  <div id="ai-take-profit" style="font-size:.9rem;font-weight:700;color:var(--green)">--</div>
+                  <div id="ai-take-profit-pct" style="font-size:.65rem;color:var(--muted)"></div>
+                </div>
+              </div>
+              <div id="ai-position-advice" style="margin-top:5px;font-size:.73rem;background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.2);border-radius:6px;padding:5px 8px;color:var(--blue)"></div>
+            </div>
+            <!-- 情绪 -->
+            <div id="ai-sentiment" style="margin-top:7px;font-size:.73rem;color:var(--muted)"></div>
+            <!-- 分时数据摘要（行内） -->
+            <div id="ai-intraday-note" style="margin-top:5px;font-size:.7rem;color:var(--muted)"></div>
+            <!-- 数据新鲜度标注 -->
+            <div id="ai-data-label" style="margin-top:4px;font-size:.67rem;font-weight:600"></div>
+            <div id="ai-timestamp" style="font-size:.65rem;color:var(--border);margin-top:3px"></div>
+          </div>
+        </div>
+
+        <!-- AI 历史记录 -->
+        <div id="aiHistorySection" style="display:none;border-top:1px solid var(--border);padding-top:6px;margin-top:2px">
+          <div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:2px 0 5px" onclick="toggleAiHistory()">
+            <span style="font-size:.72rem;color:var(--muted);font-weight:600"><i class="bi bi-clock-history"></i> 历史分析 <span id="aiHistoryCount" style="color:var(--blue)"></span></span>
+            <i class="bi bi-chevron-down" id="aiHistoryChevron" style="font-size:.7rem;color:var(--muted);transition:.2s"></i>
+          </div>
+          <div id="aiHistoryList" style="display:flex;flex-direction:column;gap:3px"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════ PAGE: 分析历史 ═══════════════════════ -->
+<div class="page" id="page-history">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-shrink:0">
+    <input id="hist-sym-filter" placeholder="按代码筛选（如 000001）" style="width:160px" oninput="filterHistoryTable()" onkeydown="if(event.key==='Enter')loadHistoryPage()">
+    <button class="btn-xs bp" onclick="loadHistoryPage()"><i class="bi bi-arrow-clockwise"></i> 刷新</button>
+    <span id="hist-count" style="font-size:.72rem;color:var(--muted)"></span>
+    <span style="margin-left:auto;font-size:.72rem;color:var(--muted)">点击行可跳转到行情分析</span>
+  </div>
+  <div class="panel" style="flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column">
+    <div class="ph"><span class="ph-title"><i class="bi bi-journal-text"></i> AI分析历史记录</span>
+      <span style="font-size:.68rem;color:var(--muted)">每次AI分析均自动保存</span>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr>
+          <th>时间</th><th>股票</th><th>名称</th><th>价格</th>
+          <th>信号</th><th>置信</th><th>RSI</th><th>均线</th>
+          <th>MACD</th><th>量比</th><th>情绪</th><th>止损</th><th>止盈</th><th>理由</th>
+        </tr></thead>
+        <tbody id="histTbody">
+          <tr><td colspan="14" style="text-align:center;color:var(--muted);padding:20px">请点击「刷新」加载历史记录</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ PAGE: 回测 ═══════════════════════ -->
+<div class="page" id="page-backtest">
+  <div class="row g-3">
+    <div class="col-12 col-md-3">
+      <div class="panel">
+        <div class="ph"><span class="ph-title"><i class="bi bi-sliders"></i> 回测参数</span></div>
+        <div style="padding:12px;display:flex;flex-direction:column;gap:10px">
+          <div><div style="font-size:.72rem;color:var(--muted);margin-bottom:3px">股票代码</div>
+            <input id="bt-symbol" placeholder="000001" style="width:100%"></div>
+          <div><div style="font-size:.72rem;color:var(--muted);margin-bottom:3px">开始日期</div>
+            <input id="bt-start" placeholder="20230101" style="width:100%"></div>
+          <div><div style="font-size:.72rem;color:var(--muted);margin-bottom:3px">结束日期</div>
+            <input id="bt-end" placeholder="20251231" style="width:100%"></div>
+          <div><div style="font-size:.72rem;color:var(--muted);margin-bottom:3px">初始资金（元）</div>
+            <input id="bt-capital" placeholder="1000000" value="1000000" type="number" style="width:100%"></div>
+          <button class="btn-xs bp" style="padding:7px" onclick="runBacktest()">
+            <i class="bi bi-play-circle"></i> 运行回测</button>
+          <div style="font-size:.65rem;color:var(--muted);line-height:1.6;background:var(--card2);border-radius:6px;padding:8px">
+            <b>策略说明：</b><br>
+            买入：MACD金叉 / 价格上穿MA20 / 多头+MACD / 量价齐升<br>
+            卖出：MACD死叉 / RSI&gt;80 / 跌破MA20 / 止损5% / 止盈15%
+          </div>
+          <div id="bt-status" style="font-size:.75rem;color:var(--muted)"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-9">
+      <div class="panel" id="bt-resultPanel" style="display:none">
+        <div class="ph"><span class="ph-title"><i class="bi bi-clipboard-data"></i> 回测结果</span></div>
+        <div style="padding:12px">
+          <div class="row g-2 mb-3" id="bt-cards"></div>
+          <table style="max-width:480px"><tbody id="bt-tbody"></tbody></table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- #app-body -->
+
+<script>
+// ══════════════════════════════════════════════
+// 工具
+// ══════════════════════════════════════════════
+const fmt  = (n,d=2)=>n==null?'--':Number(n).toFixed(d)
+const fmtM = n=>n==null?'--':(Math.abs(n)>=1e4?(n/1e4).toFixed(2)+'万':fmt(n))
+const pct  = n=>n==null?'--':(n*100).toFixed(2)+'%'
+const pctV = n=>n==null?'--':(n>=0?'+':'')+n.toFixed(2)+'%'
+const clrN = n=>n>0.001?'up':n<-0.001?'down':'flat'
+
+const badge = a => a==='BUY'
+  ? '<span class="b-buy">买入</span>'
+  : a==='SELL'||a?.startsWith('SELL')
+    ? '<span class="b-sell">卖出</span>'
+    : '<span class="b-hold">持有</span>'
+
+const sentBadge = s => s==='positive'
+  ? '<span style="color:var(--green);font-size:.7rem;font-weight:600">↑利好</span>'
+  : s==='negative'
+    ? '<span style="color:var(--red);font-size:.7rem;font-weight:600">↓利空</span>'
+    : '<span style="color:var(--muted);font-size:.7rem">→中性</span>'
+
+function toast(msg, type='info'){
+  const wrap = document.getElementById('toastWrap')
+  const el = document.createElement('div')
+  el.className = `toast-msg ${type}`; el.textContent = msg
+  wrap.appendChild(el)
+  requestAnimationFrame(()=>el.classList.add('show'))
+  setTimeout(()=>{el.classList.remove('show');setTimeout(()=>el.remove(),250)}, 3500)
+}
+
+setInterval(()=>{
+  document.getElementById('clockText').textContent = new Date().toLocaleString('zh-CN',{hour12:false})
+}, 1000)
+
+// ══════════════════════════════════════════════
+// 导航
+// ══════════════════════════════════════════════
+function showPage(name){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'))
+  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'))
+  document.getElementById('page-'+name).classList.add('active')
+  document.getElementById('tab-'+name).classList.add('active')
+  setTimeout(()=>{ if(name==='market') klineChart.resize() }, 30)
+  if(name==='market'){ loadFavorites(); loadWatchList(); }
+  if(name==='history'){ loadHistoryPage(); }
+}
+
+// ══════════════════════════════════════════════
+// 收藏 / 监控
+// ══════════════════════════════════════════════
+let favorites = new Set()
+let _namedSymbols = []
+
+async function loadFavorites(){
+  const data = await fetch('/api/favorites').then(r=>r.json()).catch(()=>[])
+  favorites = new Set(data.map(f=>f.symbol))
+  document.getElementById('favCount').textContent = data.length
+  const list = document.getElementById('favList')
+  list.innerHTML = data.length===0
+    ? '<div style="text-align:center;color:var(--muted);font-size:.72rem;padding:8px">暂无收藏</div>'
+    : data.map(f=>{
+        const inWatch = _namedSymbols.some(x=>x.symbol===f.symbol)
+        const eyeIcon = inWatch
+          ? `<i class="bi bi-eye-fill" style="font-size:.8rem;color:var(--blue)"></i>`
+          : `<i class="bi bi-eye" style="font-size:.8rem"></i>`
+        const eyeTitle = inWatch ? '已在监控队列' : '加入监控队列'
+        return `<div class="fav-item${currentSymbol===f.symbol?' selected':''}" id="fav-${f.symbol}" onclick="loadKlineBySymbol('${f.symbol}')">
+          <i class="bi bi-star-fill" style="color:var(--yellow);font-size:.7rem;flex-shrink:0"></i>
+          <div style="min-width:0;flex:1">
+            <div class="fav-code">${f.symbol}</div>
+            <div class="fav-name" style="overflow:hidden;text-overflow:ellipsis">${f.name||f.symbol}</div>
+          </div>
+          <button class="btn-icon" title="${eyeTitle}" onclick="event.stopPropagation();addSymbolToWatch('${f.symbol}')">${eyeIcon}</button>
+          <button class="btn-icon" onclick="event.stopPropagation();removeFav('${f.symbol}')"><i class="bi bi-x"></i></button>
+        </div>`
+      }).join('')
+  updateStarBtn()
+}
+
+async function loadWatchList(){
+  const r = await fetch('/api/symbols').then(r=>r.json()).catch(()=>({symbols:[],named:[]}))
+  const named = r.named||[]
+  if(named.length) _namedSymbols = named
+  const el = document.getElementById('watchList')
+  el.innerHTML = named.length===0
+    ? '<div style="text-align:center;color:var(--muted);font-size:.72rem;padding:8px">暂无标的</div>'
+    : named.map(({symbol:s,name:n})=>`<div class="fav-item${currentSymbol===s?' selected':''}" id="watch-${s}" onclick="loadKlineBySymbol('${s}')">
+        <i class="bi bi-circle-fill" style="color:var(--blue);font-size:.4rem;flex-shrink:0;margin-top:2px"></i>
+        <div style="min-width:0;flex:1">
+          <div class="fav-code">${s} <span style="font-size:.62rem;color:var(--muted);font-weight:400">${n&&n!==s?n:''}</span></div>
+          <div id="wq-chg-${s}" style="font-size:.62rem;color:var(--muted)">—</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0;margin-right:2px">
+          <div id="wq-price-${s}" style="font-size:.75rem;font-weight:600;color:var(--fg)">—</div>
+        </div>
+        <button class="btn-icon" onclick="event.stopPropagation();removeWatchSymbol('${s}')"><i class="bi bi-x"></i></button>
+      </div>`).join('')
+  // 列表重建后立即刷新一次行情
+  _refreshAllPrices()
+}
+
+async function addWatchSymbol(){
+  const inp = document.getElementById('m-addWatch')
+  const sym = inp.value.trim().padStart(6,'0'); if(!sym||sym.length<6)return
+  await fetch('/api/symbols/add',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({symbol:sym})}).then(r=>r.json())
+  inp.value = ''; await loadWatchList(); loadFavorites(); toast(`已添加监控 ${sym}`)
+}
+
+
+async function addCurrentToWatch(){
+  if(!currentSymbol) return
+  await addSymbolToWatch(currentSymbol)
+}
+
+async function removeWatchSymbol(sym){
+  await fetch('/api/symbols/remove',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({symbol:sym})}).then(r=>r.json())
+  await loadWatchList(); loadFavorites(); toast(`已移除监控 ${sym}`)
+}
+
+async function toggleFavorite(sym){
+  if(!sym)return
+  if(favorites.has(sym)) await removeFav(sym)
+  else await addFav(sym)
+}
+
+async function addFav(sym){
+  await fetch(`/api/favorites/${sym}`,{method:'POST'})
+  favorites.add(sym); updateStarBtn(); await loadFavorites(); toast(`已收藏 ${sym}`,'ok')
+}
+
+async function removeFav(sym){
+  await fetch(`/api/favorites/${sym}`,{method:'DELETE'})
+  favorites.delete(sym); updateStarBtn(); await loadFavorites(); toast(`已取消收藏 ${sym}`)
+}
+
+function updateStarBtn(){
+  const btn = document.getElementById('starBtn'); if(!btn)return
+  const starred = currentSymbol && favorites.has(currentSymbol)
+  btn.innerHTML = starred ? '<i class="bi bi-star-fill"></i>' : '<i class="bi bi-star"></i>'
+  btn.className = 'btn-icon'+(starred?' starred':'')
+}
+
+// ══════════════════════════════════════════════
+// K线图
+// ══════════════════════════════════════════════
+let klineChart = echarts.init(document.getElementById('klineChart'), 'dark')
+let currentSymbol = '', currentTF = 'daily', currentTFType = 'day', currentDays = 60
+let _klineTimer = null, _autoScanTimer = null
+const aiCache = {}     // symbol → {data, fetchedAt}
+const aiHistory = []   // [{symbol, name, action, confidence, reason, time}]
+let _aiHistoryOpen = false
+
+function _clearKlineTimer(){ if(_klineTimer){ clearInterval(_klineTimer); _klineTimer=null } }
+
+// 判断当前是否在 A股 交易时段（本地时间，不含节假日）
+function _inTradingHours(){
+  const now = new Date(), day = now.getDay()
+  if(day===0||day===6) return false
+  const t = now.getHours()*100 + now.getMinutes()
+  return (t>=925&&t<=1130)||(t>=1300&&t<=1505)
+}
+
+const baseOpt = {
+  backgroundColor:'transparent', animation:false,
+  grid:[
+    {top:'2%', left:58, right:16, height:'58%'},   // K线主图 +10%
+    {top:'63%',left:58, right:16, height:'10%'},   // 成交量
+    {top:'76%',left:58, right:16, height:'10%'},   // MACD
+    {top:'89%',left:58, right:16, height:'7%'},    // RSI
+  ],
+  xAxis:[0,1,2,3].map(i=>({type:'category',data:[],gridIndex:i,show:i===0,
+    axisLine:{lineStyle:{color:'#30363d'}},axisLabel:{color:'#8b949e',fontSize:9},
+    axisPointer:{show:true}})),
+  yAxis:[
+    {scale:true,gridIndex:0,splitLine:{lineStyle:{color:'#21262d'}},axisLabel:{color:'#8b949e',fontSize:9}},
+    {scale:true,gridIndex:1,splitLine:{show:false},axisLabel:{color:'#8b949e',fontSize:8,formatter:v=>v>=1e8?(v/1e8).toFixed(0)+'亿':v>=1e4?(v/1e4).toFixed(0)+'万':v}},
+    {scale:true,gridIndex:2,splitLine:{lineStyle:{color:'#21262d',type:'dashed'}},axisLabel:{color:'#8b949e',fontSize:8}},
+    {min:0,max:100,gridIndex:3,splitLine:{lineStyle:{color:'#21262d',type:'dashed'}},axisLabel:{color:'#8b949e',fontSize:8}},
+  ],
+  dataZoom:[
+    {type:'inside',xAxisIndex:[0,1,2,3],start:60,end:100},
+    {type:'slider',xAxisIndex:[0,1,2,3],start:60,end:100,bottom:0,height:18,borderColor:'#30363d',textStyle:{color:'#8b949e',fontSize:8}},
+  ],
+  tooltip:{trigger:'axis',axisPointer:{type:'cross',crossStyle:{color:'#555'}},
+    backgroundColor:'#1c2128',borderColor:'#30363d',textStyle:{color:'#e6edf3',fontSize:10},
+    formatter:params=>{
+      if(!params?.length)return''
+      let h=`<div style="font-weight:600;margin-bottom:3px">${params[0].axisValue}</div>`
+      params.forEach(p=>{
+        if(p.seriesName==='K线'&&p.value){const[o,c,l,hh]=p.value;h+=`<div>开:${o} 收:${c} 低:${l} 高:${hh}</div>`}
+        else if(p.value!=null&&p.seriesName!=='成交量')
+          h+=`<div><span style="color:${p.color}">${p.seriesName}</span>: ${typeof p.value==='number'?p.value.toFixed(3):p.value}</div>`
+      });return h}},
+  legend:{data:['MA5','MA20','MA60'],top:2,right:20,textStyle:{color:'#8b949e',fontSize:9}},
+  series:[
+    {name:'K线',type:'candlestick',xAxisIndex:0,yAxisIndex:0,data:[],
+     itemStyle:{color:'#f85149',color0:'#3fb950',borderColor:'#f85149',borderColor0:'#3fb950'}},
+    {name:'MA5', type:'line',xAxisIndex:0,yAxisIndex:0,data:[],lineStyle:{color:'#ffa657',width:1},showSymbol:false},
+    {name:'MA20',type:'line',xAxisIndex:0,yAxisIndex:0,data:[],lineStyle:{color:'#58a6ff',width:1},showSymbol:false},
+    {name:'MA60',type:'line',xAxisIndex:0,yAxisIndex:0,data:[],lineStyle:{color:'#d29922',width:1.5},showSymbol:false},
+    {name:'成交量',type:'bar',xAxisIndex:1,yAxisIndex:1,data:[],itemStyle:{color:'#30363d'}},
+    {name:'DIF',type:'line',xAxisIndex:2,yAxisIndex:2,data:[],lineStyle:{color:'#58a6ff',width:1.2},showSymbol:false},
+    {name:'DEA',type:'line',xAxisIndex:2,yAxisIndex:2,data:[],lineStyle:{color:'#f85149',width:1.2},showSymbol:false},
+    {name:'MACD',type:'bar',xAxisIndex:2,yAxisIndex:2,data:[]},
+    {name:'RSI',type:'line',xAxisIndex:3,yAxisIndex:3,data:[],lineStyle:{color:'#bc8cff',width:1.5},showSymbol:false,
+     markLine:{silent:true,data:[{yAxis:70,lineStyle:{color:'#f85149',type:'dashed',width:1}},{yAxis:30,lineStyle:{color:'#3fb950',type:'dashed',width:1}}]}},
+  ],
+}
+
+const intradayOpt = {
+  backgroundColor:'transparent',animation:false,
+  grid:[{top:'4%',left:58,right:16,height:'72%'},{top:'80%',left:58,right:16,height:'14%'}],
+  xAxis:[
+    {type:'category',data:[],gridIndex:0,axisLine:{lineStyle:{color:'#30363d'}},axisLabel:{color:'#8b949e',fontSize:9}},
+    {type:'category',data:[],gridIndex:1,show:false},
+  ],
+  yAxis:[
+    {scale:true,gridIndex:0,splitLine:{lineStyle:{color:'#21262d'}},axisLabel:{color:'#8b949e',fontSize:9}},
+    {scale:true,gridIndex:1,splitLine:{show:false},axisLabel:{color:'#8b949e',fontSize:8}},
+  ],
+  dataZoom:[{type:'inside',xAxisIndex:[0,1]},{type:'slider',xAxisIndex:[0,1],bottom:0,height:16,borderColor:'#30363d',textStyle:{color:'#8b949e',fontSize:8}}],
+  tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:'#30363d',textStyle:{color:'#e6edf3',fontSize:10}},
+  series:[
+    {name:'价格',type:'line',xAxisIndex:0,yAxisIndex:0,data:[],lineStyle:{color:'#58a6ff',width:1.5},showSymbol:false,
+     areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(88,166,255,0.25)'},{offset:1,color:'rgba(88,166,255,0.02)'}]}}},
+    {name:'成交量',type:'bar',xAxisIndex:1,yAxisIndex:1,data:[],itemStyle:{color:'#30363d'}},
+  ],
+}
+
+klineChart.setOption(baseOpt)
+window.addEventListener('resize', ()=>klineChart.resize())
+
+function setTF(tf, type){
+  _clearKlineTimer()
+  _stopPriceRefresh()
+  currentTF = tf; currentTFType = type
+  document.querySelectorAll('.tf-btn').forEach(b=>{
+    const t = b.textContent.trim()
+    b.classList.toggle('active',
+      (tf==='5'&&t==='5分')||(tf==='15'&&t==='15分')||
+      (tf==='30'&&t==='30分')||(tf==='60'&&t==='60分')||
+      (tf==='daily'&&t==='日K')||(tf==='weekly'&&t==='周K'))
+  })
+  const daysBtns = document.getElementById('daysBtns')
+  if(daysBtns) daysBtns.style.visibility = type==='min' ? 'hidden' : 'visible'
+  if(currentSymbol) loadKline()
+}
+
+function setDays(d){
+  currentDays = d
+  ;[30,60,120,250].forEach(n=>{const b=document.getElementById(`days${n}Btn`);if(b)b.classList.toggle('active',n===d)})
+  if(currentSymbol) loadKline()
+}
+
+function refreshKline(){
+  if(!currentSymbol){ toast('请先选择股票','err'); return }
+  const btn = document.getElementById('klineRefreshBtn')
+  if(btn){ btn.disabled = true; btn.style.opacity = '0.5' }
+  loadKline(true).finally(()=>{
+    if(btn){ btn.disabled = false; btn.style.opacity = '' }
+  })
+}
+
+async function loadKline(forceRefresh=false){
+  if(!currentSymbol){ toast('请先选择股票','err'); return }
+  const sym = currentSymbol  // capture in case it changes during await
+  try{
+    if(currentTFType === 'min'){
+      const minDays = currentTF==='1'?1:currentTF==='5'?3:5
+      const minResp = await fetch(`/api/kline/${sym}/minute?period=${currentTF}&days=${minDays}`)
+      if(sym !== currentSymbol) return  // switched away
+      if(!minResp.ok){
+        _clearKlineTimer()
+        klineChart.setOption(baseOpt, true)
+        klineChart.setOption({xAxis:[0,1,2,3].map(()=>({data:[]})),
+          series:[{data:[]},{data:[]},{data:[]},{data:[]},{data:[]},{data:[]},{data:[]},{data:[]},{data:[]}]})
+        document.getElementById('indicatorPanel').innerHTML =
+          '<div style="text-align:center;color:var(--muted);font-size:.72rem;padding:10px"><i class="bi bi-info-circle"></i> 分钟数据暂无缓存，请在交易时段加载</div>'
+        const utNoCache = document.getElementById('klineUpdateTime')
+        utNoCache.textContent = '无分钟缓存'; utNoCache.dataset.base = '无分钟缓存'; utNoCache.style.color = ''
+        _startPriceRefresh(sym)
+        return
+      }
+      const d = await minResp.json()
+      if(sym !== currentSymbol) return
+      let prevDate = null
+      const xLabels = d.times.map(t=>{
+        const date = t.slice(5,10), time = t.slice(11,16)
+        const label = (!prevDate||date!==prevDate) ? `${date} ${time}` : time
+        prevDate = date; return label
+      })
+      klineChart.setOption(intradayOpt, true)
+      klineChart.setOption({
+        xAxis:[{data:xLabels,axisLabel:{interval:'auto',rotate:0,fontSize:9}},{data:xLabels}],
+        tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:'#30363d',textStyle:{color:'#e6edf3',fontSize:10},
+          formatter:params=>{
+            if(!params?.length)return''
+            const idx = params[0].dataIndex
+            const fullTime = d.times[idx]||''
+            let h = `<div style="font-weight:600;margin-bottom:3px">${fullTime.slice(0,16)}</div>`
+            params.forEach(p=>{if(p.value!=null)h+=`<div><span style="color:${p.color}">${p.seriesName}</span>: ${typeof p.value==='number'?p.value.toFixed(3):p.value}</div>`}); return h}},
+        series:[{data:d.close},{data:d.volume}]
+      })
+      // 更新时间显示
+      const lastT = (d.last_time||'').slice(0,16)
+      const dayLabel = d.is_today ? '今日' : '历史'
+      const baseText = lastT ? `${lastT} [${dayLabel}]` : ''
+      const utEl = document.getElementById('klineUpdateTime')
+      utEl.textContent = baseText; utEl.dataset.base = baseText; utEl.style.color = ''
+      // 交易时段每10秒自动刷新分时图，非交易时段不轮询
+      _clearKlineTimer()
+      if(_inTradingHours()){
+        _klineTimer = setInterval(()=>{ if(currentTFType==='min'&&_inTradingHours()) loadKline() }, 10000)
+      }
+      _startPriceRefresh(sym)
+    } else {
+      const refreshParam = forceRefresh ? '&refresh=true' : ''
+      const d = await fetch(`/api/kline/${sym}?days=${currentDays}&period=${currentTF}${refreshParam}`)
+        .then(r=>{ if(!r.ok)throw new Error(r.status); return r.json() })
+      if(sym !== currentSymbol) return
+      if(d.name && d.name !== d.symbol){
+        document.getElementById('klineTitle').textContent = `${d.symbol}  ${d.name}`
+        const idx = _namedSymbols.findIndex(x=>x.symbol===d.symbol)
+        if(idx>=0)_namedSymbols[idx].name = d.name
+        else _namedSymbols.push({symbol:d.symbol, name:d.name})
+      }
+      const candles = d.dates.map((_,i)=>[d.open[i],d.close[i],d.low[i],d.high[i]])
+      const volData = d.volume.map((v,i)=>({value:v,itemStyle:{color:d.close[i]>=d.open[i]?'rgba(63,185,80,0.5)':'rgba(248,81,73,0.5)'}}))
+      const macdBars = d.macd_hist.map(v=>({value:v,itemStyle:{color:v>=0?'rgba(63,185,80,0.7)':'rgba(248,81,73,0.7)'}}))
+      klineChart.setOption(baseOpt, true)
+      klineChart.setOption({
+        xAxis:[0,1,2,3].map(()=>({data:d.dates})),
+        series:[{data:candles},{data:d.ma5.map(v=>v||null)},{data:d.ma20.map(v=>v||null)},{data:d.ma60.map(v=>v||null)},{data:volData},{data:d.macd_dif},{data:d.macd_dea},{data:macdBars},{data:d.rsi}]
+      })
+      updateIndicPanel(d)
+      // 更新时间显示（日K/周K）
+      const baseD = d.last_date ? `截至 ${d.last_date}` : ''
+      const utElD = document.getElementById('klineUpdateTime')
+      utElD.textContent = baseD; utElD.dataset.base = baseD; utElD.style.color = ''
+      // 日K：交易时段每60秒刷新；周K不轮询
+      _clearKlineTimer()
+      if(currentTF === 'daily' && _inTradingHours()){
+        _klineTimer = setInterval(()=>{ if(currentTFType!=='min'&&_inTradingHours()) loadKline() }, 60000)
+      }
+      _startPriceRefresh(sym)
+    }
+  }catch(e){ toast('K线加载失败: '+e.message, 'err') }
+
+  // K线加载完成后，独立刷新实时价格（不影响图表渲染）
+  _refreshPrice(sym)
+}
+
+// ── 独立实时价格刷新（腾讯API，仅更新价格显示）────────────────────────────
+let _priceTimer = null
+
+function _startPriceRefresh(sym){
+  _stopPriceRefresh()
+  _refreshPrice(sym)
+  // 交易时段每8秒刷新实时价格；非交易时段只查一次（显示收盘价）
+  if(_inTradingHours()){
+    _priceTimer = setInterval(()=>{ if(currentSymbol===sym&&_inTradingHours()) _refreshPrice(sym) }, 8000)
+  }
+}
+
+function _stopPriceRefresh(){
+  if(_priceTimer){ clearInterval(_priceTimer); _priceTimer=null }
+}
+
+async function _refreshPrice(sym){
+  if(!sym || sym !== currentSymbol) return
+  try{
+    const q = await fetch(`/api/quote/${sym}`).then(r=>r.ok?r.json():null)
+    if(!q || !q.price || sym !== currentSymbol) return
+    document.getElementById('klinePrice').textContent = fmt(q.price)
+    if(q.prev_close && q.prev_close > 0){
+      const pchg = (q.price - q.prev_close) / q.prev_close
+      const pe = document.getElementById('klinePctChg')
+      pe.textContent = (pchg>=0?'+':'')+pct(pchg)
+      pe.className = clrN(pchg)
+    }
+    // 更新时间标注（追加实时标记）
+    const timeLabel = q.is_realtime
+      ? `实时 ${(q.time||'').slice(0,5)}`
+      : `收盘 ${q.data_date||''}`
+    const utEl = document.getElementById('klineUpdateTime')
+    // 保留图表数据时间，追加价格时间
+    const base = (utEl.dataset.base || utEl.textContent || '').split('  ')[0]
+    utEl.dataset.base = base
+    utEl.textContent = base ? `${base}  |  ${timeLabel}` : timeLabel
+    utEl.style.color = q.is_realtime ? 'var(--green)' : 'var(--yellow)'
+  }catch(_){}
+}
+
+function updateIndicPanel(d){
+  const last = k=>d[k]?.[d[k].length-1]
+  const close = last('close'), prev = d.close?.[d.close.length-2]
+  const pchg = prev ? (close-prev)/prev : 0
+  const rsi = last('rsi')
+  const ma5 = last('ma5'), ma20 = last('ma20'), ma60 = last('ma60')
+
+  document.getElementById('klinePrice').textContent = fmt(close)
+  const pe = document.getElementById('klinePctChg')
+  pe.textContent = (pchg>=0?'+':'')+pct(pchg); pe.className = clrN(pchg)
+
+  // 判断趋势
+  let trend = '震荡', trendColor = 'var(--yellow)'
+  if(ma5 && ma20 && ma60){
+    if(ma5 > ma20 && ma20 > ma60){ trend = '上升趋势'; trendColor = 'var(--red)' }
+    else if(ma5 < ma20 && ma20 < ma60){ trend = '下降趋势'; trendColor = 'var(--green)' }
+  }
+
+  document.getElementById('indicatorPanel').innerHTML = `
+    <div style="margin-bottom:8px">
+      <div style="font-size:.68rem;color:var(--muted);margin-bottom:3px">均线趋势</div>
+      <span style="font-size:.8rem;font-weight:700;color:${trendColor}">${trend}</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;font-size:.75rem">
+      <div style="background:var(--card2);border-radius:5px;padding:5px 7px">
+        <div style="color:var(--muted);font-size:.63rem">RSI</div>
+        <div style="font-weight:700" class="${rsi>70?'up':rsi<30?'down':'flat'}">${fmt(rsi,1)}</div>
+      </div>
+      <div style="background:var(--card2);border-radius:5px;padding:5px 7px">
+        <div style="color:var(--muted);font-size:.63rem">MACD柱</div>
+        <div style="font-weight:700" class="${last('macd_hist')>=0?'up':'down'}">${fmt(last('macd_hist'),4)}</div>
+      </div>
+      <div style="background:var(--card2);border-radius:5px;padding:5px 7px">
+        <div style="color:var(--muted);font-size:.63rem">MA5</div>
+        <div>${fmt(ma5)}</div>
+      </div>
+      <div style="background:var(--card2);border-radius:5px;padding:5px 7px">
+        <div style="color:var(--muted);font-size:.63rem">MA20</div>
+        <div>${fmt(ma20)}</div>
+      </div>
+      <div style="background:var(--card2);border-radius:5px;padding:5px 7px">
+        <div style="color:var(--muted);font-size:.63rem">MA60</div>
+        <div>${fmt(ma60)}</div>
+      </div>
+      <div style="background:var(--card2);border-radius:5px;padding:5px 7px">
+        <div style="color:var(--muted);font-size:.63rem">DIF</div>
+        <div>${fmt(last('macd_dif'),4)}</div>
+      </div>
+    </div>`
+}
+
+function clearKlineChart(){
+  _clearKlineTimer()
+  _stopPriceRefresh()
+  // 切换股票时清空K线，防止误判旧图
+  klineChart.setOption(baseOpt, true)
+  klineChart.setOption({
+    xAxis:[0,1,2,3].map(()=>({data:[]})),
+    series:[{data:[]},{data:[]},{data:[]},{data:[]},{data:[]},{data:[]},{data:[]},{data:[]},{data:[]}]
+  })
+  document.getElementById('klinePrice').textContent = ''
+  document.getElementById('klinePctChg').textContent = ''
+  document.getElementById('klineUpdateTime').textContent = ''
+  document.getElementById('indicatorPanel').innerHTML =
+    '<div style="text-align:center;color:var(--muted);font-size:.72rem;padding:8px">加载中...</div>'
+  // 隐藏上一次的AI分析结论
+  document.getElementById('aiDecisionPanel').style.display = 'none'
+  document.getElementById('intradayPanel').style.display = 'none'
+}
+
+function loadKlineBySymbol(sym){
+  currentSymbol = sym
+  const nm = _namedSymbols.find(x=>x.symbol===sym)
+  document.getElementById('klineTitle').textContent = nm&&nm.name&&nm.name!==sym ? `${sym}  ${nm.name}` : sym
+  clearKlineChart()
+  document.querySelectorAll('.fav-item').forEach(e=>e.classList.remove('selected'))
+  ;['fav-','watch-'].forEach(pre=>{ const e=document.getElementById(pre+sym); if(e)e.classList.add('selected') })
+  document.getElementById('analyzeBtn').disabled = false
+  const watchBtn = document.getElementById('watchAddBtn')
+  if(watchBtn) watchBtn.style.display = ''
+  updateStarBtn()
+
+  // 如果有缓存的AI分析结果，立即显示
+  if(aiCache[sym]){
+    const cached = aiCache[sym]
+    document.getElementById('aiSymbolTag').textContent =
+      `${sym}  ·  上次分析 ${cached.fetchedAt}`
+    showAiDecision(cached.data)
+  } else {
+    document.getElementById('aiSymbolTag').textContent = sym
+    document.getElementById('aiDecisionPanel').style.display = 'none'
+  }
+  // 加载该股票的历史分析记录（从DB）
+  loadSymbolAnalysisHistory(sym)
+  loadKline()
+}
+
+function loadKlineBySearch(){
+  const raw = document.getElementById('m-searchSym').value.trim()
+  if(!raw){ toast('请输入股票代码','err'); return }
+  const sym = raw.padStart(6,'0')
+  loadKlineBySymbol(sym)
+}
+
+async function addSearchToWatch(){
+  const raw = document.getElementById('m-searchSym').value.trim()
+  if(!raw){ toast('请先输入股票代码','err'); return }
+  const sym = raw.padStart(6,'0')
+  await addSymbolToWatch(sym)
+}
+
+// ══════════════════════════════════════════════
+// AI 分析
+// ══════════════════════════════════════════════
+async function analyzeCurrentSymbol(){
+  if(!currentSymbol){ toast('请先选择股票','err'); return }
+  const holding = document.getElementById('ai-holding').value.trim()
+  const capital = document.getElementById('ai-capital').value.trim()
+  const note    = document.getElementById('ai-note').value.trim()
+
+  const btn = document.getElementById('analyzeBtn')
+  btn.disabled = true
+  document.getElementById('analyzeLoading').style.display = 'block'
+  document.getElementById('aiDecisionPanel').style.display = 'none'
+
+  toast(`正在分析 ${currentSymbol}...`, 'info')
+  try{
+    const r = await fetch(`/api/analyze/${currentSymbol}`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({holding, capital, note})
+    }).then(r=>r.json())
+    showAiDecision(r)
+    toast(`分析完成: ${r.action} · 置信 ${pct(r.confidence)}`, r.action==='BUY'?'ok':r.action==='SELL'?'err':'info')
+  }catch(e){
+    toast('分析失败: '+e.message, 'err')
+  }finally{
+    btn.disabled = false
+    document.getElementById('analyzeLoading').style.display = 'none'
+  }
+}
+
+function showAiDecision(d){
+  const rc = {LOW:'var(--green)', MEDIUM:'var(--yellow)', HIGH:'var(--red)'}
+  const sl = d.sentiment || {}
+  const sentColor = sl.label==='positive'?'var(--green)':sl.label==='negative'?'var(--red)':'var(--muted)'
+  const sentText  = sl.label==='positive'?'利好':sl.label==='negative'?'利空':'中性'
+
+  // 主操作标签
+  const actionLabel = d.action==='BUY'?'建议买入':d.action==='SELL'?'建议卖出':'建议持有/观望'
+  const actionClass = d.action==='BUY'?'buy':d.action==='SELL'?'sell':'hold'
+  document.getElementById('ai-action-badge').innerHTML =
+    `<span class="action-badge-lg ${actionClass}">${actionLabel}</span>`
+
+  // 置信度
+  document.getElementById('ai-conf-fill').style.width = Math.round((d.confidence||0)*100)+'%'
+  document.getElementById('ai-conf-text').textContent = '置信 '+pct(d.confidence)
+  document.getElementById('ai-risk-text').textContent = (d.risk_level||'')+'风险'
+  document.getElementById('ai-risk-text').style.color = rc[d.risk_level]||'var(--muted)'
+  document.getElementById('ai-signal-text').textContent = '信号强度：'+(d.signal_strength||'WEAK')
+
+  // 理由
+  document.getElementById('ai-reason').textContent = d.reason || '暂无分析理由'
+
+  // 止盈止损条件单（仅BUY时显示）
+  const slPanel = document.getElementById('ai-sl-tp-panel')
+  if(d.action === 'BUY' && (d.stop_loss || d.take_profit)){
+    slPanel.style.display = ''
+    document.getElementById('ai-stop-loss').textContent = d.stop_loss ? fmt(d.stop_loss) : '--'
+    document.getElementById('ai-stop-loss-pct').textContent = d.stop_loss_pct ? `跌破即止损 (${d.stop_loss_pct.toFixed(1)}%)` : ''
+    document.getElementById('ai-take-profit').textContent = d.take_profit ? fmt(d.take_profit) : '--'
+    document.getElementById('ai-take-profit-pct').textContent = d.take_profit_pct ? `目标涨幅 +${d.take_profit_pct.toFixed(1)}%` : ''
+    const posEl = document.getElementById('ai-position-advice')
+    posEl.textContent = d.position_advice ? '仓位：' + d.position_advice : ''
+    posEl.style.display = d.position_advice ? '' : 'none'
+  } else {
+    slPanel.style.display = 'none'
+    // SELL 时显示仓位建议（如"建议清仓"）
+    if(d.action === 'SELL' && d.position_advice){
+      slPanel.style.display = ''
+      document.getElementById('ai-stop-loss').textContent = '--'
+      document.getElementById('ai-stop-loss-pct').textContent = ''
+      document.getElementById('ai-take-profit').textContent = '--'
+      document.getElementById('ai-take-profit-pct').textContent = ''
+      const posEl = document.getElementById('ai-position-advice')
+      posEl.textContent = d.position_advice
+      posEl.style.display = ''
+    }
+  }
+
+  // 情绪
+  const newsCount = sl.news_count ? ` (${sl.news_count}条新闻)` : ''
+  document.getElementById('ai-sentiment').innerHTML =
+    `市场情绪：<span style="font-weight:600;color:${sentColor}">${sentText}</span>${newsCount}` +
+    (sl.sentiment_text?` · ${sl.sentiment_text}`:'')
+
+  // 分时摘要
+  const is = d.intraday_summary||{}
+  let intradayNote = ''
+  if(is.latest){
+    const sign = (is.pct_change||0)>=0?'+':''
+    intradayNote = `今日: 开${fmt(is.open)} 高${fmt(is.high)} 低${fmt(is.low)} 现${fmt(is.latest)} `
+      + `(${sign}${(is.pct_change||0).toFixed(2)}%)`
+      + (is.trend?` · 分时${is.trend}`:'')
+  }
+  const iNote = document.getElementById('ai-intraday-note')
+  iNote.textContent = intradayNote
+  iNote.style.display = intradayNote ? '' : 'none'
+
+  // 更新分时摘要面板
+  updateIntradayPanel(is)
+
+  // 数据新鲜度标注
+  const dataLabelEl = document.getElementById('ai-data-label')
+  if(d.is_realtime){
+    dataLabelEl.innerHTML = '<span style="color:var(--green)"><i class="bi bi-broadcast"></i> 实时数据</span>'
+  } else if(d.data_date){
+    dataLabelEl.innerHTML = `<span style="color:var(--yellow)"><i class="bi bi-database"></i> 历史数据，截至 ${d.data_date}</span>`
+  } else {
+    dataLabelEl.innerHTML = ''
+  }
+
+  document.getElementById('ai-timestamp').textContent = '分析时间：'+(d.timestamp||'').slice(0,19)
+  document.getElementById('aiDecisionPanel').style.display = ''
+
+  // 保存到缓存
+  const nowStr = new Date().toLocaleString('zh-CN',{hour12:false}).slice(5)
+  if(currentSymbol){
+    aiCache[currentSymbol] = { data: d, fetchedAt: nowStr }
+    document.getElementById('aiSymbolTag').textContent = `${currentSymbol}  ·  ${nowStr}`
+  }
+
+  // 推入历史
+  _pushAiHistory(d, nowStr)
+
+  // 同步标题名称
+  if(d.name && d.name !== d.symbol){
+    document.getElementById('klineTitle').textContent = `${d.symbol}  ${d.name}`
+    const idx = _namedSymbols.findIndex(x=>x.symbol===d.symbol)
+    if(idx>=0) _namedSymbols[idx].name = d.name
+    else _namedSymbols.push({symbol:d.symbol, name:d.name})
+  }
+}
+
+function updateIntradayPanel(is){
+  const panel = document.getElementById('intradayPanel')
+  if(!is || !is.latest){ panel.style.display='none'; return }
+  panel.style.display = ''
+  const sign = (is.pct_change||0)>=0?'+':''
+  const clr  = (is.pct_change||0)>=0?'var(--red)':'var(--green)'
+  document.getElementById('intradayContent').innerHTML = `
+    <div class="intraday-grid">
+      <div class="ind-item"><div class="il">今开</div><div class="iv">${fmt(is.open)}</div></div>
+      <div class="ind-item"><div class="il">今高</div><div class="iv up">${fmt(is.high)}</div></div>
+      <div class="ind-item"><div class="il">今低</div><div class="iv down">${fmt(is.low)}</div></div>
+      <div class="ind-item"><div class="il">最新</div><div class="iv" style="color:${clr}">${fmt(is.latest)}</div></div>
+      <div class="ind-item"><div class="il">涨跌</div><div class="iv" style="color:${clr}">${sign}${(is.pct_change||0).toFixed(2)}%</div></div>
+      <div class="ind-item"><div class="il">量比</div><div class="iv ${(is.vol_ratio_intraday||1)>1.2?'up':'flat'}">${(is.vol_ratio_intraday||0).toFixed(2)}</div></div>
+    </div>
+    <div style="margin-top:5px;font-size:.72rem;color:var(--muted);text-align:center">
+      分时趋势：<span style="color:${is.trend==='上行'?'var(--red)':is.trend==='下行'?'var(--green)':'var(--muted)'};font-weight:600">${is.trend||'--'}</span>
+    </div>`
+}
+
+// ══════════════════════════════════════════════
+// AI 历史记录（持久化版本，从DB加载）
+// ══════════════════════════════════════════════
+function _pushAiHistory(d, timeStr){
+  // 仍维护内存缓存供快速渲染，但主数据来自DB
+  const entry = {
+    symbol:     d.symbol || currentSymbol,
+    name:       d.name || d.symbol || currentSymbol,
+    action:     d.action,
+    confidence: d.confidence,
+    reason:     d.reason || '',
+    time:       timeStr,
+    isRealtime: d.is_realtime,
+    dataDate:   d.data_date || '',
+  }
+  const idx = aiHistory.findIndex(h=>h.symbol===entry.symbol)
+  if(idx>=0) aiHistory.splice(idx,1)
+  aiHistory.unshift(entry)
+  if(aiHistory.length > 50) aiHistory.pop()
+  renderAiHistory()
+}
+
+async function loadSymbolAnalysisHistory(symbol){
+  if(!symbol) return
+  try{
+    const r = await fetch(`/api/analysis/${symbol}/history?limit=20`).then(res=>res.json())
+    const hist = r.history || []
+    const stats = r.stats || {}
+    const section = document.getElementById('aiHistorySection')
+    const countEl = document.getElementById('aiHistoryCount')
+    if(!hist.length){ section.style.display='none'; return }
+    section.style.display = ''
+    const total = stats.total || hist.length
+    countEl.textContent = `(${total}次)`
+    const list = document.getElementById('aiHistoryList')
+    if(!_aiHistoryOpen){ list.style.display='none'; return }
+    list.style.display = 'flex'
+    list.innerHTML = hist.map(h=>{
+      const ab = badge(h.action)
+      const ts = (h.timestamp||'').slice(0,16).replace('T',' ')
+      return `<div class="ai-hist-item" onclick="">
+        <div class="ahi-row">${ab}
+          <span style="margin-left:2px;color:var(--muted);font-size:.65rem">${ts}</span>
+          <span style="margin-left:auto;color:var(--blue);font-size:.65rem">${((h.confidence||0)*100).toFixed(0)}%</span>
+        </div>
+        <div class="ahi-reason" title="${h.reason||''}">${(h.reason||'').slice(0,50)}</div>
+        <div class="ahi-time">价格:${(h.price||0).toFixed(3)}  RSI:${(h.rsi||0).toFixed(1)}  量比:${(h.vol_ratio||0).toFixed(2)}</div>
+      </div>`
+    }).join('')
+  }catch(_){}
+}
+
+function renderAiHistory(){
+  const section = document.getElementById('aiHistorySection')
+  const list    = document.getElementById('aiHistoryList')
+  const countEl = document.getElementById('aiHistoryCount')
+  if(!aiHistory.length){ section.style.display='none'; return }
+  section.style.display = ''
+  countEl.textContent = `(${aiHistory.length})`
+  if(!_aiHistoryOpen){ list.style.display='none'; return }
+  list.style.display = 'flex'
+  list.innerHTML = aiHistory.map(h=>{
+    const ab = h.action==='BUY'
+      ? '<span class="b-buy">买入</span>'
+      : h.action==='SELL'
+        ? '<span class="b-sell">卖出</span>'
+        : '<span class="b-hold">持有</span>'
+    const dataTag = h.isRealtime
+      ? '<span style="color:var(--green);font-size:.6rem">实时</span>'
+      : h.dataDate ? `<span style="color:var(--yellow);font-size:.6rem">历史${h.dataDate.slice(5)}</span>` : ''
+    return `<div class="ai-hist-item" onclick="loadKlineBySymbol('${h.symbol}')">
+      <div class="ahi-row">
+        ${ab}
+        <span style="font-weight:700">${h.symbol}</span>
+        <span style="color:var(--muted)">${h.name!==h.symbol?h.name:''}</span>
+        <span style="margin-left:auto;color:var(--muted);font-size:.65rem">${(h.confidence*100).toFixed(0)}%</span>
+        ${dataTag}
+      </div>
+      <div class="ahi-reason">${h.reason.slice(0,40)}</div>
+      <div class="ahi-time">${h.time}</div>
+    </div>`
+  }).join('')
+}
+
+function toggleAiHistory(){
+  _aiHistoryOpen = !_aiHistoryOpen
+  const chevron = document.getElementById('aiHistoryChevron')
+  if(chevron) chevron.style.transform = _aiHistoryOpen ? 'rotate(180deg)' : ''
+  if(_aiHistoryOpen && currentSymbol) loadSymbolAnalysisHistory(currentSymbol)
+  else renderAiHistory()
+}
+
+// ══════════════════════════════════════════════
+// 历史分析页面
+// ══════════════════════════════════════════════
+let _historyData = []
+
+async function loadHistoryPage(){
+  const sym = document.getElementById('hist-sym-filter')?.value.trim()
+  try{
+    let url = '/api/analysis/recent?limit=200'
+    if(sym && sym.length >= 2){
+      const padded = sym.padStart(6,'0')
+      url = `/api/analysis/${padded}/history?limit=100`
+    }
+    const r = await fetch(url).then(res=>res.json())
+    _historyData = Array.isArray(r) ? r : (r.history || [])
+    document.getElementById('hist-count').textContent = `共 ${_historyData.length} 条`
+    renderHistoryTable(_historyData)
+  }catch(e){ toast('加载历史失败: '+e.message,'err') }
+}
+
+function filterHistoryTable(){
+  const q = document.getElementById('hist-sym-filter')?.value.trim().toLowerCase()
+  if(!q){ renderHistoryTable(_historyData); return }
+  const filtered = _historyData.filter(r=>
+    r.symbol.includes(q) || (r.name||'').toLowerCase().includes(q)
+  )
+  renderHistoryTable(filtered)
+}
+
+function renderHistoryTable(rows){
+  const tbody = document.getElementById('histTbody')
+  if(!rows.length){
+    tbody.innerHTML = '<tr><td colspan="14" style="text-align:center;color:var(--muted);padding:20px">暂无数据</td></tr>'
+    return
+  }
+  tbody.innerHTML = rows.map(h=>{
+    const ts   = (h.timestamp||'').slice(0,16).replace('T',' ')
+    const ab   = badge(h.action)
+    const sl   = h.stop_loss   ? `<span style="color:var(--red)">${h.stop_loss.toFixed(3)}</span>` : '--'
+    const tp   = h.take_profit ? `<span style="color:var(--green)">${h.take_profit.toFixed(3)}</span>` : '--'
+    const sentBadge = h.sentiment==='positive'
+      ? '<span style="color:var(--green);font-size:.68rem">利好</span>'
+      : h.sentiment==='negative'
+        ? '<span style="color:var(--red);font-size:.68rem">利空</span>'
+        : '<span style="color:var(--muted);font-size:.68rem">中性</span>'
+    const maArr = (h.ma_arrangement||'').replace(/（.*?）/g,'').replace('多头排列','多').replace('空头排列','空').replace('均线粘合/交叉','震荡')
+    const macdCr = (h.macd_cross||'').replace('金叉区间（DIF>DEA）','金叉').replace('死叉区间（DIF<DEA）','死叉').slice(0,4)
+    return `<tr onclick="showPage('market');setTimeout(()=>loadKlineBySymbol('${h.symbol}'),100)" style="cursor:pointer">
+      <td style="color:var(--muted);font-size:.68rem">${ts}</td>
+      <td style="font-weight:700">${h.symbol}</td>
+      <td style="color:var(--muted)">${h.name||''}</td>
+      <td>${(h.price||0).toFixed(3)}</td>
+      <td>${ab}</td>
+      <td><span class="conf-bar"><span class="conf-fill" style="width:${Math.round((h.confidence||0)*100)}%"></span></span>${((h.confidence||0)*100).toFixed(0)}%</td>
+      <td class="${(h.rsi||50)>70?'up':(h.rsi||50)<30?'down':'flat'}">${(h.rsi||0).toFixed(1)}</td>
+      <td style="font-size:.68rem">${maArr}</td>
+      <td style="font-size:.68rem">${macdCr}</td>
+      <td class="${(h.vol_ratio||1)>1.2?'up':'flat'}">${(h.vol_ratio||0).toFixed(2)}</td>
+      <td>${sentBadge}</td>
+      <td>${sl}</td>
+      <td>${tp}</td>
+      <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.68rem" title="${h.reason||''}">${h.reason||''}</td>
+    </tr>`
+  }).join('')
+}
+
+// ══════════════════════════════════════════════
+// AI 批量扫描
+// ══════════════════════════════════════════════
+async function doScan(){
+  const btn = document.getElementById('scanBtn')
+  btn.disabled = true; btn.innerHTML = '<i class="bi bi-hourglass-split"></i> 扫描中...'
+  document.getElementById('scanStatus').textContent = '正在扫描，请稍候...'
+  try{
+    const r = await fetch('/api/engine/scan',{method:'POST'}).then(r=>r.json())
+    renderSignals(r.signals||[], `监控列表 ${(r.signals||[]).length}支`)
+    document.getElementById('hotSectors').textContent = ''
+    // 扫描结果保存到AI缓存和历史
+    for(const sig of r.signals||[]){
+      if(!sig || !sig.symbol) continue
+      const cacheData = {
+        symbol:         sig.symbol,
+        name:           sig.name||sig.symbol,
+        action:         sig.action,
+        confidence:     sig.confidence,
+        signal_strength:sig.signal_strength,
+        risk_level:     sig.risk_level,
+        reason:         sig.reason||'',
+        sentiment:      { label: sig.sentiment },
+        is_realtime:    false,
+        data_date:      (sig.timestamp||'').slice(0,10),
+        timestamp:      sig.timestamp||'',
+        stop_loss:      null, take_profit: null,
+        stop_loss_pct:  null, take_profit_pct: null,
+        position_advice:'',
+      }
+      const t = (sig.timestamp||'').slice(11,19) || new Date().toTimeString().slice(0,8)
+      aiCache[sig.symbol] = { data: cacheData, fetchedAt: t }
+      _pushAiHistory(cacheData, t)
+    }
+    document.getElementById('scanStatus').textContent = `完成，共 ${r.scanned} 支`
+    toast(`扫描完成 ${r.scanned} 支`, 'ok')
+  }catch(e){
+    document.getElementById('scanStatus').textContent = '扫描失败'
+    toast('扫描失败: '+e.message,'err')
+  }finally{
+    btn.disabled = false; btn.innerHTML = '<i class="bi bi-search"></i> 扫描监控列表'
+  }
+}
+
+function renderSignals(sigs, source=''){
+  const tbody = document.getElementById('signalsTbody')
+  const srcEl = document.getElementById('signalSource')
+  if(srcEl && source) srcEl.textContent = source
+  if(!sigs.length){
+    tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;color:var(--muted);padding:10px">无数据</td></tr>'
+    return
+  }
+  tbody.innerHTML = sigs.map(s=>`<tr onclick="loadKlineBySymbol('${s.symbol}')" style="cursor:pointer${s.action==='BUY'?';background:rgba(63,185,80,.04)':''}">
+    <td><b>${s.symbol}</b><br><span style="color:var(--muted);font-size:.68rem">${s.name||''}</span></td>
+    <td style="color:var(--muted);font-size:.68rem;white-space:nowrap">${s.sector||''}</td>
+    <td>${fmt(s.price)}</td>
+    <td class="${s.rsi>70?'up':s.rsi<30?'down':'flat'}">${fmt(s.rsi,1)}</td>
+    <td>${badge(s.action)}</td>
+    <td>
+      <span class="conf-bar"><span class="conf-fill" style="width:${Math.round((s.confidence||0)*100)}%"></span></span>
+      ${pct(s.confidence)}
+    </td>
+    <td>${sentBadge(s.sentiment)}</td>
+    <td style="color:var(--muted);max-width:120px;overflow:hidden;text-overflow:ellipsis" title="${s.reason||''}">${(s.reason||'').slice(0,25)}</td>
+    <td style="color:var(--muted);font-size:.68rem">${(s.timestamp||'').slice(11,16)}</td>
+  </tr>`).join('')
+}
+
+// ══════════════════════════════════════════════
+// 回测
+// ══════════════════════════════════════════════
+async function runBacktest(){
+  const sym     = document.getElementById('bt-symbol').value.trim()
+  const capital = parseFloat(document.getElementById('bt-capital').value) || 1000000
+  if(!sym){ toast('请输入股票代码','err'); return }
+  const st = document.getElementById('bt-status')
+  st.textContent = '回测中，请稍候...'; st.style.color = 'var(--muted)'
+  document.getElementById('bt-resultPanel').style.display = 'none'
+  try{
+    const r = await fetch('/api/backtest',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        symbol:sym.padStart(6,'0'),
+        start_date:document.getElementById('bt-start').value||null,
+        end_date:document.getElementById('bt-end').value||null,
+        initial_cash: capital
+      })
+    }).then(r=>r.json())
+    if(r.error){ st.textContent='错误: '+r.error; st.style.color='var(--red)'; return }
+    st.textContent=''; st.style.color='var(--green)'
+    const ann = r.annual_return||0
+    const wr  = r.win_rate||0
+    document.getElementById('bt-cards').innerHTML=`
+      <div class="col-6 col-md-3"><div class="metric-card">
+        <div class="lbl">年化收益</div>
+        <div class="val ${ann>0?'down':ann<0?'up':'flat'}">${(ann>=0?'+':'')+pct(ann)}</div>
+      </div></div>
+      <div class="col-6 col-md-3"><div class="metric-card">
+        <div class="lbl">最大回撤</div>
+        <div class="val up">${pct(r.max_drawdown)}</div>
+      </div></div>
+      <div class="col-6 col-md-3"><div class="metric-card">
+        <div class="lbl">夏普比率</div>
+        <div class="val">${fmt(r.sharpe_ratio,3)}</div>
+      </div></div>
+      <div class="col-6 col-md-3"><div class="metric-card">
+        <div class="lbl">胜率</div>
+        <div class="val ${wr>0.5?'down':wr<0.4?'up':'flat'}">${pct(r.win_rate)}</div>
+      </div></div>`
+    document.getElementById('bt-tbody').innerHTML=[
+      ['股票代码', r.symbol],
+      ['回测区间', `${r.start_date} ~ ${r.end_date}`],
+      ['初始资金', fmtM(r.initial_capital)+'元'],
+      ['最终净值', fmtM(r.final_value)+'元'],
+      ['总收益率', (r.total_return>=0?'+':'')+pct(r.total_return)],
+      ['总交易次数', r.total_trades + ' 笔'],
+      ['盈利交易', r.won_trades + ' 笔'],
+      ['亏损交易', r.lost_trades + ' 笔'],
+      ['手续费', '万3 + 滑点万2'],
+    ].map(([k,v])=>`<tr><td style="color:var(--muted);padding:4px 10px">${k}</td><td style="padding:4px 10px;font-weight:600">${v}</td></tr>`).join('')
+    document.getElementById('bt-resultPanel').style.display=''
+    const tradeMsg = r.total_trades > 0
+      ? `共${r.total_trades}笔，年化${(ann*100).toFixed(1)}%`
+      : '未产生交易（可尝试更长时间范围）'
+    toast('回测完成  ' + tradeMsg, r.total_trades > 0 ? 'ok' : 'info')
+  }catch(e){ st.textContent='请求失败: '+e.message; st.style.color='var(--red)' }
+}
+
+// ══════════════════════════════════════════════
+// 初始化
+// ══════════════════════════════════════════════
+// ── 交易时段自动扫描（10分钟一次；龙头1.5小时一次）
+// ──────────────────────────────────────────────
+const AUTO_SCAN_INTERVAL = 10 * 60 * 1000   // 10分钟
+
+function _startAutoScan(){
+  if(_autoScanTimer) return
+  if(!_inTradingHours()) return
+  _autoScanTick()   // 立即扫一次
+  _autoScanTimer = setInterval(()=>{
+    if(_inTradingHours()){ _autoScanTick() }
+    else { clearInterval(_autoScanTimer); _autoScanTimer=null }
+  }, AUTO_SCAN_INTERVAL)
+}
+
+// ══════════════════════════════════════════════
+// 监控列表实时行情刷新（独立于AI分析，10秒一次）
+// ══════════════════════════════════════════════
+let _watchPriceTimer = null
+let _holdingsMeta = {}   // sym → {avg_cost, shares}
+
+async function _refreshWatchListPrices(){
+  const syms = (_namedSymbols||[]).map(x=>x.symbol).filter(Boolean)
+  if(!syms.length) return
+  await Promise.all(syms.map(async sym=>{
+    try{
+      const q = await fetch(`/api/quote/${sym}`).then(r=>r.ok?r.json():null)
+      if(!q||!q.price) return
+      const pEl = document.getElementById(`wq-price-${sym}`)
+      const cEl = document.getElementById(`wq-chg-${sym}`)
+      if(!pEl||!cEl) return
+      pEl.textContent = q.price.toFixed(3)
+      if(q.prev_close>0){
+        const chg = (q.price - q.prev_close) / q.prev_close
+        const chgStr = (chg>=0?'+':'') + (chg*100).toFixed(2)+'%'
+        cEl.textContent = chgStr
+        const clr = chg>0.0001?'var(--red)':chg<-0.0001?'var(--green)':'var(--muted)'
+        cEl.style.color = clr
+        pEl.style.color = clr
+      }
+    }catch(_){}
+  }))
+}
+
+async function _refreshHoldingPrices(){
+  const syms = Object.keys(_holdingsMeta)
+  if(!syms.length) return
+  await Promise.all(syms.map(async sym=>{
+    try{
+      const q = await fetch(`/api/quote/${sym}`).then(r=>r.ok?r.json():null)
+      if(!q||!q.price) return
+      const pEl = document.getElementById(`hp-price-${sym}`)
+      const nEl = document.getElementById(`hp-pnl-${sym}`)
+      if(!pEl) return
+      const price = q.price
+      pEl.textContent = price.toFixed(3)
+      const meta = _holdingsMeta[sym]
+      if(nEl && meta && meta.avg_cost > 0){
+        const pnl = (price - meta.avg_cost) / meta.avg_cost * 100
+        nEl.textContent = (pnl>=0?'+':'') + pnl.toFixed(2)+'%'
+        nEl.className = 'hold-pnl ' + (pnl>0?'up':pnl<0?'down':'')
+      }
+      // 涨跌色
+      if(q.prev_close>0){
+        const chg = (price - q.prev_close) / q.prev_close
+        const clr = chg>0.0001?'var(--red)':chg<-0.0001?'var(--green)':'var(--muted)'
+        pEl.style.color = clr
+      }
+    }catch(_){}
+  }))
+}
+
+async function _refreshAllPrices(){
+  await Promise.all([_refreshWatchListPrices(), _refreshHoldingPrices()])
+}
+
+function _startWatchPriceRefresh(){
+  if(_watchPriceTimer) return
+  _refreshAllPrices()
+  _watchPriceTimer = setInterval(()=>{
+    if(_inTradingHours()){ _refreshAllPrices() }
+    else{ clearInterval(_watchPriceTimer); _watchPriceTimer=null }
+  }, 30000)
+}
+
+function _stopWatchPriceRefresh(){
+  if(_watchPriceTimer){ clearInterval(_watchPriceTimer); _watchPriceTimer=null }
+}
+
+// ══════════════════════════════════════════════
+// 板块龙头扫描
+// ══════════════════════════════════════════════
+async function doSectorScan(){
+  const btn = document.getElementById('sectorScanBtn')
+  btn.disabled = true; btn.innerHTML = '<i class="bi bi-hourglass-split"></i> 扫描中...'
+  document.getElementById('scanStatus').textContent = '正在分析板块龙头，约需1~2分钟...'
+  try{
+    const r = await fetch('/api/sector/scan',{method:'POST'}).then(res=>res.json())
+    const sigs = r.signals||[]
+    renderSignals(sigs, `板块龙头 ${sigs.length}支`)
+    // 热门板块
+    const hotEl = document.getElementById('hotSectors')
+    if(hotEl && r.hot_sectors?.length){
+      hotEl.textContent = '热门板块: ' + r.hot_sectors.join(' · ')
+    }
+    // 保存到AI缓存
+    for(const sig of sigs){
+      if(!sig||!sig.symbol) continue
+      const cacheData = {
+        symbol:sig.symbol, name:sig.name||sig.symbol, sector:sig.sector||'',
+        action:sig.action, confidence:sig.confidence,
+        signal_strength:sig.signal_strength, risk_level:sig.risk_level,
+        reason:sig.reason||'', sentiment:{label:sig.sentiment},
+        is_realtime:false, data_date:(sig.timestamp||'').slice(0,10),
+        timestamp:sig.timestamp||'',
+        stop_loss:sig.stop_loss, take_profit:sig.take_profit,
+        stop_loss_pct:sig.stop_loss_pct, take_profit_pct:sig.take_profit_pct,
+        position_advice:sig.position_advice||'',
+      }
+      const t=(sig.timestamp||'').slice(11,19)||new Date().toTimeString().slice(0,8)
+      aiCache[sig.symbol]={data:cacheData,fetchedAt:t}
+      _pushAiHistory(cacheData,t)
+    }
+    const buy_cnt = sigs.filter(s=>s.action==='BUY').length
+    // 更新龙头tab列表并记录时间
+    _renderSectorTab(sigs)
+    _lastSectorScanAt = Date.now()
+    // 显示扫描时间（来自后端）
+    const tEl = document.getElementById('sectorScanTime')
+    if(tEl) tEl.textContent = `更新: ${r.scanned_at||new Date().toTimeString().slice(0,5)}`
+    document.getElementById('scanStatus').textContent=`板块扫描完成，${sigs.length}支（价格≤50元），BUY ${buy_cnt}支`
+    toast(`板块龙头扫描完成 ${sigs.length}支，BUY ${buy_cnt}支`, 'ok')
+  }catch(e){
+    document.getElementById('scanStatus').textContent='板块扫描失败'
+    toast('板块扫描失败: '+e.message,'err')
+  }finally{
+    btn.disabled=false; btn.innerHTML='<i class="bi bi-grid-3x3-gap"></i> 扫描板块龙头'
+  }
+}
+
+// ══════════════════════════════════════════════
+// 邮件通知配置
+// ══════════════════════════════════════════════
+async function showNotifyConfig(){
+  // 加载当前配置
+  try{
+    const cfg = await fetch('/api/notify/status').then(r=>r.json())
+    document.getElementById('nc-host').value     = cfg.smtp_host||'smtp.qq.com'
+    document.getElementById('nc-port').value     = cfg.smtp_port||465
+    document.getElementById('nc-sender').value   = cfg.sender||''
+    document.getElementById('nc-receiver').value = cfg.receiver||''
+    document.getElementById('nc-conf').value     = cfg.min_confidence||0.60
+    if(cfg.enabled){
+      document.getElementById('notifyConfigStatus').textContent = '当前状态：已启用'
+      document.getElementById('notifyConfigStatus').style.color = 'var(--green)'
+    }
+  }catch(_){}
+  const m = document.getElementById('notifyModal')
+  m.style.display = 'flex'
+}
+function closeNotifyConfig(){
+  document.getElementById('notifyModal').style.display='none'
+}
+async function saveNotifyConfig(){
+  const body = {
+    smtp_host:    document.getElementById('nc-host').value.trim(),
+    smtp_port:    parseInt(document.getElementById('nc-port').value)||465,
+    sender:       document.getElementById('nc-sender').value.trim(),
+    sender_pass:  document.getElementById('nc-pass').value,
+    receiver:     document.getElementById('nc-receiver').value.trim(),
+    min_confidence: parseFloat(document.getElementById('nc-conf').value)||0.60,
+  }
+  if(!body.sender||!body.receiver){ toast('发件/收件邮箱不能为空','err'); return }
+  const st = document.getElementById('notifyConfigStatus')
+  st.textContent='保存中...'; st.style.color='var(--muted)'
+  try{
+    await fetch('/api/notify/config',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
+    st.textContent='保存成功！（重启服务后失效，持久化请写入 .env 文件）'
+    st.style.color='var(--green)'
+    toast('邮件配置已保存','ok')
+  }catch(e){ st.textContent='保存失败: '+e.message; st.style.color='var(--red)' }
+}
+async function testNotifyEmail(type='buy'){
+  const urlMap = {buy:'/api/notify/test', sell:'/api/notify/test/sell',
+                  ai_fail:'/api/notify/test/ai_fail', daily:'/api/notify/test/daily'}
+  const labelMap = {buy:'BUY信号', sell:'持仓SELL', ai_fail:'AI告警', daily:'每日日报'}
+  const st = document.getElementById('notifyConfigStatus')
+  st.textContent=`发送${labelMap[type]||''}测试邮件...`; st.style.color='var(--muted)'
+  try{
+    const r = await fetch(urlMap[type],{method:'POST'}).then(res=>{
+      if(!res.ok) return res.json().then(e=>{throw new Error(e.detail)})
+      return res.json()
+    })
+    st.textContent=r.message; st.style.color='var(--green)'
+    toast(`${labelMap[type]}测试邮件已发送`,'ok')
+  }catch(e){ st.textContent='失败: '+e.message; st.style.color='var(--red)'; toast('测试邮件失败','err') }
+}
+
+// ══════════════════════════════════════════════
+// 左侧四合一标签切换
+// ══════════════════════════════════════════════
+let _currentLeftTab = 'watch'
+function switchLeftTab(tab){
+  _currentLeftTab = tab
+  ;['watch','fav','sector','hold'].forEach(t=>{
+    document.getElementById(`ltab-${t}`)?.classList.toggle('active', t===tab)
+    const tc = document.getElementById(`tc-${t}`)
+    if(tc){ tc.style.display = t===tab ? (t==='hold'?'flex':'block') : 'none' }
+  })
+  if(tab==='hold')   loadHoldings()
+  if(tab==='sector') loadSectorCache()
+}
+
+// ══════════════════════════════════════════════
+// 持仓管理
+// ══════════════════════════════════════════════
+async function loadHoldings(){
+  const rows = await fetch('/api/holdings').then(r=>r.json()).catch(()=>[])
+  const el = document.getElementById('holdingList')
+  if(!rows.length){
+    _holdingsMeta = {}
+    el.innerHTML='<div style="text-align:center;color:var(--muted);font-size:.72rem;padding:8px">暂无持仓，请在上方添加</div>'
+    return
+  }
+  _holdingsMeta = {}
+  rows.forEach(h=>{ _holdingsMeta[h.symbol] = {avg_cost: h.avg_cost, shares: h.shares} })
+  el.innerHTML = rows.map(h=>{
+    const pnl = h.pnl_pct||0
+    const pnlClass = pnl>0?'up':pnl<0?'down':''
+    const initPrice = h.price > 0 ? h.price.toFixed(3) : '—'
+    const initPnl   = pnl !== 0 ? `${pnl>0?'+':''}${pnl.toFixed(2)}%` : ''
+    return `<div class="hold-row" onclick="loadKlineBySymbol('${h.symbol}')">
+      <div style="flex:1;min-width:0">
+        <div style="font-weight:600;font-size:.75rem">${h.symbol} <span style="color:var(--muted);font-weight:400">${h.name||''}</span></div>
+        <div style="font-size:.65rem;color:var(--muted)">${h.shares}股 · 成本${h.avg_cost.toFixed(3)}
+          <span id="hp-price-${h.symbol}" style="color:var(--muted)">${initPrice}</span>
+          <span id="hp-pnl-${h.symbol}" class="hold-pnl ${pnlClass}">${initPnl}</span>
+        </div>
+      </div>
+      <button class="btn-icon" title="删除持仓" onclick="event.stopPropagation();removeHolding('${h.symbol}')"><i class="bi bi-x" style="font-size:.75rem"></i></button>
+    </div>`
+  }).join('')
+}
+
+async function addHolding(){
+  const sym    = document.getElementById('h-sym').value.trim().padStart(6,'0')
+  const shares = parseFloat(document.getElementById('h-shares').value)
+  const cost   = parseFloat(document.getElementById('h-cost').value)
+  if(!sym||sym.length<6||isNaN(shares)||isNaN(cost)||shares<=0||cost<=0){
+    toast('请填写完整的代码、股数、成本','err'); return
+  }
+  await fetch('/api/holdings',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({symbol:sym,shares,avg_cost:cost})}).then(r=>r.json())
+  document.getElementById('h-sym').value=''
+  document.getElementById('h-shares').value=''
+  document.getElementById('h-cost').value=''
+  await loadHoldings()
+  toast(`已添加持仓 ${sym}`,'ok')
+}
+
+async function removeHolding(sym){
+  await fetch(`/api/holdings/${sym}`,{method:'DELETE'})
+  await loadHoldings()
+  toast(`已删除持仓 ${sym}`)
+}
+
+async function doHoldingScan(){
+  const btn = document.getElementById('holdScanBtn')
+  btn.disabled=true; btn.innerHTML='<i class="bi bi-hourglass-split"></i>'
+  document.getElementById('scanStatus').textContent='正在分析持仓...'
+  try{
+    const r = await fetch('/api/holdings/scan',{method:'POST'}).then(res=>res.json())
+    if(!r.scanned){ toast('暂无持仓','info'); return }
+    renderSignals(r.signals||[], `持仓分析 ${(r.signals||[]).length}支`)
+    document.getElementById('hotSectors').textContent=''
+    const sell_cnt = (r.signals||[]).filter(s=>s.action==='SELL').length
+    document.getElementById('scanStatus').textContent=`持仓分析完成，SELL ${sell_cnt}支`
+    toast(`持仓分析完成 ${r.scanned}支`,'ok')
+    if(_currentLeftTab==='hold') loadHoldings()
+  }catch(e){ toast('持仓分析失败: '+e.message,'err')
+  }finally{ btn.disabled=false; btn.innerHTML='<i class="bi bi-briefcase"></i> 持仓' }
+}
+
+// ══════════════════════════════════════════════
+// 板块龙头：结果显示到龙头tab
+// ══════════════════════════════════════════════
+let _lastSectorScanAt = 0   // timestamp ms
+
+// 从后端缓存加载龙头扫描结果（不触发新扫描）
+async function loadSectorCache(){
+  try{
+    const r = await fetch('/api/sector/results').then(res=>res.json())
+    if(!r.signals?.length) return
+    _renderSectorTab(r.signals)
+    if(r.scanned_at) _lastSectorScanAt = Date.now() - 1  // 标记已有缓存，防止立即重扫
+    const hotEl = document.getElementById('hotSectors')
+    if(hotEl && r.hot_sectors?.length)
+      hotEl.textContent = '热门板块: ' + r.hot_sectors.join(' · ')
+  }catch(_){}
+}
+
+function _renderSectorTab(sigs){
+  const el = document.getElementById('sectorSignalList'); if(!el)return
+  if(!sigs.length){ el.innerHTML='<div style="text-align:center;color:var(--muted);font-size:.72rem;padding:8px">无信号</div>'; return }
+  // 按action分组：BUY优先
+  const sorted = [...sigs].sort((a,b)=>(b.action==='BUY'?1:0)-(a.action==='BUY'?1:0)||(b.confidence||0)-(a.confidence||0))
+  el.innerHTML = sorted.map(s=>`
+    <div class="fav-item${currentSymbol===s.symbol?' selected':''}" onclick="loadKlineBySymbol('${s.symbol}')">
+      <div style="flex:1;min-width:0">
+        <div style="font-size:.75rem;font-weight:600">${s.symbol} <span style="color:var(--muted);font-size:.65rem;font-weight:400">${s.name||''}</span></div>
+        <div style="font-size:.65rem;color:var(--muted)">${s.sector||''} · ${s.price?s.price.toFixed(3):''}</div>
+      </div>
+      <span style="font-size:.68rem;font-weight:700;color:${s.action==='BUY'?'var(--green)':s.action==='SELL'?'var(--red)':'var(--muted)'}">${s.action}</span>
+      <span style="font-size:.65rem;color:var(--muted)">${s.confidence?(s.confidence*100).toFixed(0)+'%':''}</span>
+    </div>`).join('')
+  const t = document.getElementById('sectorScanTime')
+  if(t) t.textContent = `更新: ${new Date().toTimeString().slice(0,5)}`
+}
+
+// ══════════════════════════════════════════════
+// 收藏→监控按钮修复：不做预检查，直接提交API（幂等）
+// ══════════════════════════════════════════════
+async function addSymbolToWatch(sym){
+  try{
+    const r = await fetch('/api/symbols/add',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({symbol:sym})}).then(res=>res.json())
+    await loadWatchList(); await loadFavorites()
+    const isNew = !_namedSymbols.slice(0,-1).some(x=>x.symbol===sym)
+    toast(`${sym} ${r.symbols?.includes(sym)||true ? '已在监控队列':'已加入监控队列'}`,'ok')
+  }catch(e){ toast(`操作失败: ${e.message}`,'err') }
+}
+
+// ══════════════════════════════════════════════
+// 自动扫描：监控+持仓(10分钟)→邮件，龙头(1.5小时)
+// ══════════════════════════════════════════════
+async function _autoScanTick(){
+  if(!_inTradingHours()) return
+
+  // ① 监控列表扫描（服务端已含邮件发送）
+  let watchScanned = 0
+  try{
+    const r = await fetch('/api/engine/scan',{method:'POST'}).then(r=>r.json())
+    watchScanned = r.scanned||0
+    renderSignals(r.signals||[], `监控列表 ${(r.signals||[]).length}支`)
+    for(const sig of r.signals||[]){
+      if(!sig||!sig.symbol) continue
+      const t=(sig.timestamp||'').slice(11,19)||new Date().toTimeString().slice(0,8)
+      const cacheData={symbol:sig.symbol,name:sig.name||sig.symbol,action:sig.action,
+        confidence:sig.confidence,signal_strength:sig.signal_strength,risk_level:sig.risk_level,
+        reason:sig.reason||'',sentiment:{label:sig.sentiment},is_realtime:false,
+        data_date:(sig.timestamp||'').slice(0,10),timestamp:sig.timestamp||'',
+        stop_loss:null,take_profit:null,stop_loss_pct:null,take_profit_pct:null,position_advice:''}
+      aiCache[sig.symbol]={data:cacheData,fetchedAt:t}; _pushAiHistory(cacheData,t)
+    }
+  }catch(_){}
+
+  // ② 持仓扫描（服务端已含邮件发送）
+  try{
+    const holdings = await fetch('/api/holdings').then(r=>r.json()).catch(()=>[])
+    if(holdings.length){
+      await fetch('/api/holdings/scan',{method:'POST'}).then(r=>r.json())
+      if(_currentLeftTab==='hold') loadHoldings()
+    }
+  }catch(_){}
+
+  document.getElementById('scanStatus').textContent=
+    `自动扫描 ${watchScanned}支  ${new Date().toTimeString().slice(0,5)}`
+
+  // ③ 龙头：每1.5小时扫一次（在监控+持仓之后）
+  if(Date.now() - _lastSectorScanAt > 90*60*1000){
+    try{
+      const sr = await fetch('/api/sector/scan',{method:'POST'}).then(r=>r.json())
+      _renderSectorTab(sr.signals||[])
+      _lastSectorScanAt = Date.now()
+      if(_currentLeftTab==='sector') renderSignals(sr.signals||[],`板块龙头 ${(sr.signals||[]).length}支`)
+      const tEl=document.getElementById('sectorScanTime')
+      if(tEl) tEl.textContent=`更新: ${sr.scanned_at||new Date().toTimeString().slice(0,5)}`
+    }catch(_){}
+  }
+}
+
+async function init(){
+  await loadWatchList()
+  await loadFavorites()
+  await loadHoldings()
+  loadSectorCache()            // 后台静默加载龙头缓存，不阻塞
+  if(_inTradingHours()){
+    _startAutoScan()           // AI分析：10分钟一次
+    _startWatchPriceRefresh()  // 监控+持仓行情：30秒一次
+  } else {
+    _refreshAllPrices()        // 非交易时间拉一次收盘价
+  }
+}
+init()
+</script>
+</body>
+</html>

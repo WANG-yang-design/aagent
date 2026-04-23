@@ -1,0 +1,3 @@
+{"test": "ok", "action": "BUY", "symbol": "000001", "price": 11.0, "shares": 100, "timestamp": "2026-04-15T14:56:20.385983"}
+{"symbol": "600103", "action": "BUY", "price": 3.99, "shares": 1200, "amount": 4788.0, "mode": "paper", "confidence": 0.86, "signal_strength": "STRONG", "risk_level": "MEDIUM", "reason": "均线多头排列，MACD与放量共振，RSI未极端，趋势确认", "timestamp": "2026-04-15T21:19:36.433880"}
+{"symbol": "600103", "action": "BUY", "price": 3.99, "shares": 1200, "amount": 4788.0, "mode": "paper", "confidence": 0.9, "signal_strength": "STRONG", "risk_level": "MEDIUM", "reason": "均线多头排列，MACD与放量共振，RSI未过热，趋势确认", "timestamp": "2026-04-15T21:21:42.213741"}

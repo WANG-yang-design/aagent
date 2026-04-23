@@ -1,0 +1,1038 @@
+2026-04-18 10:19:33 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:19:33 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:19:38 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:19:46 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:19:53 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:19:53 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:19:53 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:19:53 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:19:53 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:19:53 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:19:53 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:19:53 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:19:53 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:19:53 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:19:54 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:19:54 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:19:54 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:19:54 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:19:55 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:19:55 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:19:55 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:19:55 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:19:55 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:03 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:06 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:06 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:20:06 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:20:06 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:06 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:14 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:16 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:16 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:20:16 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:20:16 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:16 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:25 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:26 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:26 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:20:26 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:20:26 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:26 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:34 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:36 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:36 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:20:36 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:20:36 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:36 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:44 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:46 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:46 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:20:46 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:20:46 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:47 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:55 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:57 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:57 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:20:57 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:20:57 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:20:57 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:05 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:07 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:07 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:21:07 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:21:07 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:07 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:15 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:17 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:17 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:21:17 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:21:17 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:17 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:25 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:27 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:27 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:21:27 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:21:27 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:27 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:35 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:38 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:38 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:21:38 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:21:38 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:38 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:46 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:48 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:48 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:21:48 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:21:48 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:48 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:56 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:58 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:58 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:21:58 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:21:58 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:21:58 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:06 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:08 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:08 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:22:08 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:22:08 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:08 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:16 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:18 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:18 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:22:18 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:22:18 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:19 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:27 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:29 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:29 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:22:29 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:22:29 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:29 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:37 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:39 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:39 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:22:39 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:22:39 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:39 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:48 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:50 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:50 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:22:50 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:22:50 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:50 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:22:59 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:01 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:01 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:23:01 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:23:02 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:02 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:10 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:12 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:12 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:23:12 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:23:12 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:12 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:21 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:23 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:23 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:23:23 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:23:23 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:23 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:32 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:34 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:34 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:23:34 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:23:34 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:34 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:43 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:45 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:45 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:23:45 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:23:45 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:45 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:55 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:56 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:56 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:23:56 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:23:56 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:23:56 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:05 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:07 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:07 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:24:07 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:24:07 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:07 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:16 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:18 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:18 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:24:18 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:24:18 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:18 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:27 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:29 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:29 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:24:29 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:24:29 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:29 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:38 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:40 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:40 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:24:40 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:24:40 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:40 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:50 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:51 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:51 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:24:51 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:24:51 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:24:51 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:00 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:02 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:02 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:25:02 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:25:02 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:02 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:11 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:13 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:13 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:25:13 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:25:13 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:13 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:23 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:24 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:24 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:25:24 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:25:24 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:24 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:33 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:35 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:35 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:25:35 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:25:35 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:35 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:44 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:46 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:46 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:25:46 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:25:46 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:46 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:55 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:57 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:57 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:25:57 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:25:57 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:25:57 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:06 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:08 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:08 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:26:08 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:26:09 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:09 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:17 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:19 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:19 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:26:19 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:26:19 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:19 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:28 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:30 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:30 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:26:30 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:26:30 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:30 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:39 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:41 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:41 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:26:41 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:26:41 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:41 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:50 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:52 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:52 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:26:52 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:26:52 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:26:52 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:01 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:03 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:03 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:27:03 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:27:03 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:03 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:12 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:14 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:14 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:27:14 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:27:14 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:14 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:23 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:25 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:25 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:27:25 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:27:25 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:25 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:34 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:36 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:36 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:27:36 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:27:36 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:36 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:45 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:47 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:47 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:27:47 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:27:47 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:47 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:56 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:58 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:58 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:27:58 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:27:58 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:27:58 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:09 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:09 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:28:09 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:28:10 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:10 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:10 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:18 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:20 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:20 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:28:20 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:28:20 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:20 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:29 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:31 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:31 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:28:31 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:28:31 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:31 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:40 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:42 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:42 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:28:42 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:28:42 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:42 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:51 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:53 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:53 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:28:53 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:28:53 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:28:53 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:02 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:04 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:04 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:29:04 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:29:04 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:04 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:13 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:15 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:15 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:29:15 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:29:15 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:15 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:24 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:26 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:26 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:29:26 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:29:26 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:26 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:35 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:37 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:37 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:29:37 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:29:37 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:37 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:46 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:48 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:48 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:29:48 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:29:48 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:48 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:57 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:59 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:59 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:29:59 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:29:59 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:29:59 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:08 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:10 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:10 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:30:10 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:30:10 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:10 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:19 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:21 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:21 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:30:21 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:30:21 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:21 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:31 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:32 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:32 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:30:32 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:30:32 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:32 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:41 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:43 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:43 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:30:43 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:30:43 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:43 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:52 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:54 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:54 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:30:54 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:30:54 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:30:54 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:04 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:05 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:05 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:31:05 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:31:05 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:05 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:14 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:16 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:16 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:31:16 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:31:16 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:16 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:25 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:27 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:27 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:31:27 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:31:27 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:27 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:36 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:38 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:38 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:31:38 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:31:38 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:38 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:47 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:49 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:49 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:31:49 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:31:49 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:49 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:31:58 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:00 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:00 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:32:00 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:32:00 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:00 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:09 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:11 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:11 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:32:11 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:32:11 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:11 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:20 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:22 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:22 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:32:22 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:32:22 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:22 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:31 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:33 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:33 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:32:33 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:32:33 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:33 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:42 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:44 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:44 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:32:44 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:32:44 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:44 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:53 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:55 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:55 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:32:55 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:32:55 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:32:55 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:04 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:06 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:06 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:33:06 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:33:06 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:06 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:15 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:17 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:17 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:33:17 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:33:17 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:17 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:26 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:28 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:28 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:33:28 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:33:28 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:28 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:37 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:39 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:39 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:33:39 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:33:40 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:40 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:48 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:50 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:50 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:33:50 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:33:50 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:50 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:33:59 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:01 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:01 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:34:01 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:34:01 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:01 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:10 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:12 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:12 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:34:12 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:34:12 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:12 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:21 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:23 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:23 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:34:23 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:34:23 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:23 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:32 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:34 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:34 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:34:34 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:34:34 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:34 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:43 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:45 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:45 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:34:45 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:34:45 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:45 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:54 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:56 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:56 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:34:56 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:34:56 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:34:56 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:35:05 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:35:07 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:35:07 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:35:07 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:35:07 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:35:07 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:35:16 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:35:18 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600410&code=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:35:18 [WARNING] data.market_data: [600410] baostock分钟失败(网络接收错误。)
+2026-04-18 10:35:18 [INFO] data.market_data: [600410] 分时本地缓存 242 条 period=5
+2026-04-18 10:35:18 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 10:35:18 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600410 "HTTP/1.1 200 OK"
+2026-04-18 11:03:02 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['600103', '513400', '002361']
+2026-04-18 11:03:08 [WARNING] data.market_data: [002261] baostock历史数据为空
+2026-04-18 11:03:08 [INFO] data.market_data: [002261] DB缓存K线 1211 条 (d)
+2026-04-18 11:03:08 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002261 "HTTP/1.1 200 OK"
+2026-04-18 11:03:09 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002261 "HTTP/1.1 200 OK"
+2026-04-18 11:03:13 [WARNING] data.market_data: [002738] baostock历史数据为空
+2026-04-18 11:03:13 [INFO] data.market_data: [002738] DB缓存K线 1211 条 (d)
+2026-04-18 11:03:13 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002738 "HTTP/1.1 200 OK"
+2026-04-18 11:03:13 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002738 "HTTP/1.1 200 OK"
+2026-04-18 11:03:33 [INFO] trading.sector_leaders: [板块龙头] 开始扫描 59 支龙头股
+2026-04-18 11:03:33 [INFO] data.market_data: [002371] baostock历史 77 条
+2026-04-18 11:03:33 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002371 "HTTP/1.1 200 OK"
+2026-04-18 11:03:40 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz002371&code=sz002371 "HTTP/1.1 200 OK"
+2026-04-18 11:03:41 [INFO] data.market_data: [002371] baostock分钟 192 条  freq=5
+2026-04-18 11:03:41 [INFO] data.market_data: [002371] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:03:46 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:03:46 [INFO] ai_decision.agent: [AI] 002371 → HOLD  置信:79%  均线未形成多头排列，价在MA5/MA60下且分时横盘，MACD偏强但信号冲突，先观望
+2026-04-18 11:03:46 [INFO] trading.sector_leaders: [板块龙头] [1/59] 002371 → HOLD 79%
+2026-04-18 11:03:47 [INFO] data.market_data: [688012] baostock历史 68 条
+2026-04-18 11:03:47 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh688012 "HTTP/1.1 200 OK"
+2026-04-18 11:03:53 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh688012&code=sh688012 "HTTP/1.1 200 OK"
+2026-04-18 11:03:54 [INFO] data.market_data: [688012] baostock分钟 192 条  freq=5
+2026-04-18 11:03:54 [INFO] data.market_data: [688012] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:03:57 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:03:57 [INFO] ai_decision.agent: [AI] 688012 → HOLD  置信:79%  均线未形成多头或空头共振，MACD转强但分时下行，信号冲突，暂不交易
+2026-04-18 11:03:57 [INFO] trading.sector_leaders: [板块龙头] [2/59] 688012 → HOLD 79%
+2026-04-18 11:03:57 [INFO] data.market_data: [603501] baostock历史 77 条
+2026-04-18 11:03:57 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh603501 "HTTP/1.1 200 OK"
+2026-04-18 11:04:03 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh603501&code=sh603501 "HTTP/1.1 200 OK"
+2026-04-18 11:04:03 [INFO] data.market_data: [603501] baostock分钟 192 条  freq=5
+2026-04-18 11:04:03 [INFO] data.market_data: [603501] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:04:07 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:04:07 [INFO] ai_decision.agent: [AI] 603501 → HOLD  置信:82%  空仓宜观望；均线空头排列，分时下行，虽MACD弱修复但量能不足，信号冲突
+2026-04-18 11:04:07 [INFO] trading.sector_leaders: [板块龙头] [3/59] 603501 → HOLD 82%
+2026-04-18 11:04:07 [INFO] data.market_data: [688981] baostock历史 77 条
+2026-04-18 11:04:08 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh688981 "HTTP/1.1 200 OK"
+2026-04-18 11:04:17 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh688981&code=sh688981 "HTTP/1.1 200 OK"
+2026-04-18 11:04:18 [INFO] data.market_data: [688981] baostock分钟 192 条  freq=5
+2026-04-18 11:04:18 [INFO] data.market_data: [688981] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:04:23 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:04:23 [INFO] ai_decision.agent: [AI] 688981 → HOLD  置信:77%  短线走强且放量，但MA20未上穿MA60，趋势未形成多头共振，先观望更稳妥
+2026-04-18 11:04:23 [INFO] trading.sector_leaders: [板块龙头] [4/59] 688981 → HOLD 77%
+2026-04-18 11:04:24 [INFO] data.market_data: [688008] baostock历史 77 条
+2026-04-18 11:04:26 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh688008 "HTTP/1.1 200 OK"
+2026-04-18 11:04:33 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh688008&code=sh688008 "HTTP/1.1 200 OK"
+2026-04-18 11:04:34 [INFO] data.market_data: [688008] baostock分钟 192 条  freq=5
+2026-04-18 11:04:34 [INFO] data.market_data: [688008] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:04:37 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:04:37 [INFO] ai_decision.agent: [AI] 688008 → HOLD  置信:81%  均线未形成多头排列，价在MA60下且分时横盘，MACD虽强但指标冲突，先观望
+2026-04-18 11:04:37 [INFO] trading.sector_leaders: [板块龙头] [5/59] 688008 → HOLD 81%
+2026-04-18 11:04:37 [INFO] data.market_data: [688256] baostock历史 77 条
+2026-04-18 11:04:37 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh688256 "HTTP/1.1 200 OK"
+2026-04-18 11:04:43 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh688256&code=sh688256 "HTTP/1.1 200 OK"
+2026-04-18 11:04:43 [INFO] data.market_data: [688256] baostock分钟 192 条  freq=5
+2026-04-18 11:04:43 [INFO] data.market_data: [688256] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:04:47 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:04:47 [INFO] ai_decision.agent: [AI] 688256 → HOLD  置信:84%  均线多头但RSI超80过热，量比0.87未放量确认，追高胜率不足，宜观望
+2026-04-18 11:04:47 [INFO] trading.sector_leaders: [板块龙头] [6/59] 688256 → HOLD 84%
+2026-04-18 11:04:47 [INFO] data.market_data: [002230] baostock历史 77 条
+2026-04-18 11:04:48 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002230 "HTTP/1.1 200 OK"
+2026-04-18 11:04:55 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz002230&code=sz002230 "HTTP/1.1 200 OK"
+2026-04-18 11:04:55 [INFO] data.market_data: [002230] baostock分钟 192 条  freq=5
+2026-04-18 11:04:55 [INFO] data.market_data: [002230] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:04:59 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:04:59 [INFO] ai_decision.agent: [AI] 002230 → HOLD  置信:80%  短线站上MA5/20但仍压于MA60，MACD修复与量能不足并存，属反弹未确认，先观望
+2026-04-18 11:04:59 [INFO] trading.sector_leaders: [板块龙头] [7/59] 002230 → HOLD 80%
+2026-04-18 11:04:59 [INFO] data.market_data: [603877] baostock历史 77 条
+2026-04-18 11:05:00 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh603877 "HTTP/1.1 200 OK"
+2026-04-18 11:05:07 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh603877&code=sh603877 "HTTP/1.1 200 OK"
+2026-04-18 11:05:07 [INFO] data.market_data: [603877] baostock分钟 192 条  freq=5
+2026-04-18 11:05:07 [INFO] data.market_data: [603877] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:05:13 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:05:13 [INFO] ai_decision.agent: [AI] 603877 → HOLD  置信:78%  均线未形成多头排列，MACD虽修复但仍在零轴下，分时走弱，信号冲突宜观望
+2026-04-18 11:05:13 [INFO] trading.sector_leaders: [板块龙头] [8/59] 603877 → HOLD 78%
+2026-04-18 11:05:13 [INFO] data.market_data: [688061] baostock历史 77 条
+2026-04-18 11:05:13 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh688061 "HTTP/1.1 200 OK"
+2026-04-18 11:05:20 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh688061&code=sh688061 "HTTP/1.1 200 OK"
+2026-04-18 11:05:21 [INFO] data.market_data: [688061] baostock分钟 192 条  freq=5
+2026-04-18 11:05:21 [INFO] data.market_data: [688061] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:05:25 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:05:25 [INFO] ai_decision.agent: [AI] 688061 → HOLD  置信:80%  短线走强但均线未多头排列，MACD修复与量能不足共振不够，先观望
+2026-04-18 11:05:25 [INFO] trading.sector_leaders: [板块龙头] [9/59] 688061 → HOLD 80%
+2026-04-18 11:05:26 [INFO] data.market_data: [688126] baostock历史 77 条
+2026-04-18 11:05:27 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh688126 "HTTP/1.1 200 OK"
+2026-04-18 11:05:34 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh688126&code=sh688126 "HTTP/1.1 200 OK"
+2026-04-18 11:05:35 [INFO] data.market_data: [688126] baostock分钟 192 条  freq=5
+2026-04-18 11:05:35 [INFO] data.market_data: [688126] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:05:39 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:05:39 [INFO] ai_decision.agent: [AI] 688126 → HOLD  置信:79%  短线站上MA5/20且放量上行，但MA60仍压制，均线未多头排列，MACD修复与中期趋势冲突，先观望。
+2026-04-18 11:05:39 [INFO] trading.sector_leaders: [板块龙头] [10/59] 688126 → HOLD 79%
+2026-04-18 11:05:39 [INFO] data.market_data: [301548] baostock历史 77 条
+2026-04-18 11:05:40 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz301548 "HTTP/1.1 200 OK"
+2026-04-18 11:05:46 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz301548&code=sz301548 "HTTP/1.1 200 OK"
+2026-04-18 11:05:46 [INFO] data.market_data: [301548] baostock分钟 192 条  freq=5
+2026-04-18 11:05:46 [INFO] data.market_data: [301548] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:05:50 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:05:50 [INFO] ai_decision.agent: [AI] 301548 → HOLD  置信:74%  量能放大且MACD转强，但均线未成多头排列，RSI偏高且分时横盘，暂不追涨，等待放量突破或回踩确认
+2026-04-18 11:05:50 [INFO] trading.sector_leaders: [板块龙头] [11/59] 301548 → HOLD 74%
+2026-04-18 11:05:51 [INFO] data.market_data: [688208] baostock历史 77 条
+2026-04-18 11:05:52 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh688208 "HTTP/1.1 200 OK"
+2026-04-18 11:05:58 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh688208&code=sh688208 "HTTP/1.1 200 OK"
+2026-04-18 11:05:59 [INFO] data.market_data: [688208] baostock分钟 192 条  freq=5
+2026-04-18 11:05:59 [INFO] data.market_data: [688208] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:06:02 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:06:02 [INFO] ai_decision.agent: [AI] 688208 → HOLD  置信:79%  均线多头但MA20未上穿MA60，MACD偏强，RSI偏高且量比不足，暂不满足高胜率建仓条件
+2026-04-18 11:06:02 [INFO] trading.sector_leaders: [板块龙头] [12/59] 688208 → HOLD 79%
+2026-04-18 11:06:02 [INFO] data.market_data: [300750] baostock历史 77 条
+2026-04-18 11:06:05 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz300750 "HTTP/1.1 200 OK"
+2026-04-18 11:06:12 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz300750&code=sz300750 "HTTP/1.1 200 OK"
+2026-04-18 11:06:13 [INFO] data.market_data: [300750] baostock分钟 192 条  freq=5
+2026-04-18 11:06:13 [INFO] data.market_data: [300750] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:06:16 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:06:16 [INFO] ai_decision.agent: [AI] 300750 → HOLD  置信:79%  均线多头、MACD偏强，但量比仅1.06且分时下行，突破确认不足，优先观望
+2026-04-18 11:06:16 [INFO] trading.sector_leaders: [板块龙头] [13/59] 300750 → HOLD 79%
+2026-04-18 11:06:17 [INFO] data.market_data: [002594] baostock历史 77 条
+2026-04-18 11:06:17 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002594 "HTTP/1.1 200 OK"
+2026-04-18 11:06:22 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz002594&code=sz002594 "HTTP/1.1 200 OK"
+2026-04-18 11:06:22 [INFO] data.market_data: [002594] baostock分钟 192 条  freq=5
+2026-04-18 11:06:22 [INFO] data.market_data: [002594] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:06:26 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:06:26 [INFO] ai_decision.agent: [AI] 002594 → HOLD  置信:82%  均线未形成多头共振，MACD死叉柱绿且量比0.67，分时下行，确定性不足，先观望
+2026-04-18 11:06:26 [INFO] trading.sector_leaders: [板块龙头] [14/59] 002594 → HOLD 82%
+2026-04-18 11:06:26 [INFO] data.market_data: [300014] baostock历史 77 条
+2026-04-18 11:06:27 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz300014 "HTTP/1.1 200 OK"
+2026-04-18 11:06:33 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz300014&code=sz300014 "HTTP/1.1 200 OK"
+2026-04-18 11:06:33 [INFO] data.market_data: [300014] baostock分钟 192 条  freq=5
+2026-04-18 11:06:33 [INFO] data.market_data: [300014] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:06:37 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:06:37 [INFO] ai_decision.agent: [AI] 300014 → HOLD  置信:78%  中期仍偏多，但MA5下穿现价且分时下行，量比仅0.8，缺乏放量共振，暂不满足高胜率建仓条件
+2026-04-18 11:06:37 [INFO] trading.sector_leaders: [板块龙头] [15/59] 300014 → HOLD 78%
+2026-04-18 11:06:38 [INFO] data.market_data: [002460] baostock历史 77 条
+2026-04-18 11:06:38 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002460 "HTTP/1.1 200 OK"
+2026-04-18 11:06:44 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz002460&code=sz002460 "HTTP/1.1 200 OK"
+2026-04-18 11:06:44 [INFO] data.market_data: [002460] baostock分钟 192 条  freq=5
+2026-04-18 11:06:44 [INFO] data.market_data: [002460] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:06:47 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:06:47 [INFO] ai_decision.agent: [AI] 002460 → HOLD  置信:78%  中期仍偏多，但MA5失守且分时下行，量比仅1.09未达共振，暂不具高胜率建仓条件
+2026-04-18 11:06:47 [INFO] trading.sector_leaders: [板块龙头] [16/59] 002460 → HOLD 78%
+2026-04-18 11:06:48 [INFO] data.market_data: [603799] baostock历史 77 条
+2026-04-18 11:06:49 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh603799 "HTTP/1.1 200 OK"
+2026-04-18 11:06:56 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh603799&code=sh603799 "HTTP/1.1 200 OK"
+2026-04-18 11:06:56 [INFO] data.market_data: [603799] baostock分钟 192 条  freq=5
+2026-04-18 11:06:56 [INFO] data.market_data: [603799] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:07:01 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:07:01 [INFO] ai_decision.agent: [AI] 603799 → HOLD  置信:79%  均线未形成多头排列，MACD虽修复但分时走弱，放量冲高回落，确定性不足先观望
+2026-04-18 11:07:01 [INFO] trading.sector_leaders: [板块龙头] [17/59] 603799 → HOLD 79%
+2026-04-18 11:07:01 [INFO] data.market_data: [002831] baostock历史 77 条
+2026-04-18 11:07:01 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002831 "HTTP/1.1 200 OK"
+2026-04-18 11:07:07 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz002831&code=sz002831 "HTTP/1.1 200 OK"
+2026-04-18 11:07:07 [INFO] data.market_data: [002831] baostock分钟 192 条  freq=5
+2026-04-18 11:07:07 [INFO] data.market_data: [002831] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:07:12 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:07:12 [INFO] ai_decision.agent: [AI] 002831 → HOLD  置信:81%  均线多头但量比仅0.88，冲高回落且接近短线偏热区，缺乏放量共振，优先观望
+2026-04-18 11:07:12 [INFO] trading.sector_leaders: [板块龙头] [18/59] 002831 → HOLD 81%
+2026-04-18 11:07:13 [INFO] data.market_data: [601012] baostock历史 77 条
+2026-04-18 11:07:13 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh601012 "HTTP/1.1 200 OK"
+2026-04-18 11:07:18 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh601012&code=sh601012 "HTTP/1.1 200 OK"
+2026-04-18 11:07:19 [INFO] data.market_data: [601012] baostock分钟 192 条  freq=5
+2026-04-18 11:07:19 [INFO] data.market_data: [601012] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:07:23 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:07:23 [INFO] ai_decision.agent: [AI] 601012 → HOLD  置信:84%  均线空头排列，量比仅0.55，分时横盘；MACD略修复但共振不足，等待放量明确信号
+2026-04-18 11:07:23 [INFO] trading.sector_leaders: [板块龙头] [19/59] 601012 → HOLD 84%
+2026-04-18 11:07:23 [INFO] data.market_data: [600438] baostock历史 67 条
+2026-04-18 11:07:23 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600438 "HTTP/1.1 200 OK"
+2026-04-18 11:07:30 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600438&code=sh600438 "HTTP/1.1 200 OK"
+2026-04-18 11:07:30 [INFO] data.market_data: [600438] baostock分钟 192 条  freq=5
+2026-04-18 11:07:30 [INFO] data.market_data: [600438] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:07:33 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:07:33 [INFO] ai_decision.agent: [AI] 600438 → HOLD  置信:80%  短线站上MA5与MA20，但仍受MA60压制，MACD修复而量比仅0.75，未达多指标共振，宜观望
+2026-04-18 11:07:33 [INFO] trading.sector_leaders: [板块龙头] [20/59] 600438 → HOLD 80%
+2026-04-18 11:07:33 [INFO] data.market_data: [688223] baostock历史 77 条
+2026-04-18 11:07:34 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh688223 "HTTP/1.1 200 OK"
+2026-04-18 11:07:42 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh688223&code=sh688223 "HTTP/1.1 200 OK"
+2026-04-18 11:07:42 [INFO] data.market_data: [688223] baostock分钟 192 条  freq=5
+2026-04-18 11:07:42 [INFO] data.market_data: [688223] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:07:45 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:07:45 [INFO] ai_decision.agent: [AI] 688223 → HOLD  置信:83%  均线未形成多头排列，MACD修复但量比仅0.79，属弱反弹震荡，确定性不足，先观望
+2026-04-18 11:07:45 [INFO] trading.sector_leaders: [板块龙头] [21/59] 688223 → HOLD 83%
+2026-04-18 11:07:46 [INFO] data.market_data: [300274] baostock历史 77 条
+2026-04-18 11:07:46 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz300274 "HTTP/1.1 200 OK"
+2026-04-18 11:07:52 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz300274&code=sz300274 "HTTP/1.1 200 OK"
+2026-04-18 11:07:52 [INFO] data.market_data: [300274] baostock分钟 192 条  freq=5
+2026-04-18 11:07:52 [INFO] data.market_data: [300274] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:07:57 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:07:57 [INFO] ai_decision.agent: [AI] 300274 → HOLD  置信:89%  空仓不宜抄底，均线空头排列且MACD偏弱，量比0.77不足，分时横盘仅属弱势整理
+2026-04-18 11:07:57 [INFO] trading.sector_leaders: [板块龙头] [22/59] 300274 → HOLD 89%
+2026-04-18 11:07:57 [INFO] data.market_data: [002463] baostock历史 77 条
+2026-04-18 11:07:57 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002463 "HTTP/1.1 200 OK"
+2026-04-18 11:08:03 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz002463&code=sz002463 "HTTP/1.1 200 OK"
+2026-04-18 11:08:03 [INFO] data.market_data: [002463] baostock分钟 192 条  freq=5
+2026-04-18 11:08:03 [INFO] data.market_data: [002463] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:08:07 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:08:07 [INFO] ai_decision.agent: [AI] 002463 → HOLD  置信:77%  均线多头、MACD偏强，但RSI达70附近且量比1.17未达放量确认，追高确定性不足，宜观望
+2026-04-18 11:08:07 [INFO] trading.sector_leaders: [板块龙头] [23/59] 002463 → HOLD 77%
+2026-04-18 11:08:08 [INFO] data.market_data: [688599] baostock历史 77 条
+2026-04-18 11:08:08 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh688599 "HTTP/1.1 200 OK"
+2026-04-18 11:08:15 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh688599&code=sh688599 "HTTP/1.1 200 OK"
+2026-04-18 11:08:15 [INFO] data.market_data: [688599] baostock分钟 192 条  freq=5
+2026-04-18 11:08:15 [INFO] data.market_data: [688599] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:08:19 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:08:19 [INFO] ai_decision.agent: [AI] 688599 → HOLD  置信:81%  均线空头排列未扭转，MACD虽修复但量比0.68不足，分时上行缺乏确认，宜观望
+2026-04-18 11:08:19 [INFO] trading.sector_leaders: [板块龙头] [24/59] 688599 → HOLD 81%
+2026-04-18 11:08:20 [INFO] data.market_data: [600893] baostock历史 77 条
+2026-04-18 11:08:20 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600893 "HTTP/1.1 200 OK"
+2026-04-18 11:08:26 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600893&code=sh600893 "HTTP/1.1 200 OK"
+2026-04-18 11:08:26 [INFO] data.market_data: [600893] baostock分钟 192 条  freq=5
+2026-04-18 11:08:26 [INFO] data.market_data: [600893] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:08:31 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:08:31 [INFO] ai_decision.agent: [AI] 600893 → HOLD  置信:84%  均线未形成明确多空趋势，MACD修复但量比仅0.68，分时下行，信号冲突，宜继续观望
+2026-04-18 11:08:31 [INFO] trading.sector_leaders: [板块龙头] [25/59] 600893 → HOLD 84%
+2026-04-18 11:08:32 [INFO] data.market_data: [600038] baostock历史 77 条
+2026-04-18 11:08:32 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600038 "HTTP/1.1 200 OK"
+2026-04-18 11:08:39 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600038&code=sh600038 "HTTP/1.1 200 OK"
+2026-04-18 11:08:39 [INFO] data.market_data: [600038] baostock分钟 192 条  freq=5
+2026-04-18 11:08:39 [INFO] data.market_data: [600038] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:08:43 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:08:43 [INFO] ai_decision.agent: [AI] 600038 → HOLD  置信:84%  均线未形成多头排列，MACD修复但量比仅0.69，分时横盘，信号冲突，观望为主
+2026-04-18 11:08:43 [INFO] trading.sector_leaders: [板块龙头] [26/59] 600038 → HOLD 84%
+2026-04-18 11:08:43 [INFO] data.market_data: [000768] baostock历史 77 条
+2026-04-18 11:08:44 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz000768 "HTTP/1.1 200 OK"
+2026-04-18 11:08:50 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz000768&code=sz000768 "HTTP/1.1 200 OK"
+2026-04-18 11:08:50 [INFO] data.market_data: [000768] baostock分钟 192 条  freq=5
+2026-04-18 11:08:50 [INFO] data.market_data: [000768] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:08:54 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:08:54 [INFO] ai_decision.agent: [AI] 000768 → HOLD  置信:80%  均线未形成多头，MACD虽修复但量能不足，分时横盘，当前确定性不够，宜继续观望
+2026-04-18 11:08:54 [INFO] trading.sector_leaders: [板块龙头] [27/59] 000768 → HOLD 80%
+2026-04-18 11:08:55 [INFO] data.market_data: [002985] baostock历史 77 条
+2026-04-18 11:08:55 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002985 "HTTP/1.1 200 OK"
+2026-04-18 11:09:01 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz002985&code=sz002985 "HTTP/1.1 200 OK"
+2026-04-18 11:09:01 [INFO] data.market_data: [002985] baostock分钟 192 条  freq=5
+2026-04-18 11:09:01 [INFO] data.market_data: [002985] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:09:05 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:09:05 [INFO] ai_decision.agent: [AI] 002985 → HOLD  置信:82%  均线未形成多头排列，MACD修复但量能不足，属震荡偏强，暂不满足高确定性建仓条件
+2026-04-18 11:09:05 [INFO] trading.sector_leaders: [板块龙头] [28/59] 002985 → HOLD 82%
+2026-04-18 11:09:05 [INFO] data.market_data: [688271] baostock历史 77 条
+2026-04-18 11:09:05 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh688271 "HTTP/1.1 200 OK"
+2026-04-18 11:09:12 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh688271&code=sh688271 "HTTP/1.1 200 OK"
+2026-04-18 11:09:12 [INFO] data.market_data: [688271] baostock分钟 192 条  freq=5
+2026-04-18 11:09:12 [INFO] data.market_data: [688271] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:09:16 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:09:16 [INFO] ai_decision.agent: [AI] 688271 → HOLD  置信:83%  均线未形成多头共振，股价仍弱于MA60；MACD修复但分时下行、量比不足，确定性不够，先观望。
+2026-04-18 11:09:16 [INFO] trading.sector_leaders: [板块龙头] [29/59] 688271 → HOLD 83%
+2026-04-18 11:09:17 [INFO] data.market_data: [600765] baostock历史 77 条
+2026-04-18 11:09:17 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600765 "HTTP/1.1 200 OK"
+2026-04-18 11:09:23 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600765&code=sh600765 "HTTP/1.1 200 OK"
+2026-04-18 11:09:23 [INFO] data.market_data: [600765] baostock分钟 192 条  freq=5
+2026-04-18 11:09:23 [INFO] data.market_data: [600765] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:09:26 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:09:26 [INFO] ai_decision.agent: [AI] 600765 → HOLD  置信:82%  均线未形成多头排列，价在MA60下方，MACD修复但量能不足，分时偏弱，宜观望
+2026-04-18 11:09:26 [INFO] trading.sector_leaders: [板块龙头] [30/59] 600765 → HOLD 82%
+2026-04-18 11:09:28 [INFO] data.market_data: [600276] baostock历史 77 条
+2026-04-18 11:09:29 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600276 "HTTP/1.1 200 OK"
+2026-04-18 11:09:36 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600276&code=sh600276 "HTTP/1.1 200 OK"
+2026-04-18 11:09:36 [INFO] data.market_data: [600276] baostock分钟 192 条  freq=5
+2026-04-18 11:09:36 [INFO] data.market_data: [600276] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:09:42 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:09:42 [INFO] ai_decision.agent: [AI] 600276 → HOLD  置信:84%  均线未形成明确多头，量能无放大，分时走弱，信号不共振，先观望
+2026-04-18 11:09:42 [INFO] trading.sector_leaders: [板块龙头] [31/59] 600276 → HOLD 84%
+2026-04-18 11:09:42 [INFO] data.market_data: [603259] baostock历史 77 条
+2026-04-18 11:09:42 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh603259 "HTTP/1.1 200 OK"
+2026-04-18 11:09:48 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh603259&code=sh603259 "HTTP/1.1 200 OK"
+2026-04-18 11:09:49 [INFO] data.market_data: [603259] baostock分钟 192 条  freq=5
+2026-04-18 11:09:49 [INFO] data.market_data: [603259] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:09:52 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:09:52 [INFO] ai_decision.agent: [AI] 603259 → HOLD  置信:82%  均线未形成多头共振，价跌破MA20且分时单边下行，放量下跌风险偏高，先观望
+2026-04-18 11:09:52 [INFO] trading.sector_leaders: [板块龙头] [32/59] 603259 → HOLD 82%
+2026-04-18 11:09:52 [INFO] data.market_data: [300760] baostock历史 77 条
+2026-04-18 11:09:52 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz300760 "HTTP/1.1 200 OK"
+2026-04-18 11:10:01 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz300760&code=sz300760 "HTTP/1.1 200 OK"
+2026-04-18 11:10:01 [INFO] data.market_data: [300760] baostock分钟 192 条  freq=5
+2026-04-18 11:10:01 [INFO] data.market_data: [300760] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:10:06 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:10:06 [INFO] ai_decision.agent: [AI] 300760 → HOLD  置信:84%  均线空头排列且分时下行，量能仅略放大；MACD弱修复与跌势冲突，缺乏多指标共振，宜观望
+2026-04-18 11:10:06 [INFO] trading.sector_leaders: [板块龙头] [33/59] 300760 → HOLD 84%
+2026-04-18 11:10:06 [INFO] data.market_data: [300122] baostock历史 77 条
+2026-04-18 11:10:06 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz300122 "HTTP/1.1 200 OK"
+2026-04-18 11:10:16 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz300122&code=sz300122 "HTTP/1.1 200 OK"
+2026-04-18 11:10:16 [INFO] data.market_data: [300122] baostock分钟 192 条  freq=5
+2026-04-18 11:10:16 [INFO] data.market_data: [300122] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:10:20 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:10:20 [INFO] ai_decision.agent: [AI] 300122 → HOLD  置信:86%  均线未形成多头，价在MA20附近、低于MA60，量比0.63不足，分时下行，观望为宜
+2026-04-18 11:10:20 [INFO] trading.sector_leaders: [板块龙头] [34/59] 300122 → HOLD 86%
+2026-04-18 11:10:20 [INFO] data.market_data: [688180] baostock历史 77 条
+2026-04-18 11:10:20 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh688180 "HTTP/1.1 200 OK"
+2026-04-18 11:10:30 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh688180&code=sh688180 "HTTP/1.1 200 OK"
+2026-04-18 11:10:31 [INFO] data.market_data: [688180] baostock分钟 192 条  freq=5
+2026-04-18 11:10:31 [INFO] data.market_data: [688180] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:10:34 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:10:34 [INFO] ai_decision.agent: [AI] 688180 → HOLD  置信:88%  均线多头、MACD偏强，但RSI 89.59严重过热且量比仅1.11，追高胜率不足，先观望
+2026-04-18 11:10:34 [INFO] trading.sector_leaders: [板块龙头] [35/59] 688180 → HOLD 88%
+2026-04-18 11:10:35 [INFO] data.market_data: [002589] baostock历史 77 条
+2026-04-18 11:10:35 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002589 "HTTP/1.1 200 OK"
+2026-04-18 11:10:41 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz002589&code=sz002589 "HTTP/1.1 200 OK"
+2026-04-18 11:10:42 [INFO] data.market_data: [002589] baostock分钟 192 条  freq=5
+2026-04-18 11:10:42 [INFO] data.market_data: [002589] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:10:45 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:10:45 [INFO] ai_decision.agent: [AI] 002589 → HOLD  置信:78%  均线未形成多头排列，MACD偏多但日内放量下跌且分时走弱，信号冲突，宜观望
+2026-04-18 11:10:45 [INFO] trading.sector_leaders: [板块龙头] [36/59] 002589 → HOLD 78%
+2026-04-18 11:10:46 [INFO] data.market_data: [600519] baostock历史 77 条
+2026-04-18 11:10:46 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600519 "HTTP/1.1 200 OK"
+2026-04-18 11:10:51 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600519&code=sh600519 "HTTP/1.1 200 OK"
+2026-04-18 11:10:52 [INFO] data.market_data: [600519] baostock分钟 192 条  freq=5
+2026-04-18 11:10:52 [INFO] data.market_data: [600519] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:10:55 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:10:55 [INFO] ai_decision.agent: [AI] 600519 → HOLD  置信:88%  均线粘合且现价跌破MA5/20/60，MACD死叉绿柱放大，放量下跌与分时反抽冲突，确定性不足观望
+2026-04-18 11:10:55 [INFO] trading.sector_leaders: [板块龙头] [37/59] 600519 → HOLD 88%
+2026-04-18 11:10:56 [INFO] data.market_data: [000858] baostock历史 77 条
+2026-04-18 11:10:56 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz000858 "HTTP/1.1 200 OK"
+2026-04-18 11:11:01 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz000858&code=sz000858 "HTTP/1.1 200 OK"
+2026-04-18 11:11:01 [INFO] data.market_data: [000858] baostock分钟 192 条  freq=5
+2026-04-18 11:11:01 [INFO] data.market_data: [000858] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:11:05 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:11:05 [INFO] ai_decision.agent: [AI] 000858 → HOLD  置信:82%  均线粘合且现价低于三均线，MACD走弱、RSI中性，放量但无突破，暂不具备高胜率交易条件
+2026-04-18 11:11:05 [INFO] trading.sector_leaders: [板块龙头] [38/59] 000858 → HOLD 82%
+2026-04-18 11:11:06 [INFO] data.market_data: [002304] baostock历史 77 条
+2026-04-18 11:11:06 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002304 "HTTP/1.1 200 OK"
+2026-04-18 11:11:12 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz002304&code=sz002304 "HTTP/1.1 200 OK"
+2026-04-18 11:11:13 [INFO] data.market_data: [002304] baostock分钟 192 条  freq=5
+2026-04-18 11:11:13 [INFO] data.market_data: [002304] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:11:19 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:11:19 [INFO] ai_decision.agent: [AI] 002304 → HOLD  置信:79%  均线空头但MA5与MA20接近，MACD弱修复、量能不足，分时下行，不符多指标共振，宜观望
+2026-04-18 11:11:19 [INFO] trading.sector_leaders: [板块龙头] [39/59] 002304 → HOLD 79%
+2026-04-18 11:11:19 [INFO] data.market_data: [600887] baostock历史 77 条
+2026-04-18 11:11:19 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600887 "HTTP/1.1 200 OK"
+2026-04-18 11:11:26 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600887&code=sh600887 "HTTP/1.1 200 OK"
+2026-04-18 11:11:26 [INFO] data.market_data: [600887] baostock分钟 192 条  freq=5
+2026-04-18 11:11:26 [INFO] data.market_data: [600887] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:11:30 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:11:30 [INFO] ai_decision.agent: [AI] 600887 → HOLD  置信:86%  均线空头排列，MACD走弱且分时下行；虽放量但属下跌放量，暂无高确定性买点，观望为主
+2026-04-18 11:11:30 [INFO] trading.sector_leaders: [板块龙头] [40/59] 600887 → HOLD 86%
+2026-04-18 11:11:30 [INFO] data.market_data: [603288] baostock历史 77 条
+2026-04-18 11:11:30 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh603288 "HTTP/1.1 200 OK"
+2026-04-18 11:11:36 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh603288&code=sh603288 "HTTP/1.1 200 OK"
+2026-04-18 11:11:37 [INFO] data.market_data: [603288] baostock分钟 192 条  freq=5
+2026-04-18 11:11:37 [INFO] data.market_data: [603288] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:11:40 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:11:40 [INFO] ai_decision.agent: [AI] 603288 → HOLD  置信:82%  均线未形成明确多头，MACD死叉柱绿且量能不足，分时下行，当前胜率不够，宜观望
+2026-04-18 11:11:40 [INFO] trading.sector_leaders: [板块龙头] [41/59] 603288 → HOLD 82%
+2026-04-18 11:11:42 [INFO] data.market_data: [000568] baostock历史 77 条
+2026-04-18 11:11:42 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz000568 "HTTP/1.1 200 OK"
+2026-04-18 11:11:49 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz000568&code=sz000568 "HTTP/1.1 200 OK"
+2026-04-18 11:11:50 [INFO] data.market_data: [000568] baostock分钟 192 条  freq=5
+2026-04-18 11:11:50 [INFO] data.market_data: [000568] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:11:53 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:11:53 [INFO] ai_decision.agent: [AI] 000568 → HOLD  置信:83%  均线空头排列，价格弱于MA5/20/60；MACD略修复但分时横盘，信号冲突，等待放量企稳再评估
+2026-04-18 11:11:53 [INFO] trading.sector_leaders: [板块龙头] [42/59] 000568 → HOLD 83%
+2026-04-18 11:11:53 [INFO] data.market_data: [600036] baostock历史 77 条
+2026-04-18 11:11:53 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600036 "HTTP/1.1 200 OK"
+2026-04-18 11:12:05 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600036&code=sh600036 "HTTP/1.1 200 OK"
+2026-04-18 11:12:05 [INFO] data.market_data: [600036] baostock分钟 192 条  freq=5
+2026-04-18 11:12:05 [INFO] data.market_data: [600036] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:12:09 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:12:09 [INFO] ai_decision.agent: [AI] 600036 → HOLD  置信:78%  均线虽略多头但粘合，量能未放大，分时走弱，缺乏多指标共振，宜继续观望
+2026-04-18 11:12:09 [INFO] trading.sector_leaders: [板块龙头] [43/59] 600036 → HOLD 78%
+2026-04-18 11:12:09 [INFO] data.market_data: [000001] baostock历史 77 条
+2026-04-18 11:12:09 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz000001 "HTTP/1.1 200 OK"
+2026-04-18 11:12:16 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz000001&code=sz000001 "HTTP/1.1 200 OK"
+2026-04-18 11:12:17 [INFO] data.market_data: [000001] baostock分钟 192 条  freq=5
+2026-04-18 11:12:17 [INFO] data.market_data: [000001] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:12:20 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:12:21 [INFO] ai_decision.agent: [AI] 000001 → HOLD  置信:84%  均线粘合近震荡，MACD略弱且分时下行，量能未放大，不满足多指标共振，观望为主
+2026-04-18 11:12:21 [INFO] trading.sector_leaders: [板块龙头] [44/59] 000001 → HOLD 84%
+2026-04-18 11:12:21 [INFO] data.market_data: [601166] baostock历史 77 条
+2026-04-18 11:12:21 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh601166 "HTTP/1.1 200 OK"
+2026-04-18 11:12:26 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh601166&code=sh601166 "HTTP/1.1 200 OK"
+2026-04-18 11:12:26 [INFO] data.market_data: [601166] baostock分钟 192 条  freq=5
+2026-04-18 11:12:26 [INFO] data.market_data: [601166] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:12:30 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:12:30 [INFO] ai_decision.agent: [AI] 601166 → HOLD  置信:86%  均线粘合偏空，MACD死叉绿柱、分时下行，虽放量但无趋势共振，观望为主
+2026-04-18 11:12:30 [INFO] trading.sector_leaders: [板块龙头] [45/59] 601166 → HOLD 86%
+2026-04-18 11:12:30 [INFO] data.market_data: [002142] baostock历史 77 条
+2026-04-18 11:12:31 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002142 "HTTP/1.1 200 OK"
+2026-04-18 11:12:38 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz002142&code=sz002142 "HTTP/1.1 200 OK"
+2026-04-18 11:12:38 [INFO] data.market_data: [002142] baostock分钟 192 条  freq=5
+2026-04-18 11:12:38 [INFO] data.market_data: [002142] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:12:44 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:12:44 [INFO] ai_decision.agent: [AI] 002142 → HOLD  置信:79%  均线未形成明确多头排列，量比仅0.8且分时走弱，MACD偏多但共振不足，宜观望
+2026-04-18 11:12:44 [INFO] trading.sector_leaders: [板块龙头] [46/59] 002142 → HOLD 79%
+2026-04-18 11:12:44 [INFO] data.market_data: [601318] baostock历史 77 条
+2026-04-18 11:12:44 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh601318 "HTTP/1.1 200 OK"
+2026-04-18 11:12:51 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh601318&code=sh601318 "HTTP/1.1 200 OK"
+2026-04-18 11:12:51 [INFO] data.market_data: [601318] baostock分钟 192 条  freq=5
+2026-04-18 11:12:51 [INFO] data.market_data: [601318] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:13:00 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:13:00 [INFO] ai_decision.agent: [AI] 601318 → HOLD  置信:79%  均线未形成多头，价在MA20附近且低于MA60，MACD虽修复但量能不足，分时走弱，宜观望
+2026-04-18 11:13:00 [INFO] trading.sector_leaders: [板块龙头] [47/59] 601318 → HOLD 79%
+2026-04-18 11:13:00 [INFO] data.market_data: [600030] baostock历史 77 条
+2026-04-18 11:13:01 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600030 "HTTP/1.1 200 OK"
+2026-04-18 11:13:07 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh600030&code=sh600030 "HTTP/1.1 200 OK"
+2026-04-18 11:13:07 [INFO] data.market_data: [600030] baostock分钟 192 条  freq=5
+2026-04-18 11:13:07 [INFO] data.market_data: [600030] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:13:10 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:13:10 [INFO] ai_decision.agent: [AI] 600030 → HOLD  置信:82%  均线未形成多头排列，价格受MA60压制，量比0.79偏弱，分时横盘，不符多指标共振，宜观望
+2026-04-18 11:13:10 [INFO] trading.sector_leaders: [板块龙头] [48/59] 600030 → HOLD 82%
+2026-04-18 11:13:11 [INFO] data.market_data: [300024] baostock历史 77 条
+2026-04-18 11:13:12 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz300024 "HTTP/1.1 200 OK"
+2026-04-18 11:13:18 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz300024&code=sz300024 "HTTP/1.1 200 OK"
+2026-04-18 11:13:19 [INFO] data.market_data: [300024] baostock分钟 192 条  freq=5
+2026-04-18 11:13:19 [INFO] data.market_data: [300024] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:13:23 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:13:23 [INFO] ai_decision.agent: [AI] 300024 → HOLD  置信:84%  短线横盘，MA5略上MA20但仍低于MA60，MACD修复与中期趋势冲突，量比不足，不符多指标共振，先观望
+2026-04-18 11:13:23 [INFO] trading.sector_leaders: [板块龙头] [49/59] 300024 → HOLD 84%
+2026-04-18 11:13:23 [INFO] data.market_data: [688029] baostock历史 77 条
+2026-04-18 11:13:23 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh688029 "HTTP/1.1 200 OK"
+2026-04-18 11:13:28 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh688029&code=sh688029 "HTTP/1.1 200 OK"
+2026-04-18 11:13:29 [INFO] data.market_data: [688029] baostock分钟 192 条  freq=5
+2026-04-18 11:13:29 [INFO] data.market_data: [688029] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:13:33 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:13:33 [INFO] ai_decision.agent: [AI] 688029 → HOLD  置信:84%  均线未形成多头且价弱于MA5/MA20，分时下行，量比0.79无支撑，MACD改善但信号冲突，宜观望
+2026-04-18 11:13:33 [INFO] trading.sector_leaders: [板块龙头] [50/59] 688029 → HOLD 84%
+2026-04-18 11:13:33 [INFO] data.market_data: [300496] baostock历史 77 条
+2026-04-18 11:13:33 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz300496 "HTTP/1.1 200 OK"
+2026-04-18 11:13:39 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz300496&code=sz300496 "HTTP/1.1 200 OK"
+2026-04-18 11:13:39 [INFO] data.market_data: [300496] baostock分钟 192 条  freq=5
+2026-04-18 11:13:39 [INFO] data.market_data: [300496] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:13:43 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:13:43 [INFO] ai_decision.agent: [AI] 300496 → HOLD  置信:83%  短线站上MA5和MA20但仍低于MA60，MACD修复而量能不足，分时横盘，信号冲突，宜观望。
+2026-04-18 11:13:43 [INFO] trading.sector_leaders: [板块龙头] [51/59] 300496 → HOLD 83%
+2026-04-18 11:13:44 [INFO] data.market_data: [002008] baostock历史 77 条
+2026-04-18 11:13:44 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002008 "HTTP/1.1 200 OK"
+2026-04-18 11:13:52 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz002008&code=sz002008 "HTTP/1.1 200 OK"
+2026-04-18 11:13:53 [INFO] data.market_data: [002008] baostock分钟 192 条  freq=5
+2026-04-18 11:13:53 [INFO] data.market_data: [002008] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:13:56 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:13:56 [INFO] ai_decision.agent: [AI] 002008 → HOLD  置信:82%  均线多头趋势明确，但RSI接近过热且分时走弱，短线追高胜率不足，宜观望
+2026-04-18 11:13:56 [INFO] trading.sector_leaders: [板块龙头] [52/59] 002008 → HOLD 82%
+2026-04-18 11:13:56 [INFO] data.market_data: [300769] baostock历史 77 条
+2026-04-18 11:13:57 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz300769 "HTTP/1.1 200 OK"
+2026-04-18 11:14:07 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz300769&code=sz300769 "HTTP/1.1 200 OK"
+2026-04-18 11:14:07 [INFO] data.market_data: [300769] baostock分钟 192 条  freq=5
+2026-04-18 11:14:07 [INFO] data.market_data: [300769] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:14:12 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:14:12 [INFO] ai_decision.agent: [AI] 300769 → HOLD  置信:78%  均线多头排列且MACD偏强，但量比仅0.95未放量确认，日内冲高回落，暂不满足高确定性建仓条件
+2026-04-18 11:14:12 [INFO] trading.sector_leaders: [板块龙头] [53/59] 300769 → HOLD 78%
+2026-04-18 11:14:12 [INFO] data.market_data: [688111] baostock历史 77 条
+2026-04-18 11:14:13 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh688111 "HTTP/1.1 200 OK"
+2026-04-18 11:14:19 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh688111&code=sh688111 "HTTP/1.1 200 OK"
+2026-04-18 11:14:20 [INFO] data.market_data: [688111] baostock分钟 192 条  freq=5
+2026-04-18 11:14:20 [INFO] data.market_data: [688111] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:14:26 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:14:26 [INFO] ai_decision.agent: [AI] 688111 → HOLD  置信:79%  短线站上MA5和MA20，但仍远低于MA60；MACD修复与分时下行冲突，量能仅略放大，未达多指标共振，宜观望。
+2026-04-18 11:14:26 [INFO] trading.sector_leaders: [板块龙头] [54/59] 688111 → HOLD 79%
+2026-04-18 11:14:26 [INFO] data.market_data: [300033] baostock历史 77 条
+2026-04-18 11:14:27 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz300033 "HTTP/1.1 200 OK"
+2026-04-18 11:14:35 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz300033&code=sz300033 "HTTP/1.1 200 OK"
+2026-04-18 11:14:35 [INFO] data.market_data: [300033] baostock分钟 192 条  freq=5
+2026-04-18 11:14:35 [INFO] data.market_data: [300033] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:14:39 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:14:39 [INFO] ai_decision.agent: [AI] 300033 → HOLD  置信:80%  短线偏强但均线未成标准多头排列，RSI偏高接近过热，追高确定性不足，先观望
+2026-04-18 11:14:39 [INFO] trading.sector_leaders: [板块龙头] [55/59] 300033 → HOLD 80%
+2026-04-18 11:14:40 [INFO] data.market_data: [002049] baostock历史 67 条
+2026-04-18 11:14:40 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002049 "HTTP/1.1 200 OK"
+2026-04-18 11:14:46 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz002049&code=sz002049 "HTTP/1.1 200 OK"
+2026-04-18 11:14:46 [INFO] data.market_data: [002049] baostock分钟 192 条  freq=5
+2026-04-18 11:14:46 [INFO] data.market_data: [002049] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:14:50 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:14:50 [INFO] ai_decision.agent: [AI] 002049 → HOLD  置信:82%  短线放量上行且MACD修复，但MA20下MA60未成多头排列，趋势未完全确认，先观望
+2026-04-18 11:14:50 [INFO] trading.sector_leaders: [板块龙头] [56/59] 002049 → HOLD 82%
+2026-04-18 11:14:50 [INFO] data.market_data: [688588] baostock历史 77 条
+2026-04-18 11:14:50 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh688588 "HTTP/1.1 200 OK"
+2026-04-18 11:14:56 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh688588&code=sh688588 "HTTP/1.1 200 OK"
+2026-04-18 11:14:56 [INFO] data.market_data: [688588] baostock分钟 192 条  freq=5
+2026-04-18 11:14:56 [INFO] data.market_data: [688588] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:15:01 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:15:01 [INFO] ai_decision.agent: [AI] 688588 → HOLD  置信:80%  均线未形成多头排列，MACD修复但量比仅1.01，分时走弱，信号冲突宜观望
+2026-04-18 11:15:01 [INFO] trading.sector_leaders: [板块龙头] [57/59] 688588 → HOLD 80%
+2026-04-18 11:15:02 [INFO] data.market_data: [603533] baostock历史 77 条
+2026-04-18 11:15:02 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh603533 "HTTP/1.1 200 OK"
+2026-04-18 11:15:08 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sh603533&code=sh603533 "HTTP/1.1 200 OK"
+2026-04-18 11:15:08 [INFO] data.market_data: [603533] baostock分钟 192 条  freq=5
+2026-04-18 11:15:08 [INFO] data.market_data: [603533] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:15:12 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:15:12 [INFO] ai_decision.agent: [AI] 603533 → HOLD  置信:84%  均线未形成多头排列，MACD修复但量比不足，分时横盘，确定性不够，先观望
+2026-04-18 11:15:12 [INFO] trading.sector_leaders: [板块龙头] [58/59] 603533 → HOLD 84%
+2026-04-18 11:15:13 [INFO] data.market_data: [300450] baostock历史 77 条
+2026-04-18 11:15:14 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz300450 "HTTP/1.1 200 OK"
+2026-04-18 11:15:22 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz300450&code=sz300450 "HTTP/1.1 200 OK"
+2026-04-18 11:15:22 [INFO] data.market_data: [300450] baostock分钟 192 条  freq=5
+2026-04-18 11:15:22 [INFO] data.market_data: [300450] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:15:27 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:15:27 [INFO] ai_decision.agent: [AI] 300450 → HOLD  置信:74%  放量上行且MACD偏强，但均线未成MA5>MA20>MA60多头排列，追高确定性不足，先观望
+2026-04-18 11:15:27 [INFO] trading.sector_leaders: [板块龙头] [59/59] 300450 → HOLD 74%
+2026-04-18 11:15:27 [INFO] trading.sector_leaders: [板块龙头] 扫描完成，59 支有效结果
+2026-04-18 11:38:00 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['600103', '513400', '002361']
+2026-04-18 11:38:07 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz000636 "HTTP/1.1 200 OK"
+2026-04-18 11:38:12 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002738 "HTTP/1.1 200 OK"
+2026-04-18 11:38:35 [WARNING] data.market_data: [002361] baostock历史数据为空
+2026-04-18 11:38:35 [INFO] data.market_data: [002361] DB缓存K线 1211 条 (d)
+2026-04-18 11:38:36 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002361 "HTTP/1.1 200 OK"
+2026-04-18 11:38:36 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002361 "HTTP/1.1 200 OK"
+2026-04-18 11:38:44 [WARNING] data.market_data: [600103] baostock历史数据为空
+2026-04-18 11:38:44 [INFO] data.market_data: [600103] DB缓存K线 1211 条 (d)
+2026-04-18 11:38:45 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600103 "HTTP/1.1 200 OK"
+2026-04-18 11:38:45 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sh600103 "HTTP/1.1 200 OK"
+2026-04-18 11:38:46 [WARNING] data.market_data: [002361] baostock历史数据为空
+2026-04-18 11:38:47 [INFO] data.market_data: [002361] DB缓存K线 1211 条 (d)
+2026-04-18 11:38:47 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002361 "HTTP/1.1 200 OK"
+2026-04-18 11:38:47 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002361 "HTTP/1.1 200 OK"
+2026-04-18 11:38:53 [INFO] data.market_data: [002361] baostock历史 77 条
+2026-04-18 11:38:53 [INFO] httpx: HTTP Request: GET http://qt.gtimg.cn/q=sz002361 "HTTP/1.1 200 OK"
+2026-04-18 11:38:59 [INFO] httpx: HTTP Request: GET https://web.ifzq.gtimg.cn/appstock/app/minute/query?_var=min_data_sz002361&code=sz002361 "HTTP/1.1 200 OK"
+2026-04-18 11:39:00 [INFO] data.market_data: [002361] baostock分钟 192 条  freq=5
+2026-04-18 11:39:00 [INFO] data.market_data: [002361] 无今日分时数据，显示最近历史 192 根
+2026-04-18 11:39:05 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 11:39:05 [INFO] ai_decision.agent: [AI] 002361 → HOLD  置信:72%  空仓下虽属多头趋势且量能配合，但RSI偏高、日内回落且分时横盘，追高确定性不足，先观望

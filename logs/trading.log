@@ -1,0 +1,150 @@
+2026-04-15 11:26:51,413 [ERROR] data.market_data: [000001] 获取历史数据失败: HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.000001&beg=20251216&end=20260415 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+2026-04-15 11:27:45,999 [INFO] data.market_data: [000001] 历史数据 78 条  20251216~20260415
+2026-04-15 11:27:46,751 [WARNING] data.news_sentiment: [000001] 获取新闻情绪失败: Expecting value: line 1 column 1 (char 0)
+2026-04-15 11:27:52,258 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 11:27:52,269 [INFO] ai_decision.agent: [AI] 000001 → HOLD  置信:90%  均线多头但量比仅0.37，无放量确认，不符多指标共振
+2026-04-15 11:28:03,660 [INFO] backtest.strategy: [回测] 000001  20200101 ~ 20251231
+2026-04-15 11:28:03,829 [ERROR] data.market_data: [000001] 获取历史数据失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-15 11:28:28,290 [INFO] backtest.strategy: [回测] 000001  20200101 ~ 20251231
+2026-04-15 11:28:28,522 [WARNING] data.market_data: [000001] 第1次请求失败，3秒后重试: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-15 11:28:31,630 [WARNING] data.market_data: [000001] 第2次请求失败，3秒后重试: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-15 11:28:34,947 [ERROR] data.market_data: [000001] 获取历史数据失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-15 11:32:45,683 [INFO] data.market_data: [000001] 历史数据 77 条  2025-12-16~2026-04-15
+2026-04-15 11:32:46,022 [WARNING] data.market_data: [000001] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 11:32:46,064 [INFO] data.market_data: [000001] 历史数据 3 条  2026-04-10~2026-04-15
+2026-04-15 11:32:46,216 [WARNING] data.news_sentiment: [000001] 获取新闻情绪失败: Expecting value: line 1 column 1 (char 0)
+2026-04-15 11:32:51,000 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 11:32:51,009 [INFO] ai_decision.agent: [AI] 000001 → HOLD  置信:92%  均线虽多头但粘合，量比0.58无量，未达多指标共振
+2026-04-15 11:32:51,394 [INFO] data.market_data: [600519] 历史数据 77 条  2025-12-16~2026-04-15
+2026-04-15 11:32:51,638 [WARNING] data.market_data: [600519] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 11:32:51,681 [INFO] data.market_data: [600519] 历史数据 3 条  2026-04-10~2026-04-15
+2026-04-15 11:32:51,758 [WARNING] data.news_sentiment: [600519] 获取新闻情绪失败: Expecting value: line 1 column 1 (char 0)
+2026-04-15 11:32:55,616 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 11:32:55,616 [INFO] ai_decision.agent: [AI] 600519 → HOLD  置信:90%  均线多头但量比0.79不足，未达放量共振，纪律性观望
+2026-04-15 11:33:00,550 [INFO] backtest.strategy: [回测] 000001  20200101 ~ 20251231
+2026-04-15 11:33:01,849 [INFO] data.market_data: [000001] 历史数据 1455 条  2020-01-01~2025-12-31
+2026-04-15 11:33:50,776 [INFO] backtest.strategy: [回测] 000001  20200101 ~ 20251231
+2026-04-15 11:33:51,429 [INFO] data.market_data: [000001] 历史数据 1455 条  2020-01-01~2025-12-31
+2026-04-15 11:33:51,725 [INFO] backtest.strategy: [回测完成] 000001  年化=0.19%  最大回撤=40.24%  胜率=0.00%  共0笔
+2026-04-15 11:35:16,769 [INFO] backtest.strategy: [回测] 600519  20200101 ~ 20251231
+2026-04-15 11:35:19,357 [INFO] data.market_data: [600519] 历史数据 1455 条  2020-01-01~2025-12-31
+2026-04-15 11:35:19,637 [INFO] backtest.strategy: [回测完成] 600519  年化=2.36%  最大回撤=17.37%  胜率=50.00%  共2笔
+2026-04-15 11:35:19,637 [INFO] backtest.strategy: [回测] 000858  20200101 ~ 20251231
+2026-04-15 11:35:21,388 [INFO] data.market_data: [000858] 历史数据 1455 条  2020-01-01~2025-12-31
+2026-04-15 11:35:21,722 [INFO] backtest.strategy: [回测完成] 000858  年化=0.74%  最大回撤=43.59%  胜率=0.00%  共0笔
+2026-04-15 11:35:55,971 [INFO] backtest.strategy: [回测] 600519  20200101 ~ 20251231
+2026-04-15 11:35:59,671 [INFO] data.market_data: [600519] 历史数据 1455 条  2020-01-01~2025-12-31
+2026-04-15 11:35:59,965 [INFO] backtest.strategy: [回测完成] 600519  年化=3.47%  最大回撤=21.73%  胜率=50.00%  共2笔
+2026-04-15 11:35:59,966 [INFO] backtest.strategy: [回测] 000001  20200101 ~ 20251231
+2026-04-15 11:36:03,037 [INFO] data.market_data: [000001] 历史数据 1455 条  2020-01-01~2025-12-31
+2026-04-15 11:36:03,348 [INFO] backtest.strategy: [回测完成] 000001  年化=0.82%  最大回撤=41.08%  胜率=0.00%  共0笔
+2026-04-15 11:36:03,349 [INFO] backtest.strategy: [回测] 300750  20200101 ~ 20251231
+2026-04-15 11:36:09,893 [INFO] data.market_data: [300750] 历史数据 1455 条  2020-01-01~2025-12-31
+2026-04-15 11:36:10,228 [INFO] backtest.strategy: [回测完成] 300750  年化=20.44%  最大回撤=50.04%  胜率=0.00%  共0笔
+2026-04-15 11:36:34,021 [INFO] data.market_data: [000001] 历史数据 77 条  2025-12-16~2026-04-15
+2026-04-15 11:36:34,367 [WARNING] data.market_data: [000001] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 11:36:34,407 [INFO] data.market_data: [000001] 历史数据 3 条  2026-04-10~2026-04-15
+2026-04-15 11:36:34,481 [WARNING] data.news_sentiment: [000001] 获取新闻情绪失败: Expecting value: line 1 column 1 (char 0)
+2026-04-15 11:36:37,944 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 11:36:37,953 [INFO] ai_decision.agent: [AI] 000001 → HOLD  置信:88%  均线虽多头但粘合，量比0.58无放量，缺乏共振确认，空仓观望
+2026-04-15 11:36:37,996 [INFO] data.market_data: [600519] 历史数据 77 条  2025-12-16~2026-04-15
+2026-04-15 11:36:38,252 [WARNING] data.market_data: [600519] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 11:36:38,291 [INFO] data.market_data: [600519] 历史数据 3 条  2026-04-10~2026-04-15
+2026-04-15 11:36:38,364 [WARNING] data.news_sentiment: [600519] 获取新闻情绪失败: Expecting value: line 1 column 1 (char 0)
+2026-04-15 11:36:40,732 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 11:36:40,733 [INFO] ai_decision.agent: [AI] 600519 → HOLD  置信:90%  均线多头但量比0.79不足，缺乏放量共振，确定性不够
+2026-04-15 15:05:05,370 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['000001', '600519']
+2026-04-15 15:05:28,636 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['000001', '600519']
+2026-04-15 15:05:28,637 [INFO] trading.engine: [引擎] 启动 mode=paper interval=60s
+2026-04-15 15:05:28,637 [INFO] app: [API] 引擎启动 mode=paper
+2026-04-15 15:21:22,285 [INFO] trading.engine: [引擎] 已停止
+2026-04-15 15:22:03,252 [INFO] data.market_data: [000001] 历史数据 77 条  2025-12-16~2026-04-15
+2026-04-15 15:22:03,621 [WARNING] data.market_data: [000001] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 15:22:03,674 [INFO] data.market_data: [000001] 历史数据 3 条  2026-04-10~2026-04-15
+2026-04-15 15:22:03,845 [WARNING] data.news_sentiment: [000001] 获取新闻情绪失败: Expecting value: line 1 column 1 (char 0)
+2026-04-15 15:22:07,725 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 15:22:07,756 [INFO] ai_decision.agent: [AI] 000001 → HOLD  置信:90%  均线虽多头但粘合，量比0.58无放量，缺乏共振确认，观望
+2026-04-15 15:22:07,817 [INFO] data.market_data: [600519] 历史数据 77 条  2025-12-16~2026-04-15
+2026-04-15 15:22:08,101 [WARNING] data.market_data: [600519] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 15:22:08,153 [INFO] data.market_data: [600519] 历史数据 3 条  2026-04-10~2026-04-15
+2026-04-15 15:22:08,237 [WARNING] data.news_sentiment: [600519] 获取新闻情绪失败: Expecting value: line 1 column 1 (char 0)
+2026-04-15 15:22:10,812 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 15:22:10,814 [INFO] ai_decision.agent: [AI] 600519 → HOLD  置信:90%  均线多头但量比0.79不足，突破无量，不符多指标共振
+2026-04-15 15:22:36,780 [INFO] backtest.strategy: [回测] 002176  20200101 ~ 20260101
+2026-04-15 15:22:38,858 [INFO] data.market_data: [002176] 历史数据 1450 条  2020-01-01~2026-01-01
+2026-04-15 15:22:39,712 [INFO] backtest.strategy: [回测完成] 002176  年化=23.52%  最大回撤=75.26%  胜率=0.00%  共0笔
+2026-04-15 15:33:11,480 [INFO] trading.engine: [引擎] 已停止
+2026-04-15 15:33:18,605 [ERROR] data.market_data: [002176] baostock 查询失败: 网络接收错误。
+2026-04-15 15:33:18,607 [ERROR] data.market_data: [002176] baostock 查询失败: 网络接收错误。
+2026-04-15 16:43:10,501 [INFO] trading.engine: [引擎] 初始化完成  模式=paper  标的=['000001', '600519']
+2026-04-15 16:43:36,171 [INFO] data.market_data: [000001] 历史数据 77 条  2025-12-16~2026-04-15
+2026-04-15 16:43:36,690 [WARNING] data.market_data: [000001] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 16:43:36,736 [INFO] data.market_data: [000001] 历史数据 3 条  2026-04-10~2026-04-15
+2026-04-15 16:43:36,903 [WARNING] data.news_sentiment: [000001] 获取新闻情绪失败: Expecting value: line 1 column 1 (char 0)
+2026-04-15 16:43:41,559 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 16:43:41,626 [INFO] ai_decision.agent: [AI] 000001 → HOLD  置信:89%  均线多头但量比0.58无量支撑，未达多指标共振，纪律空仓
+2026-04-15 16:43:41,671 [INFO] data.market_data: [600519] 历史数据 77 条  2025-12-16~2026-04-15
+2026-04-15 16:43:41,677 [ERROR] asyncio: Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "D:\python\python38\lib\asyncio\events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\python\python38\lib\asyncio\proactor_events.py", line 162, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-04-15 16:43:41,973 [WARNING] data.market_data: [600519] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 16:43:42,258 [INFO] data.market_data: [600519] 历史数据 3 条  2026-04-10~2026-04-15
+2026-04-15 16:43:42,334 [WARNING] data.news_sentiment: [600519] 获取新闻情绪失败: Expecting value: line 1 column 1 (char 0)
+2026-04-15 16:43:45,379 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 16:43:45,379 [INFO] ai_decision.agent: [AI] 600519 → HOLD  置信:90%  均线多头但量比仅0.79，放量确认缺失，按纪律观望
+2026-04-15 16:45:27,448 [INFO] data.market_data: [600103] 历史数据 77 条  2025-12-16~2026-04-15
+2026-04-15 16:45:32,897 [INFO] data.market_data: [600103] 历史数据 35 条  2026-02-14~2026-04-15
+2026-04-15 16:45:42,070 [INFO] data.market_data: [600103] 历史数据 77 条  2025-12-16~2026-04-15
+2026-04-15 16:45:42,368 [INFO] data.market_data: [600103] 历史数据 77 条  2025-12-16~2026-04-15
+2026-04-15 16:45:49,618 [INFO] data.market_data: [600103] 历史数据 35 条  2026-02-14~2026-04-15
+2026-04-15 16:46:47,643 [INFO] data.market_data: [600103] 历史数据 163 条  2025-08-08~2026-04-15
+2026-04-15 16:46:56,709 [INFO] data.market_data: [600103] 历史数据 77 条  2025-12-16~2026-04-15
+2026-04-15 16:47:04,668 [INFO] data.market_data: [600103] 历史数据 35 条  2026-02-14~2026-04-15
+2026-04-15 16:52:05,752 [INFO] backtest.strategy: [回测] 600103  20240101 ~ 20260415
+2026-04-15 16:52:24,980 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 16:52:32,779 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 16:52:39,491 [ERROR] data.market_data: [600103] baostock 查询失败: 网络接收错误。
+2026-04-15 19:08:34,569 [INFO] data.market_data: [000001] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 19:08:34,896 [WARNING] data.market_data: [000001] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 19:08:34,942 [INFO] data.market_data: [000001] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 19:08:35,089 [INFO] data.news_sentiment: [000001] 新闻获取异常(Expecting value: line 1 column 1 (char 0)，2秒后重试(1/2)
+2026-04-15 19:08:37,179 [INFO] data.news_sentiment: [000001] 新闻获取异常(Expecting value: line 1 column 1 (char 0)，2秒后重试(2/2)
+2026-04-15 19:08:39,257 [WARNING] data.news_sentiment: [000001] 获取新闻情绪失败(已重试2次): Expecting value: line 1 column 1 (char 0)
+2026-04-15 19:08:42,875 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 19:08:42,885 [INFO] ai_decision.agent: [AI] 000001 → HOLD  置信:90%  均线多头但量比0.61无放量确认，不符多指标共振，继续观望
+2026-04-15 19:08:42,937 [INFO] data.market_data: [600519] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 19:08:43,186 [WARNING] data.market_data: [600519] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 19:08:43,230 [INFO] data.market_data: [600519] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 19:08:43,305 [INFO] data.news_sentiment: [600519] 新闻获取异常(Expecting value: line 1 column 1 (char 0)，2秒后重试(1/2)
+2026-04-15 19:08:45,395 [INFO] data.news_sentiment: [600519] 新闻获取异常(Expecting value: line 1 column 1 (char 0)，2秒后重试(2/2)
+2026-04-15 19:08:47,479 [WARNING] data.news_sentiment: [600519] 获取新闻情绪失败(已重试2次): Expecting value: line 1 column 1 (char 0)
+2026-04-15 19:08:49,694 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 19:08:49,694 [INFO] ai_decision.agent: [AI] 600519 → HOLD  置信:86%  均线多头但量比1.15未达放量确认，缺少多指标共振
+2026-04-15 19:17:31,436 [INFO] data.market_data: [000001] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 19:17:31,810 [WARNING] data.market_data: [000001] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 19:17:32,125 [INFO] data.market_data: [000001] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 19:17:32,267 [INFO] data.news_sentiment: [000001] 新闻获取异常(Expecting value: line 1 column 1 (char 0)，2秒后重试(1/2)
+2026-04-15 19:17:34,335 [INFO] data.news_sentiment: [000001] 新闻获取异常(Expecting value: line 1 column 1 (char 0)，2秒后重试(2/2)
+2026-04-15 19:17:36,419 [WARNING] data.news_sentiment: [000001] 获取新闻情绪失败(已重试2次): Expecting value: line 1 column 1 (char 0)
+2026-04-15 19:17:39,405 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 19:17:39,415 [INFO] ai_decision.agent: [AI] 000001 → HOLD  置信:88%  均线多头但量比0.61无放量确认，未达多指标共振，纪律性观望
+2026-04-15 21:04:15,437 [INFO] data.market_data: [000001] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:04:16,041 [WARNING] data.market_data: [000001] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:04:16,088 [INFO] data.market_data: [000001] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:04:22,271 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:04:22,285 [INFO] ai_decision.agent: [AI] 000001 → HOLD  置信:89%  均线多头但量比0.61无放量确认，未达多指标共振，纪律空仓
+2026-04-15 21:04:22,910 [INFO] data.market_data: [600519] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:04:23,222 [WARNING] data.market_data: [600519] 实时行情获取失败(AkShare): Server disconnected
+2026-04-15 21:04:23,268 [INFO] data.market_data: [600519] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:04:38,408 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:04:38,409 [INFO] ai_decision.agent: [AI] 600519 → HOLD  置信:84%  均线多头、MACD偏强，但量比1.15未达放量确认，纪律上观望
+2026-04-15 21:17:29,994 [INFO] data.market_data: [000001] 历史数据 78 条  2025-12-16~2026-04-15
+2026-04-15 21:17:30,480 [WARNING] data.market_data: [000001] 实时行情获取失败(AkShare): ServerDisconnectedError: Server disconnected
+2026-04-15 21:17:30,521 [INFO] data.market_data: [000001] 历史数据 4 条  2026-04-10~2026-04-15
+2026-04-15 21:17:37,700 [INFO] httpx: HTTP Request: POST https://yunwu.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-15 21:17:37,710 [INFO] ai_decision.agent: [AI] 000001 → HOLD  置信:90%  均线多头但量比0.61不足，缺乏放量共振，按纪律观望

@@ -4,7 +4,8 @@
 AI_API_KEY=sk-xxxxxxxxxxxxxxxx
 AI_BASE_URL=https://yunwu.ai/v1
 AI_MODEL=gpt-4o
-SECRET_KEY=随机32位字符串（重要！）
+SECRET_KEY=随机32位字符串（不是很重要！）
+ //生成随机 SECRET_KEY：`python -c "import secrets; print(secrets.token_hex(32))"`
 ```
 
 可选邮件配置：

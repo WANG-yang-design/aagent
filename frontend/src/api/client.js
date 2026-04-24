@@ -14,14 +14,17 @@ api.interceptors.request.use((config) => {
   return config
 })
 
-// 401 自动登出
+// 401 自动登出（在登录/注册页时不跳转）
 api.interceptors.response.use(
   (res) => res,
   (err) => {
     if (err.response?.status === 401) {
-      localStorage.removeItem('token')
-      localStorage.removeItem('user')
-      window.location.href = '/login'
+      const p = window.location.pathname
+      if (p !== '/login' && p !== '/register') {
+        localStorage.removeItem('token')
+        localStorage.removeItem('user')
+        window.location.href = '/login'
+      }
     }
     return Promise.reject(err)
   }

@@ -27,7 +27,11 @@ export default function Register() {
       login({ id: data.user_id, username: data.username, email: data.email }, data.access_token)
       navigate('/settings')
     } catch (err) {
-      setError(err.response?.data?.detail || '注册失败，请重试')
+      if (!err.response) {
+        setError(`网络连接失败（${err.message}）——请确认后端隧道仍在运行`)
+      } else {
+        setError(err.response?.data?.detail || '注册失败，请重试')
+      }
     } finally {
       setLoading(false)
     }

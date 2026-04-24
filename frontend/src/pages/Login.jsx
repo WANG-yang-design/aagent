@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { authApi } from '../api/client'
 import { useAuthStore } from '../store/authStore'
+
+const API_URL = import.meta.env.VITE_API_URL || '(未设置，使用相对路径)'
 
 export default function Login() {
   const navigate = useNavigate()
@@ -9,6 +11,14 @@ export default function Login() {
   const [form, setForm] = useState({ username: '', password: '' })
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [backendOk, setBackendOk] = useState(null)
+
+  useEffect(() => {
+    const base = import.meta.env.VITE_API_URL || ''
+    fetch(`${base}/api/health`)
+      .then((r) => setBackendOk(r.ok))
+      .catch(() => setBackendOk(false))
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -19,7 +29,11 @@ export default function Login() {
       login({ id: data.user_id, username: data.username, email: data.email }, data.access_token)
       navigate('/')
     } catch (err) {
-      setError(err.response?.data?.detail || '登录失败，请重试')
+      if (!err.response) {
+        setError(`网络连接失败（${err.message}）——请确认后端隧道仍在运行`)
+      } else {
+        setError(err.response?.data?.detail || '登录失败，请重试')
+      }
     } finally {
       setLoading(false)
     }
@@ -35,6 +49,17 @@ export default function Login() {
         </div>
 
         <div className="card shadow-lg">
+          {/* Backend status indicator */}
+          <div className={`text-xs rounded-lg px-3 py-2 mb-4 font-mono break-all ${
+            backendOk === null ? 'bg-slate-100 text-slate-500' :
+            backendOk ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-600'
+          }`}>
+            {backendOk === null && '正在检测后端连接...'}
+            {backendOk === true && `后端已连接 ✓`}
+            {backendOk === false && `后端无法连接 ✗ — 请启动隧道`}
+            <span className="block text-slate-400 mt-0.5">{API_URL}</span>
+          </div>
+
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="label">用户名 / 邮箱</label>

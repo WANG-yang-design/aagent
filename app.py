@@ -137,6 +137,11 @@ def index():
     return HTMLResponse("<h1>static/index.html not found</h1>")
 
 
+@app.get("/api/health")
+def api_health():
+    return {"ok": True}
+
+
 @app.get("/api/status")
 def api_status():
     eng = _get_engine()
